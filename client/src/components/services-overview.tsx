@@ -16,8 +16,8 @@ export default function ServicesOverview() {
       target: "socials"
     },
     {
-      title: "Fotografía de Retratos",
-      description: "Retratos profesionales y marca personal",
+      title: "Fotografía",
+      description: "Retratos profesionales y hasta paisajes hermosos",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       target: "portraits"
     },

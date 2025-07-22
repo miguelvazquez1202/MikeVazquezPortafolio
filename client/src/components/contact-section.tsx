@@ -111,7 +111,7 @@ export default function ContactSection() {
             Creemos Juntos
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
-            ¿Listo para capturar tu próximo momento importante? Contáctame para discutir tus necesidades de fotografía y cinematografía.
+            ¿Listo para capturar tu próximo momento importante? Contáctame para platicar sobre tus necesidades de fotografía y cinematografía.
           </p>
         </motion.div>
 

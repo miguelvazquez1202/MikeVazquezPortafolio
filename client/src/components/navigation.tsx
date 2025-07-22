@@ -28,7 +28,7 @@ export default function Navigation() {
     { label: "Inicio", id: "home" },
     { label: "Conciertos", id: "concerts" },
     { label: "Eventos Sociales", id: "socials" },
-    { label: "Retratos", id: "portraits" },
+    { label: "Fotografía", id: "portraits" },
     { label: "Videoclips", id: "videoclips" },
     { label: "Demo Reel", id: "demo-reel" },
     { label: "Acerca de", id: "about" },

@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import ServicesOverview from "@/components/services-overview";
 import GallerySection from "@/components/gallery-section";
+import PhotographyCategories from "@/components/photography-categories";
 import VideoclipsSection from "@/components/videoclips-section";
 import DemoReelSection from "@/components/demo-reel-section";
 import AboutSection from "@/components/about-section";
@@ -34,12 +35,13 @@ export default function Home() {
       
       <GallerySection
         id="portraits"
-        title="Fotografía de Retratos"
-        description="Retratos profesionales y fotografía de marca personal que cuenta tu historia única"
+        title="Fotografía"
+        description="Retratos profesionales y hasta paisajes hermosos, capturando la esencia de cada momento"
         images={portraitImages}
         bgColor="bg-soft-grey"
       />
       
+      <PhotographyCategories />
       <VideoclipsSection />
       <DemoReelSection />
       <AboutSection />
