@@ -51,9 +51,7 @@ export default function Navigation() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="font-playfair text-2xl font-semibold text-dark-grey cursor-pointer"
             onClick={() => scrollToSection("home")}
-          >
-            Alex Martinez
-          </motion.div>
+          >Mike Vázquez</motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
