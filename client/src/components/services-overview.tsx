@@ -4,26 +4,26 @@ import { Card } from "@/components/ui/card";
 export default function ServicesOverview() {
   const services = [
     {
-      title: "Concert Photography",
-      description: "Live music events and performances",
+      title: "Fotografía de Conciertos",
+      description: "Eventos de música en vivo y presentaciones",
       image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       target: "concerts"
     },
     {
-      title: "Social Events",
-      description: "Weddings, parties, and celebrations",
+      title: "Eventos Sociales",
+      description: "Bodas, fiestas y celebraciones",
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       target: "socials"
     },
     {
-      title: "Portrait Photography",
-      description: "Professional headshots and personal branding",
+      title: "Fotografía de Retratos",
+      description: "Retratos profesionales y marca personal",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       target: "portraits"
     },
     {
-      title: "Demo Reel",
-      description: "Cinematic videos and motion pictures",
+      title: "Reel Demo",
+      description: "Videos cinematográficos y producciones",
       image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       target: "demo-reel"
     }
@@ -47,10 +47,10 @@ export default function ServicesOverview() {
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-            Creative Services
+            Servicios Creativos
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
-            From intimate portraits to large-scale events, I capture the essence of every moment with artistic vision and technical expertise
+            Desde retratos íntimos hasta eventos a gran escala, capturo la esencia de cada momento con visión artística y experiencia técnica
           </p>
         </motion.div>
 

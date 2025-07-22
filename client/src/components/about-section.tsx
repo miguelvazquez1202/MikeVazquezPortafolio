@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
   const specializations = [
-    { icon: Music, label: "Concert Photography" },
-    { icon: Heart, label: "Wedding & Events" },
-    { icon: User, label: "Portrait Sessions" },
-    { icon: Video, label: "Cinematic Videos" },
+    { icon: Music, label: "Fotografía de Conciertos" },
+    { icon: Heart, label: "Bodas y Eventos" },
+    { icon: User, label: "Sesiones de Retratos" },
+    { icon: Video, label: "Videos Cinematográficos" },
   ];
 
   const scrollToContact = () => {
@@ -50,17 +50,17 @@ export default function AboutSection() {
           >
             <div>
               <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-                About Alex Martinez
+                Acerca de Alex Martinez
               </h2>
               <div className="space-y-6 font-source text-lg text-charcoal leading-relaxed">
                 <p>
-                  With over 8 years of experience in photography and filmmaking, I specialize in capturing the authentic emotions and memorable moments that define life's most important events.
+                  Con más de 8 años de experiencia en fotografía y cinematografía, me especializo en capturar las emociones auténticas y los momentos memorables que definen los eventos más importantes de la vida.
                 </p>
                 <p>
-                  My work spans from intimate portrait sessions to large-scale concert productions, always with a focus on storytelling through visual artistry. I believe every photograph should tell a story and every video should evoke emotion.
+                  Mi trabajo abarca desde sesiones íntimas de retratos hasta producciones de conciertos a gran escala, siempre con enfoque en la narrativa a través del arte visual. Creo que cada fotografía debe contar una historia y cada video debe evocar emociones.
                 </p>
                 <p>
-                  Based in Los Angeles, I've had the privilege of working with diverse clients, from emerging musicians to Fortune 500 companies, always delivering creative excellence and professional service.
+                  Radicado en Los Ángeles, he tenido el privilegio de trabajar con clientes diversos, desde músicos emergentes hasta empresas Fortune 500, siempre entregando excelencia creativa y servicio profesional.
                 </p>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function AboutSection() {
               className="space-y-4"
             >
               <h3 className="font-playfair text-2xl font-semibold text-dark-grey">
-                Specializations
+                Especializaciones
               </h3>
               <div className="grid grid-cols-2 gap-4 font-montserrat text-charcoal">
                 {specializations.map((spec, index) => (
@@ -105,7 +105,7 @@ export default function AboutSection() {
                 onClick={scrollToContact}
                 className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
               >
-                Hire Me
+                Contrátame
               </Button>
               <Button
                 variant="outline"
@@ -113,7 +113,7 @@ export default function AboutSection() {
                 className="border-2 border-vibrant-yellow text-vibrant-yellow px-8 py-4 font-montserrat font-semibold hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-300 text-lg h-auto"
               >
                 <Download size={20} className="mr-2" />
-                Download Portfolio
+                Descargar Portafolio
               </Button>
             </motion.div>
           </motion.div>

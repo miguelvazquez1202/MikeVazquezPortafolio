@@ -34,8 +34,8 @@ export default function ContactSection() {
     },
     onSuccess: () => {
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your inquiry. I'll get back to you soon.",
+        title: "¡Mensaje enviado exitosamente!",
+        description: "Gracias por tu consulta. Me pondré en contacto contigo pronto.",
       });
       setFormData({
         firstName: "",
@@ -47,8 +47,8 @@ export default function ContactSection() {
     },
     onError: (error: any) => {
       toast({
-        title: "Failed to send message",
-        description: error.message || "Please try again later.",
+        title: "Error al enviar mensaje",
+        description: error.message || "Por favor intenta de nuevo más tarde.",
         variant: "destructive",
       });
     },
@@ -58,7 +58,7 @@ export default function ContactSection() {
     e.preventDefault();
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       toast({
-        title: "Please fill in all required fields",
+        title: "Por favor completa todos los campos requeridos",
         variant: "destructive",
       });
       return;
@@ -73,20 +73,20 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: "Correo",
       value: "alex@alexmartinez.photo",
       href: "mailto:alex@alexmartinez.photo",
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: "Teléfono",
       value: "+1 (555) 123-4567",
       href: "tel:+15551234567",
     },
     {
       icon: MapPin,
-      label: "Location",
-      value: "Los Angeles, California",
+      label: "Ubicación",
+      value: "Los Ángeles, California",
       href: null,
     },
   ];
@@ -108,10 +108,10 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-            Let's Create Together
+            Creemos Juntos
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
-            Ready to capture your next important moment? Get in touch to discuss your photography and filmmaking needs.
+            ¿Listo para capturar tu próximo momento importante? Contáctame para discutir tus necesidades de fotografía y cinematografía.
           </p>
         </motion.div>
 
@@ -126,7 +126,7 @@ export default function ContactSection() {
           >
             <div>
               <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
-                Get In Touch
+                Ponte en Contacto
               </h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -168,7 +168,7 @@ export default function ContactSection() {
               viewport={{ once: true }}
             >
               <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
-                Follow My Work
+                Sigue Mi Trabajo
               </h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -196,13 +196,13 @@ export default function ContactSection() {
           >
             <Card className="p-8 shadow-lg border-2 border-light-grey hover:border-vibrant-yellow/30 transition-colors duration-300">
               <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
-                Send a Message
+                Envía un Mensaje
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block font-montserrat font-medium text-charcoal mb-2">
-                      First Name *
+                      Nombre *
                     </label>
                     <Input
                       id="firstName"
@@ -214,7 +214,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block font-montserrat font-medium text-charcoal mb-2">
-                      Last Name *
+                      Apellido *
                     </label>
                     <Input
                       id="lastName"
@@ -228,7 +228,7 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="email" className="block font-montserrat font-medium text-charcoal mb-2">
-                    Email Address *
+                    Correo Electrónico *
                   </label>
                   <Input
                     id="email"
@@ -242,25 +242,25 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="serviceType" className="block font-montserrat font-medium text-charcoal mb-2">
-                    Service Type
+                    Tipo de Servicio
                   </label>
                   <Select value={formData.serviceType} onValueChange={(value) => handleInputChange("serviceType", value)}>
                     <SelectTrigger className="focus:border-vibrant-yellow transition-colors duration-200">
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder="Selecciona un servicio" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="concert">Concert Photography</SelectItem>
-                      <SelectItem value="social">Social Events</SelectItem>
-                      <SelectItem value="portrait">Portrait Photography</SelectItem>
-                      <SelectItem value="video">Video Production</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="concert">Fotografía de Conciertos</SelectItem>
+                      <SelectItem value="social">Eventos Sociales</SelectItem>
+                      <SelectItem value="portrait">Fotografía de Retratos</SelectItem>
+                      <SelectItem value="video">Producción de Videos</SelectItem>
+                      <SelectItem value="other">Otro</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block font-montserrat font-medium text-charcoal mb-2">
-                    Message *
+                    Mensaje *
                   </label>
                   <Textarea
                     id="message"
@@ -268,7 +268,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
                     className="focus:border-vibrant-yellow transition-colors duration-200 resize-vertical"
-                    placeholder="Tell me about your project..."
+                    placeholder="Cuéntame sobre tu proyecto..."
                     required
                   />
                 </div>
@@ -278,7 +278,7 @@ export default function ContactSection() {
                   disabled={contactMutation.isPending}
                   className="w-full bg-vibrant-yellow text-dark-grey py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
                 >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
+                  {contactMutation.isPending ? "Enviando..." : "Enviar Mensaje"}
                 </Button>
               </form>
             </Card>

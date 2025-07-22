@@ -67,7 +67,7 @@ export default function GallerySection({ id, title, description, images, bgColor
           className="text-center mt-12"
         >
           <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
-            View More {title.split(' ')[0]} Photos
+            Ver Más Fotos de {title.split(' ')[0]}
           </Button>
         </motion.div>
       </div>

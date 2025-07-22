@@ -21,10 +21,10 @@ export default function DemoReelSection() {
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-            Demo Reel
+            Reel Demo
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
-            Cinematic storytelling through motion pictures and video production
+            Narrativa cinematográfica a través de producciones audiovisuales y videos
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export default function DemoReelSection() {
           className="text-center mt-12"
         >
           <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
-            View All Videos
+            Ver Todos los Videos
           </Button>
         </motion.div>
       </div>

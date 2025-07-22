@@ -17,24 +17,24 @@ export default function Home() {
       
       <GallerySection
         id="concerts"
-        title="Concert Photography"
-        description="Capturing the energy, emotion, and artistry of live musical performances"
+        title="Fotografía de Conciertos"
+        description="Capturando la energía, emoción y arte de las presentaciones musicales en vivo"
         images={concertImages}
         bgColor="bg-soft-grey"
       />
       
       <GallerySection
         id="socials"
-        title="Social Events"
-        description="Documenting life's most precious celebrations with elegance and authenticity"
+        title="Eventos Sociales"
+        description="Documentando las celebraciones más preciosas de la vida con elegancia y autenticidad"
         images={socialImages}
         bgColor="bg-pure-white"
       />
       
       <GallerySection
         id="portraits"
-        title="Portrait Photography"
-        description="Professional headshots and personal branding photography that tells your unique story"
+        title="Fotografía de Retratos"
+        description="Retratos profesionales y fotografía de marca personal que cuenta tu historia única"
         images={portraitImages}
         bgColor="bg-soft-grey"
       />
@@ -50,10 +50,10 @@ export default function Home() {
               Alex Martinez
             </div>
             <p className="font-source text-light-grey max-w-2xl mx-auto">
-              Professional photographer and filmmaker capturing life's most beautiful moments with artistic vision and technical expertise.
+              Fotógrafo y cineasta profesional capturando los momentos más hermosos de la vida con visión artística y experiencia técnica.
             </p>
             <div className="border-t border-vibrant-yellow/30 pt-6 text-sm text-light-grey">
-              <p>&copy; 2024 Alex Martinez Photography. All rights reserved.</p>
+              <p>&copy; 2024 Alex Martinez Photography. Todos los derechos reservados.</p>
             </div>
           </div>
         </div>

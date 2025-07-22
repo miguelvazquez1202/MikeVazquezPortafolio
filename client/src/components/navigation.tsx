@@ -25,13 +25,13 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { label: "Home", id: "home" },
-    { label: "Concerts", id: "concerts" },
-    { label: "Social Events", id: "socials" },
-    { label: "Portraits", id: "portraits" },
-    { label: "Demo Reel", id: "demo-reel" },
-    { label: "About", id: "about" },
-    { label: "Contact", id: "contact" },
+    { label: "Inicio", id: "home" },
+    { label: "Conciertos", id: "concerts" },
+    { label: "Eventos Sociales", id: "socials" },
+    { label: "Retratos", id: "portraits" },
+    { label: "Reel Demo", id: "demo-reel" },
+    { label: "Acerca de", id: "about" },
+    { label: "Contacto", id: "contact" },
   ];
 
   return (

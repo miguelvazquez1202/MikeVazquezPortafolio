@@ -28,8 +28,8 @@ export default function HeroSection() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          Capturing Life's<br />
-          <span className="text-vibrant-yellow">Most Beautiful</span> Moments
+          Capturando los<br />
+          <span className="text-vibrant-yellow">Momentos Más Hermosos</span> de la Vida
         </motion.h1>
 
         <motion.p
@@ -38,7 +38,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="font-montserrat text-xl md:text-2xl mb-8 font-light opacity-90"
         >
-          Professional photographer and filmmaker specializing in concerts, social events, and cinematic storytelling
+          Fotógrafo y cineasta profesional especializado en conciertos, eventos sociales y narrativa cinematográfica
         </motion.p>
 
         <motion.div
@@ -51,14 +51,14 @@ export default function HeroSection() {
             onClick={() => scrollToSection("concerts")}
             className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-lg h-auto"
           >
-            View Portfolio
+            Ver Portafolio
           </Button>
           <Button
             variant="outline"
             onClick={() => scrollToSection("contact")}
             className="border-2 border-vibrant-yellow text-vibrant-yellow px-8 py-4 font-montserrat font-semibold hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-300 bg-transparent text-lg h-auto"
           >
-            Get In Touch
+            Contáctame
           </Button>
         </motion.div>
       </div>
