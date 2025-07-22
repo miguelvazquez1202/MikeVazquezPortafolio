@@ -28,7 +28,7 @@ export default function GallerySection({ id, title, description, images, bgColor
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-deep-black mb-6">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
             {title}
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ export default function GallerySection({ id, title, description, images, bgColor
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="cursor-pointer"
+              className="cursor-pointer group relative"
               onClick={() => openLightbox(index)}
             >
               <img
@@ -53,6 +53,8 @@ export default function GallerySection({ id, title, description, images, bgColor
                 alt={image.alt}
                 className="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
               />
+              <div className="absolute inset-0 bg-vibrant-yellow/0 group-hover:bg-vibrant-yellow/20 transition-all duration-300 rounded-lg" />
+              <div className="absolute top-4 right-4 w-3 h-3 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
         </div>
@@ -64,7 +66,7 @@ export default function GallerySection({ id, title, description, images, bgColor
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button className="bg-deep-black text-pure-white px-8 py-4 font-montserrat font-semibold hover:bg-charcoal transition-all duration-300 text-lg h-auto">
+          <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
             View More {title.split(' ')[0]} Photos
           </Button>
         </motion.div>

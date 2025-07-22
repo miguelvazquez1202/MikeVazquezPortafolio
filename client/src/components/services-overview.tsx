@@ -46,7 +46,7 @@ export default function ServicesOverview() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-deep-black mb-6">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
             Creative Services
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
@@ -66,18 +66,19 @@ export default function ServicesOverview() {
               className="cursor-pointer"
               onClick={() => scrollToSection(service.target)}
             >
-              <Card className="group overflow-hidden bg-deep-black rounded-lg border-0 shadow-lg hover:shadow-2xl transition-all duration-500">
+              <Card className="group overflow-hidden bg-dark-grey rounded-lg border-0 shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="relative">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-black/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/90 to-transparent" />
                   <div className="absolute bottom-6 left-6 text-pure-white">
                     <h3 className="font-playfair text-2xl font-semibold mb-2">{service.title}</h3>
                     <p className="font-source text-sm opacity-90">{service.description}</p>
                   </div>
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </Card>
             </motion.div>

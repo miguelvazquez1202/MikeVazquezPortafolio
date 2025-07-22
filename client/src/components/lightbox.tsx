@@ -70,7 +70,7 @@ export default function Lightbox() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[999] bg-deep-black/90 backdrop-blur-sm flex items-center justify-center"
+          className="fixed inset-0 z-[999] bg-dark-grey/95 backdrop-blur-sm flex items-center justify-center"
           onClick={(e) => {
             if (e.target === e.currentTarget) {
               closeLightbox();
@@ -82,7 +82,7 @@ export default function Lightbox() {
             variant="ghost"
             size="icon"
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-pure-white hover:text-light-grey transition-colors duration-200 z-10 h-12 w-12"
+            className="absolute top-6 right-6 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
           >
             <X size={24} />
           </Button>
@@ -94,7 +94,7 @@ export default function Lightbox() {
                 variant="ghost"
                 size="icon"
                 onClick={() => navigateImage(-1)}
-                className="absolute left-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-light-grey transition-colors duration-200 h-12 w-12"
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 h-12 w-12"
               >
                 <ChevronLeft size={24} />
               </Button>
@@ -102,7 +102,7 @@ export default function Lightbox() {
                 variant="ghost"
                 size="icon"
                 onClick={() => navigateImage(1)}
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-light-grey transition-colors duration-200 h-12 w-12"
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 h-12 w-12"
               >
                 <ChevronRight size={24} />
               </Button>
@@ -122,7 +122,7 @@ export default function Lightbox() {
               <img
                 src={currentImage.src}
                 alt={currentImage.alt}
-                className="max-w-full max-h-full object-contain"
+                className="max-w-full max-h-full object-contain border-2 border-vibrant-yellow/20"
               />
             </motion.div>
           )}
@@ -138,7 +138,7 @@ export default function Lightbox() {
               <p className="font-montserrat text-lg">{currentImage.alt}</p>
               {images.length > 1 && (
                 <p className="font-source text-sm opacity-70 mt-1">
-                  {currentIndex + 1} of {images.length}
+                  <span className="text-vibrant-yellow">{currentIndex + 1}</span> of {images.length}
                 </p>
               )}
             </motion.div>

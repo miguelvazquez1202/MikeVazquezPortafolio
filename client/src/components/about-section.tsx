@@ -31,12 +31,14 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="relative"
           >
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000"
               alt="Alex Martinez professional photographer headshot"
               className="w-full h-auto rounded-lg shadow-2xl"
             />
+            <div className="absolute -top-4 -left-4 w-full h-full border-4 border-vibrant-yellow rounded-lg -z-10" />
           </motion.div>
 
           <motion.div
@@ -47,7 +49,7 @@ export default function AboutSection() {
             className="space-y-8"
           >
             <div>
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-deep-black mb-6">
+              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
                 About Alex Martinez
               </h2>
               <div className="space-y-6 font-source text-lg text-charcoal leading-relaxed">
@@ -70,7 +72,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="font-playfair text-2xl font-semibold text-deep-black">
+              <h3 className="font-playfair text-2xl font-semibold text-dark-grey">
                 Specializations
               </h3>
               <div className="grid grid-cols-2 gap-4 font-montserrat text-charcoal">
@@ -81,9 +83,11 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 * index }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-3"
+                    className="flex items-center space-x-3 group"
                   >
-                    <spec.icon size={20} className="text-deep-black" />
+                    <div className="w-8 h-8 bg-vibrant-yellow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                      <spec.icon size={16} className="text-dark-grey" />
+                    </div>
                     <span>{spec.label}</span>
                   </motion.div>
                 ))}
@@ -99,14 +103,14 @@ export default function AboutSection() {
             >
               <Button
                 onClick={scrollToContact}
-                className="bg-deep-black text-pure-white px-8 py-4 font-montserrat font-semibold hover:bg-charcoal transition-all duration-300 text-lg h-auto"
+                className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
               >
                 Hire Me
               </Button>
               <Button
                 variant="outline"
                 onClick={handleDownloadPortfolio}
-                className="border-2 border-deep-black text-deep-black px-8 py-4 font-montserrat font-semibold hover:bg-deep-black hover:text-pure-white transition-all duration-300 text-lg h-auto"
+                className="border-2 border-vibrant-yellow text-vibrant-yellow px-8 py-4 font-montserrat font-semibold hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-300 text-lg h-auto"
               >
                 <Download size={20} className="mr-2" />
                 Download Portfolio

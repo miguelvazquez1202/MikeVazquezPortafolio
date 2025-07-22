@@ -107,7 +107,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-deep-black mb-6">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
             Let's Create Together
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
@@ -125,7 +125,7 @@ export default function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="font-playfair text-2xl font-semibold text-deep-black mb-6">
+              <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
                 Get In Touch
               </h3>
               <div className="space-y-6">
@@ -136,19 +136,19 @@ export default function ContactSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-4"
+                    className="flex items-center space-x-4 group"
                   >
-                    <div className="w-12 h-12 bg-deep-black rounded-full flex items-center justify-center">
-                      <info.icon size={20} className="text-pure-white" />
+                    <div className="w-12 h-12 bg-vibrant-yellow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                      <info.icon size={20} className="text-dark-grey" />
                     </div>
                     <div>
-                      <p className="font-montserrat font-semibold text-deep-black">
+                      <p className="font-montserrat font-semibold text-dark-grey">
                         {info.label}
                       </p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="font-source text-charcoal hover:text-deep-black transition-colors duration-200"
+                          className="font-source text-charcoal hover:text-vibrant-yellow transition-colors duration-200"
                         >
                           {info.value}
                         </a>
@@ -167,7 +167,7 @@ export default function ContactSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h3 className="font-playfair text-2xl font-semibold text-deep-black mb-6">
+              <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
                 Follow My Work
               </h3>
               <div className="flex space-x-4">
@@ -177,10 +177,10 @@ export default function ContactSection() {
                     href={social.href}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 bg-deep-black rounded-full flex items-center justify-center hover:bg-charcoal transition-colors duration-300"
+                    className="w-12 h-12 bg-dark-grey rounded-full flex items-center justify-center hover:bg-vibrant-yellow transition-colors duration-300 group"
                     aria-label={social.label}
                   >
-                    <social.icon size={20} className="text-pure-white" />
+                    <social.icon size={20} className="text-pure-white group-hover:text-dark-grey transition-colors duration-300" />
                   </motion.a>
                 ))}
               </div>
@@ -194,8 +194,8 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8 shadow-lg border-light-grey">
-              <h3 className="font-playfair text-2xl font-semibold text-deep-black mb-6">
+            <Card className="p-8 shadow-lg border-2 border-light-grey hover:border-vibrant-yellow/30 transition-colors duration-300">
+              <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
                 Send a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -208,7 +208,7 @@ export default function ContactSection() {
                       id="firstName"
                       value={formData.firstName}
                       onChange={(e) => handleInputChange("firstName", e.target.value)}
-                      className="focus:border-deep-black transition-colors duration-200"
+                      className="focus:border-vibrant-yellow transition-colors duration-200"
                       required
                     />
                   </div>
@@ -220,7 +220,7 @@ export default function ContactSection() {
                       id="lastName"
                       value={formData.lastName}
                       onChange={(e) => handleInputChange("lastName", e.target.value)}
-                      className="focus:border-deep-black transition-colors duration-200"
+                      className="focus:border-vibrant-yellow transition-colors duration-200"
                       required
                     />
                   </div>
@@ -235,7 +235,7 @@ export default function ContactSection() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
-                    className="focus:border-deep-black transition-colors duration-200"
+                    className="focus:border-vibrant-yellow transition-colors duration-200"
                     required
                   />
                 </div>
@@ -245,7 +245,7 @@ export default function ContactSection() {
                     Service Type
                   </label>
                   <Select value={formData.serviceType} onValueChange={(value) => handleInputChange("serviceType", value)}>
-                    <SelectTrigger className="focus:border-deep-black transition-colors duration-200">
+                    <SelectTrigger className="focus:border-vibrant-yellow transition-colors duration-200">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
@@ -267,7 +267,7 @@ export default function ContactSection() {
                     rows={6}
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
-                    className="focus:border-deep-black transition-colors duration-200 resize-vertical"
+                    className="focus:border-vibrant-yellow transition-colors duration-200 resize-vertical"
                     placeholder="Tell me about your project..."
                     required
                   />
@@ -276,7 +276,7 @@ export default function ContactSection() {
                 <Button
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full bg-deep-black text-pure-white py-4 font-montserrat font-semibold hover:bg-charcoal transition-all duration-300 text-lg h-auto"
+                  className="w-full bg-vibrant-yellow text-dark-grey py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}
                 </Button>

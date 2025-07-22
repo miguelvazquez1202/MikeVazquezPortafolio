@@ -1,32 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
-
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(0, 0%, 20%);
+  --foreground: hsl(0, 0%, 18%);
   --muted: hsl(0, 0%, 89.8%);
   --muted-foreground: hsl(0, 0%, 44.7%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(0, 0%, 20%);
+  --popover-foreground: hsl(0, 0%, 18%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(0, 0%, 20%);
+  --card-foreground: hsl(0, 0%, 18%);
   --border: hsl(0, 0%, 89.8%);
   --input: hsl(0, 0%, 89.8%);
-  --primary: hsl(0, 0%, 0%);
-  --primary-foreground: hsl(0, 0%, 100%);
+  --primary: hsl(45, 100%, 53%);
+  --primary-foreground: hsl(0, 0%, 18%);
   --secondary: hsl(0, 0%, 94.1%);
-  --secondary-foreground: hsl(0, 0%, 9%);
-  --accent: hsl(0, 0%, 94.1%);
-  --accent-foreground: hsl(0, 0%, 9%);
+  --secondary-foreground: hsl(0, 0%, 18%);
+  --accent: hsl(45, 100%, 53%);
+  --accent-foreground: hsl(0, 0%, 18%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(0, 0%, 20%);
+  --ring: hsl(45, 100%, 53%);
   --radius: 0.5rem;
   
   /* Custom portfolio colors */
+  --vibrant-yellow: hsl(45, 100%, 53%); /* #ffc20f */
+  --dark-grey: hsl(0, 0%, 18%); /* #2e2e2e */
   --deep-black: hsl(0, 0%, 0%);
   --pure-white: hsl(0, 0%, 100%);
   --light-grey: hsl(0, 0%, 89.8%);
@@ -83,6 +85,15 @@
     font-family: 'Source Sans Pro', sans-serif;
   }
 
+  /* Text Colors */
+  .text-vibrant-yellow {
+    color: var(--vibrant-yellow);
+  }
+
+  .text-dark-grey {
+    color: var(--dark-grey);
+  }
+
   .text-deep-black {
     color: var(--deep-black);
   }
@@ -97,6 +108,15 @@
 
   .text-charcoal {
     color: var(--charcoal);
+  }
+
+  /* Background Colors */
+  .bg-vibrant-yellow {
+    background-color: var(--vibrant-yellow);
+  }
+
+  .bg-dark-grey {
+    background-color: var(--dark-grey);
   }
 
   .bg-deep-black {
@@ -115,8 +135,26 @@
     background-color: var(--soft-grey);
   }
 
+  /* Border Colors */
+  .border-vibrant-yellow {
+    border-color: var(--vibrant-yellow);
+  }
+
+  .border-dark-grey {
+    border-color: var(--dark-grey);
+  }
+
   .border-light-grey {
     border-color: var(--light-grey);
+  }
+
+  /* Hover States */
+  .hover\:bg-vibrant-yellow:hover {
+    background-color: var(--vibrant-yellow);
+  }
+
+  .hover\:bg-dark-grey:hover {
+    background-color: var(--dark-grey);
   }
 
   .hover\:bg-charcoal:hover {
@@ -125,6 +163,23 @@
 
   .hover\:bg-soft-grey:hover {
     background-color: var(--soft-grey);
+  }
+
+  .hover\:text-vibrant-yellow:hover {
+    color: var(--vibrant-yellow);
+  }
+
+  .hover\:text-dark-grey:hover {
+    color: var(--dark-grey);
+  }
+
+  /* Focus States */
+  .focus\:border-vibrant-yellow:focus {
+    border-color: var(--vibrant-yellow);
+  }
+
+  .focus\:border-dark-grey:focus {
+    border-color: var(--dark-grey);
   }
 
   .focus\:border-deep-black:focus {

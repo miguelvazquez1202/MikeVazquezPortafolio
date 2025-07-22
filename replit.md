@@ -29,8 +29,9 @@ Preferred communication style: Simple, everyday language.
 
 ### Design System
 - **Typography**: Google Fonts (Playfair Display, Montserrat, Source Sans Pro)
-- **Color Scheme**: Neutral palette with custom CSS variables for theming
-- **Style Guide**: "New York" variant from shadcn/ui
+- **Color Scheme**: Updated palette featuring vibrant yellow (#ffc20f) and dark grey (#2e2e2e) with custom CSS variables
+- **Primary Colors**: Vibrant Yellow (#ffc20f), Dark Grey (#2e2e2e), Pure White, Deep Black
+- **Style Guide**: "New York" variant from shadcn/ui with custom color overrides
 - **Responsive Design**: Mobile-first approach with Tailwind breakpoints
 
 ## Key Components

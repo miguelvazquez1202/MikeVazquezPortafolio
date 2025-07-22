@@ -49,7 +49,7 @@ export default function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-playfair text-2xl font-semibold text-deep-black cursor-pointer"
+            className="font-playfair text-2xl font-semibold text-dark-grey cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
             Alex Martinez
@@ -64,7 +64,7 @@ export default function Navigation() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index, duration: 0.6 }}
                 onClick={() => scrollToSection(item.id)}
-                className="text-charcoal hover:text-deep-black transition-colors duration-200 font-montserrat font-medium"
+                className="text-charcoal hover:text-vibrant-yellow transition-colors duration-200 font-montserrat font-medium"
               >
                 {item.label}
               </motion.button>
@@ -75,7 +75,7 @@ export default function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-charcoal hover:text-deep-black"
+            className="md:hidden text-charcoal hover:text-vibrant-yellow"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,7 +100,7 @@ export default function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 * index, duration: 0.3 }}
                     onClick={() => scrollToSection(item.id)}
-                    className="text-left text-charcoal hover:text-deep-black transition-colors duration-200 font-montserrat font-medium py-2"
+                    className="text-left text-charcoal hover:text-vibrant-yellow transition-colors duration-200 font-montserrat font-medium py-2"
                   >
                     {item.label}
                   </motion.button>

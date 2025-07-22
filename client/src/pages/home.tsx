@@ -43,7 +43,7 @@ export default function Home() {
       <AboutSection />
       <ContactSection />
       
-      <footer className="bg-deep-black text-pure-white py-12">
+      <footer className="bg-dark-grey text-pure-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center space-y-6">
             <div className="font-playfair text-3xl font-semibold">
@@ -52,7 +52,7 @@ export default function Home() {
             <p className="font-source text-light-grey max-w-2xl mx-auto">
               Professional photographer and filmmaker capturing life's most beautiful moments with artistic vision and technical expertise.
             </p>
-            <div className="border-t border-charcoal pt-6 text-sm text-light-grey">
+            <div className="border-t border-vibrant-yellow/30 pt-6 text-sm text-light-grey">
               <p>&copy; 2024 Alex Martinez Photography. All rights reserved.</p>
             </div>
           </div>
