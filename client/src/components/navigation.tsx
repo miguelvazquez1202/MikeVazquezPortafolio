@@ -26,12 +26,12 @@ export default function Navigation() {
 
   const navItems = [
     { label: "Home", id: "home" },
-    { label: "Concerts", id: "conciertos" },
-    { label: "Social Events", id: "sociales" },
-    { label: "Portraits", id: "retratos" },
+    { label: "Concerts", id: "concerts" },
+    { label: "Social Events", id: "socials" },
+    { label: "Portraits", id: "portraits" },
     { label: "Demo Reel", id: "demo-reel" },
     { label: "About", id: "about" },
-    { label: "Contact", id: "contacto" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
