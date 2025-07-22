@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 20%);
+  --muted: hsl(0, 0%, 89.8%);
+  --muted-foreground: hsl(0, 0%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 20%);
+  --border: hsl(0, 0%, 89.8%);
+  --input: hsl(0, 0%, 89.8%);
+  --primary: hsl(0, 0%, 0%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(0, 0%, 94.1%);
+  --secondary-foreground: hsl(0, 0%, 9%);
+  --accent: hsl(0, 0%, 94.1%);
+  --accent-foreground: hsl(0, 0%, 9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(0, 0%, 20%);
+  --radius: 0.5rem;
+  
+  /* Custom portfolio colors */
+  --deep-black: hsl(0, 0%, 0%);
+  --pure-white: hsl(0, 0%, 100%);
+  --light-grey: hsl(0, 0%, 89.8%);
+  --charcoal: hsl(0, 0%, 20%);
+  --soft-grey: hsl(0, 0%, 94.1%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-source antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-source {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .text-deep-black {
+    color: var(--deep-black);
+  }
+
+  .text-pure-white {
+    color: var(--pure-white);
+  }
+
+  .text-light-grey {
+    color: var(--light-grey);
+  }
+
+  .text-charcoal {
+    color: var(--charcoal);
+  }
+
+  .bg-deep-black {
+    background-color: var(--deep-black);
+  }
+
+  .bg-pure-white {
+    background-color: var(--pure-white);
+  }
+
+  .bg-light-grey {
+    background-color: var(--light-grey);
+  }
+
+  .bg-soft-grey {
+    background-color: var(--soft-grey);
+  }
+
+  .border-light-grey {
+    border-color: var(--light-grey);
+  }
+
+  .hover\:bg-charcoal:hover {
+    background-color: var(--charcoal);
+  }
+
+  .hover\:bg-soft-grey:hover {
+    background-color: var(--soft-grey);
+  }
+
+  .focus\:border-deep-black:focus {
+    border-color: var(--deep-black);
+  }
+}
