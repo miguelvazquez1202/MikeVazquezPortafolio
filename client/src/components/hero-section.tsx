@@ -29,7 +29,8 @@ export default function HeroSection() {
           className="font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
           Capturando los<br />
-          <span className="text-vibrant-yellow">Momentos Únicos</span> de la Vida
+          <span className="text-vibrant-yellow">Momentos Únicos</span><br />
+          de la Vida
         </motion.h1>
 
         <motion.p
