@@ -29,7 +29,7 @@ export default function Navigation() {
     { label: "Conciertos", id: "concerts" },
     { label: "Eventos Sociales", id: "socials" },
     { label: "Retratos", id: "portraits" },
-    { label: "Reel Demo", id: "demo-reel" },
+    { label: "Demo Reel", id: "demo-reel" },
     { label: "Acerca de", id: "about" },
     { label: "Contacto", id: "contact" },
   ];

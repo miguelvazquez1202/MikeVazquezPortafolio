@@ -101,13 +101,13 @@ export const portraitImages: GalleryImage[] = [
 export const demoReelVideos: VideoItem[] = [
   {
     id: 'video-1',
-    title: 'Reel Demo Destacado',
+    title: 'Demo Reel Destacado',
     description: 'Muestra cinematográfica de mi trabajo de filmación',
     thumbnailSrc: 'https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
   },
   {
     id: 'video-2',
-    title: 'Reel de Bodas',
+    title: 'Demo Reel de Bodas',
     description: 'Muestra de narrativa romántica',
     thumbnailSrc: 'https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
   },

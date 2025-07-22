@@ -22,7 +22,7 @@ export default function ServicesOverview() {
       target: "portraits"
     },
     {
-      title: "Reel Demo",
+      title: "Demo Reel",
       description: "Videos cinematográficos y producciones",
       image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
       target: "demo-reel"

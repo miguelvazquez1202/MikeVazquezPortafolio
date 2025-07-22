@@ -21,7 +21,7 @@ export default function DemoReelSection() {
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-            Reel Demo
+            Demo Reel
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
             Narrativa cinematográfica a través de producciones audiovisuales y videos
