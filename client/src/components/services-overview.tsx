@@ -22,6 +22,12 @@ export default function ServicesOverview() {
       target: "portraits"
     },
     {
+      title: "Videoclips",
+      description: "Producciones musicales para artistas emergentes y establecidos",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      target: "videoclips"
+    },
+    {
       title: "Demo Reel",
       description: "Videos cinematográficos y producciones",
       image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
@@ -54,7 +60,7 @@ export default function ServicesOverview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

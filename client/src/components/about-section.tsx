@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Music, Heart, User, Video, Download } from "lucide-react";
+import { Music, Heart, User, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
@@ -17,10 +17,7 @@ export default function AboutSection() {
     }
   };
 
-  const handleDownloadPortfolio = () => {
-    // In a real implementation, this would trigger a portfolio PDF download
-    console.log("Downloading portfolio...");
-  };
+
 
   return (
     <section id="about" className="py-20 bg-soft-grey">
@@ -106,14 +103,6 @@ export default function AboutSection() {
                 className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
               >
                 Contrátame
-              </Button>
-              <Button
-                variant="outline"
-                onClick={handleDownloadPortfolio}
-                className="border-2 border-vibrant-yellow text-vibrant-yellow px-8 py-4 font-montserrat font-semibold hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-300 text-lg h-auto"
-              >
-                <Download size={20} className="mr-2" />
-                Descargar Portafolio
               </Button>
             </motion.div>
           </motion.div>
