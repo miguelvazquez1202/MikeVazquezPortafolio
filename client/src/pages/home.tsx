@@ -51,13 +51,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center space-y-6">
             <div className="font-playfair text-3xl font-semibold">
-              Alex Martinez
+              Mike Vázquez
             </div>
             <p className="font-source text-light-grey max-w-2xl mx-auto">
-              Fotógrafo y cineasta profesional capturando los momentos más hermosos de la vida con visión artística y experiencia técnica.
+              Fotógrafo y cineasta capturando los momentos únicos de la vida con visión artística y experiencia técnica.
             </p>
             <div className="border-t border-vibrant-yellow/30 pt-6 text-sm text-light-grey">
-              <p>&copy; 2024 Alex Martinez Photography. Todos los derechos reservados.</p>
+              <p>&copy; 2025 Hello Hi Producciones. Todos los derechos reservados.</p>
             </div>
           </div>
         </div>

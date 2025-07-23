@@ -74,19 +74,19 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Correo",
-      value: "alex@alexmartinez.photo",
-      href: "mailto:alex@alexmartinez.photo",
+      value: "miguelvazquez1202@gmail.com",
+      href: "mailto:miguelvazquez1202@gmail.com",
     },
     {
       icon: Phone,
       label: "Teléfono",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+52 55 3726 4582",
+      href: "tel:+525537264582",
     },
     {
       icon: MapPin,
       label: "Ubicación",
-      value: "Los Ángeles, California",
+      value: "Ciudad de México",
       href: null,
     },
   ];
