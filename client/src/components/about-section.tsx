@@ -32,7 +32,7 @@ export default function AboutSection() {
           >
             <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000"
-              alt="Alex Martinez professional photographer headshot"
+              alt="Mike Vázquez professional photographer headshot"
               className="w-full h-auto rounded-lg shadow-2xl"
             />
             <div className="absolute -top-4 -left-4 w-full h-full border-4 border-vibrant-yellow rounded-lg -z-10" />
@@ -47,17 +47,23 @@ export default function AboutSection() {
           >
             <div>
               <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-                Acerca de Alex Martinez
+                Acerca de Mike Vázquez
               </h2>
               <div className="space-y-6 font-source text-lg text-charcoal leading-relaxed">
                 <p>
-                  Con más de 8 años de experiencia en fotografía y cinematografía, me especializo en capturar las emociones auténticas y los momentos memorables que definen los eventos más importantes de la vida.
+                  Con más de una década de experiencia en la producción audiovisual, especializado en capturar emociones genuinas y contar historias auténticas a través de la fotografía y el video. Cada imagen debe hablar por sí sola, y cada secuencia debe transmitir una sola cosa: EMOCIÓN.
                 </p>
                 <p>
-                  Mi trabajo abarca desde sesiones íntimas de retratos hasta producciones de conciertos a gran escala, siempre con enfoque en la narrativa a través del arte visual. Creo que cada fotografía debe contar una historia y cada video debe evocar emociones.
+                  Ha trabajado desde la dirección y realización hasta la edición y postproducción, con un enfoque narrativo que pone al centro lo más importante: las personas y sus momentos irrepetibles. Ha colaborado en proyectos que van desde retratos íntimos hasta conciertos y producciones de gran escala.
                 </p>
                 <p>
-                  Radicado en Los Ángeles, he tenido el privilegio de trabajar con clientes diversos, desde músicos emergentes hasta empresas Fortune 500, siempre entregando excelencia creativa y servicio profesional.
+                  Cofundador de Hello Hi Producciones, una productora donde la calidad visual y la narrativa emocional se encuentran para ofrecer contenido con identidad y propósito.
+                </p>
+                <p>
+                  Radica en la Ciudad de México, pero su trabajo ha viajado lejos: ha colaborado con clientes en Estados Unidos, Europa, Nueva Zelanda y todo México. Entre los proyectos más destacados están campañas para marcas como Coca-Cola, Nescafé, Johnson & Johnson, y producciones junto a artistas como Reyli Barba, Pandora y Ana Bárbara.
+                </p>
+                <p>
+                  Un apasionado del arte visual que conecta, que emociona y que deja huella. Su compromiso es claro: ofrecer excelencia creativa, profesionalismo absoluto y resultados que cuenten una historia que valga la pena recordar.
                 </p>
               </div>
             </div>
