@@ -21,7 +21,7 @@ export default function PhotographyCategories() {
       icon: User,
       color: 'bg-vibrant-yellow',
       images: [
-        'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_south,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg'
+        'https://res.cloudinary.com/dq0ogehwz/image/upload/c_crop,w_400,h_300,x_0,y_150,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg'
       ]
     },
     {
