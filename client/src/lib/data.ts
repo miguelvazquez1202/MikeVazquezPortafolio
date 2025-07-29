@@ -101,8 +101,9 @@ export const demoReelVideos: VideoItem[] = [
   },
   {
     id: 'video-4',
-    title: 'Video Musical',
-    description: 'Colaboración visual artística',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+    title: 'Salvatierra',
+    description: 'Producción cinematográfica original',
+    thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770686/Salvatierra_V1_mncehb.jpg',
+    videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770686/Salvatierra_V1_mncehb.mp4'
   }
 ];
