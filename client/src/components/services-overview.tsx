@@ -18,7 +18,7 @@ export default function ServicesOverview() {
     {
       title: "Fotografía",
       description: "Retratos profesionales y hasta paisajes hermosos",
-      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/DSC03844_rwfsa7.jpg",
+      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_north,q_auto,f_auto/v1753764613/WEB-08_i87yky.jpg",
       target: "portraits"
     },
     {
