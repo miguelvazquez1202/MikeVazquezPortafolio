@@ -67,8 +67,8 @@ export const portraitImages: GalleryImage[] = [
   },
   {
     id: 'portrait-2',
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Retrato creativo con iluminación artística',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
+    alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   },
   {
