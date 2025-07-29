@@ -6,7 +6,7 @@ export default function ServicesOverview() {
     {
       title: "Fotografía de Conciertos",
       description: "Eventos de música en vivo y presentaciones",
-      image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753763272/WEB-03_a3iisf.jpg",
       target: "concerts"
     },
     {
