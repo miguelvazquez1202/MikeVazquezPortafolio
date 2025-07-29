@@ -285,9 +285,6 @@ export default function ConcertsGallery() {
                   {/* Efecto de brillo */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   
-                  {/* Indicador visual */}
-                  <div className="absolute top-4 right-4 w-4 h-4 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-pulse" />
-                  
                   {/* Interactive Controls */}
                   <AnimatePresence>
                     {hoveredImage === image.id && (
