@@ -28,10 +28,10 @@ export default function ServicesOverview() {
       target: "videoclips"
     },
     {
-      title: "Demo Reel",
-      description: "Videos cinematográficos y producciones",
-      image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      target: "demo-reel"
+      title: "Para Empresas",
+      description: "Contenido corporativo y campañas comerciales",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      target: "corporate"
     }
   ];
 
@@ -56,7 +56,7 @@ export default function ServicesOverview() {
             Servicios Creativos
           </h2>
           <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
-            Desde retratos íntimos hasta eventos a gran escala, capturo la esencia de cada momento con visión artística y experiencia técnica
+            Desde retratos fotográficos hasta eventos a gran escala, capturo la esencia de cada momento con visión artística y experiencia técnica
           </p>
         </motion.div>
 

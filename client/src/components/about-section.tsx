@@ -51,13 +51,10 @@ export default function AboutSection() {
               </h2>
               <div className="space-y-6 font-source text-lg text-charcoal leading-relaxed">
                 <p>
-                  Con más de una década de experiencia en la producción audiovisual, especializado en capturar emociones genuinas y contar historias auténticas a través de la fotografía y el video. Cada imagen debe hablar por sí sola, y cada secuencia debe transmitir una sola cosa: EMOCIÓN.
+                  Cada imagen debe hablar por sí sola, y cada secuencia debe transmitir una sola cosa: EMOCIÓN.
                 </p>
                 <p>
-                  Ha trabajado desde la dirección y realización hasta la edición y postproducción, con un enfoque narrativo que pone al centro lo más importante: las personas y sus momentos irrepetibles. Ha colaborado en proyectos que van desde retratos íntimos hasta conciertos y producciones de gran escala.
-                </p>
-                <p>
-                  Cofundador de Hello Hi Producciones, una productora donde la calidad visual y la narrativa emocional se encuentran para ofrecer contenido con identidad y propósito.
+                  Con más de 10 años de experiencia en la industria audiovisual, ha trabajado desde la dirección, realización hasta la edición y postproducción, con un enfoque narrativo que pone al centro lo más importante: las personas y sus momentos irrepetibles. Ha producido proyectos que van desde retratos hasta conciertos y producciones de gran escala.
                 </p>
                 <p>
                   Radica en la Ciudad de México, pero su trabajo ha viajado lejos: ha colaborado con clientes en Estados Unidos, Europa, Nueva Zelanda y todo México. Entre los proyectos más destacados están campañas para marcas como Coca-Cola, Nescafé, Johnson & Johnson, y producciones junto a artistas como Reyli Barba, Pandora y Ana Bárbara.
