@@ -18,7 +18,7 @@ export default function HeroSection() {
           backgroundImage: `url('https://res.cloudinary.com/dq0ogehwz/image/upload/DSC00379_p6qglu.jpg')`
         }}
       />
-      <div className="absolute inset-0 bg-dark-grey/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-grey/70 via-dark-grey/60 to-dark-grey/80" />
 
       {/* Content */}
       <div className="relative z-10 text-center text-pure-white max-w-4xl mx-auto px-6">
@@ -26,10 +26,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          className="font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-2xl"
+          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
         >
           Capturando los<br />
-          <span className="text-vibrant-yellow">Momentos Únicos</span><br />
+          <span className="text-vibrant-yellow drop-shadow-2xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)' }}>Momentos Únicos</span><br />
           de la Vida
         </motion.h1>
 
@@ -37,7 +38,8 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="font-montserrat text-xl md:text-2xl mb-8 font-light opacity-90"
+          className="font-montserrat text-xl md:text-2xl mb-8 font-light opacity-95 drop-shadow-lg"
+          style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)' }}
         >
           Fotógrafo y cineasta profesional especializado en conciertos, eventos sociales y narrativa cinematográfica
         </motion.p>
