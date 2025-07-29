@@ -17,26 +17,20 @@ export interface VideoItem {
 export const concertImages: GalleryImage[] = [
   {
     id: 'concert-1',
-    src: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Concierto de rock con guitarrista silueteado contra las luces del escenario',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/WEB-04_ehov0y.jpg',
+    alt: 'Fotografía profesional de concierto capturando la energía del escenario',
     category: 'concert'
   },
   {
     id: 'concert-2',
-    src: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Artista solista en el escenario con foco de luz',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/DSC00165_varofk.jpg',
+    alt: 'Artista en presentación en vivo con iluminación dramática',
     category: 'concert'
   },
   {
     id: 'concert-3',
-    src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Multitud de concierto con manos alzadas',
-    category: 'concert'
-  },
-  {
-    id: 'concert-4',
-    src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Presentación de DJ con iluminación colorida del escenario',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753762141/DSC00944-Enhanced-NR_jscfcx.jpg',
+    alt: 'Momento único de presentación musical con efectos de iluminación',
     category: 'concert'
   }
 ];
