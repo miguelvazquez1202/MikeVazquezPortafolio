@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GalleryImage } from "@/lib/data";
+import { Link } from "wouter";
 
 interface GallerySectionProps {
   id: string;
@@ -67,11 +68,18 @@ export default function GallerySection({ id, title, description, images, bgColor
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
-              {title === "Fotografía de Conciertos" ? "Ver Más Fotos de Conciertos" :
-               title === "Eventos Sociales" ? "Ver Más Fotos de Eventos Sociales" :
-               `Ver Más Fotos de ${title.split(' ')[0]}`}
-            </Button>
+            {title === "Fotografía de Conciertos" ? (
+              <Link href="/conciertos">
+                <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
+                  Ver Más Fotos de Conciertos
+                </Button>
+              </Link>
+            ) : (
+              <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
+                {title === "Eventos Sociales" ? "Ver Más Fotos de Eventos Sociales" :
+                 `Ver Más Fotos de ${title.split(' ')[0]}`}
+              </Button>
+            )}
           </motion.div>
         )}
       </div>
