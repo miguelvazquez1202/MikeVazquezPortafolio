@@ -106,6 +106,8 @@ export default function DemoReelSection() {
               <video
                 controls
                 autoPlay
+                controlsList="nodownload"
+                disablePictureInPicture
                 className="w-full h-auto"
                 src={selectedVideo.videoUrl}
               >
