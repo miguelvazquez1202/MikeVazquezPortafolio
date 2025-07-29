@@ -18,7 +18,7 @@ export default function HeroSection() {
           backgroundImage: `url('https://res.cloudinary.com/dq0ogehwz/image/upload/DSC00379_p6qglu.jpg')`
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-dark-grey/75 to-black/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-dark-grey/55 to-black/70" />
 
       {/* Content */}
       <div className="relative z-10 text-center text-pure-white max-w-4xl mx-auto px-6">
