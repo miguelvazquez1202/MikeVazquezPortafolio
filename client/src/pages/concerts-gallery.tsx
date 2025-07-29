@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, X, Heart, Share2, Download, Filter, Grid, Columns } from 'lucide-react';
+import { ArrowLeft, X, Heart, Share2, Download } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 
@@ -53,9 +53,6 @@ export default function ConcertsGallery() {
   const [selectedImage, setSelectedImage] = useState<ConcertImage | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
-  const [layoutMode, setLayoutMode] = useState<'masonry' | 'grid'>('masonry');
-  const [filterTag, setFilterTag] = useState<string>('all');
-  const [isLoading, setIsLoading] = useState(false);
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const openLightbox = (image: ConcertImage, index: number) => {
@@ -198,31 +195,9 @@ export default function ConcertsGallery() {
       <section className="py-8 bg-soft-grey/50 border-b border-soft-grey">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center space-x-4">
-              <h3 className="font-montserrat font-semibold text-dark-grey">
-                {concertGalleryImages.length} Fotografías
-              </h3>
-              <div className="flex items-center space-x-2">
-                <Button
-                  variant={layoutMode === 'masonry' ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setLayoutMode('masonry')}
-                  className="text-xs"
-                >
-                  <Columns size={16} className="mr-1" />
-                  Masonry
-                </Button>
-                <Button
-                  variant={layoutMode === 'grid' ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setLayoutMode('grid')}
-                  className="text-xs"
-                >
-                  <Grid size={16} className="mr-1" />
-                  Grid
-                </Button>
-              </div>
-            </div>
+            <h3 className="font-montserrat font-semibold text-dark-grey">
+              {concertGalleryImages.length} Fotografías
+            </h3>
             
             <div className="flex items-center space-x-2 text-sm text-dark-grey/70">
               <Heart size={16} />
@@ -236,14 +211,10 @@ export default function ConcertsGallery() {
       <section className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            key={layoutMode}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className={layoutMode === 'masonry' 
-              ? "columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
-              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-            }
+            className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
           >
             {concertGalleryImages.map((image, index) => {
               // Crear variaciones de altura para efecto masonry más dinámico
@@ -265,11 +236,7 @@ export default function ConcertsGallery() {
                     type: "spring",
                     stiffness: 100 
                   }}
-                  className={`relative group cursor-pointer ${
-                    layoutMode === 'masonry' 
-                      ? (isFeatureImage ? 'h-96 ring-2 ring-vibrant-yellow/30' : randomHeight) + ' mb-6 break-inside-avoid'
-                      : 'aspect-square'
-                  } overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-rotate-1 hover:scale-105 ${isFeatureImage ? 'hover:ring-vibrant-yellow/60' : ''}`}
+                  className={`relative group cursor-pointer ${isFeatureImage ? 'h-96 ring-2 ring-vibrant-yellow/30' : randomHeight} mb-6 break-inside-avoid overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-rotate-1 hover:scale-105 ${isFeatureImage ? 'hover:ring-vibrant-yellow/60' : ''}`}
                   onClick={() => openLightbox(image, index)}
                   onMouseEnter={() => setHoveredImage(image.id)}
                   onMouseLeave={() => setHoveredImage(null)}
