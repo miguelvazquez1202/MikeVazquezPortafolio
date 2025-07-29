@@ -177,7 +177,7 @@ export default function ConcertsGallery() {
               className="font-montserrat text-xl text-dark-grey/80 max-w-3xl mx-auto leading-relaxed mb-8"
             >
               Capturando la energía, emoción y arte de las presentaciones musicales en vivo. 
-              Una colección de <span className="text-vibrant-yellow font-semibold">{concertGalleryImages.length} momentos únicos</span> que definen la experiencia musical.
+              Una colección de <span className="text-vibrant-yellow font-semibold">momentos únicos</span> que definen la experiencia musical.
             </motion.p>
 
             <motion.div
