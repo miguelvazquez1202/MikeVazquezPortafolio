@@ -1,13 +1,24 @@
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { demoReelVideos } from "@/lib/data";
+import { demoReelVideos, VideoItem } from "@/lib/data";
+import { useState } from "react";
 
 export default function DemoReelSection() {
+  const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
+
   const handleVideoClick = (videoId: string) => {
-    // In a real implementation, this would open a video player modal
-    console.log(`Playing video: ${videoId}`);
+    const video = demoReelVideos.find(v => v.id === videoId);
+    if (video && video.videoUrl) {
+      setSelectedVideo(video);
+    } else {
+      console.log(`Playing video: ${videoId}`);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedVideo(null);
   };
 
   return (
@@ -80,6 +91,38 @@ export default function DemoReelSection() {
           </Button>
         </motion.div>
       </div>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+          <div className="relative w-full max-w-4xl">
+            <button
+              onClick={closeModal}
+              className="absolute -top-12 right-0 text-white hover:text-vibrant-yellow transition-colors"
+            >
+              <X size={32} />
+            </button>
+            <div className="bg-black rounded-lg overflow-hidden">
+              <video
+                controls
+                autoPlay
+                className="w-full h-auto"
+                src={selectedVideo.videoUrl}
+              >
+                Tu navegador no soporta la reproducción de video.
+              </video>
+              <div className="p-6 text-white">
+                <h3 className="font-playfair text-2xl font-semibold mb-2">
+                  {selectedVideo.title}
+                </h3>
+                <p className="font-montserrat text-lg opacity-90">
+                  {selectedVideo.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
