@@ -51,8 +51,8 @@ export const socialImages: GalleryImage[] = [
   },
   {
     id: 'social-3',
-    src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Celebración de cumpleaños con pastel',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753769823/WEB-14_fia6sz.jpg',
+    alt: 'Evento social profesional capturado por Mike Vázquez',
     category: 'social'
   }
 ];
