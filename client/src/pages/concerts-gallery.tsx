@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, X, Heart, Share2, Download, Filter, Grid, Columns } from 'lucide-react';
 import { Link } from 'wouter';
+import { Button } from '@/components/ui/button';
 
 interface ConcertImage {
   id: string;
@@ -51,6 +52,11 @@ const concertGalleryImages: ConcertImage[] = [
 export default function ConcertsGallery() {
   const [selectedImage, setSelectedImage] = useState<ConcertImage | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
+  const [layoutMode, setLayoutMode] = useState<'masonry' | 'grid'>('masonry');
+  const [filterTag, setFilterTag] = useState<string>('all');
+  const [isLoading, setIsLoading] = useState(false);
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const openLightbox = (image: ConcertImage, index: number) => {
     setSelectedImage(image);
@@ -72,6 +78,52 @@ export default function ConcertsGallery() {
     setSelectedImage(concertGalleryImages[prevIndex]);
     setCurrentIndex(prevIndex);
   };
+
+  const toggleLike = (imageId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setLikedImages(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(imageId)) {
+        newSet.delete(imageId);
+      } else {
+        newSet.add(imageId);
+      }
+      return newSet;
+    });
+  };
+
+  const shareImage = (image: ConcertImage, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (navigator.share) {
+      navigator.share({
+        title: `Fotografía de Concierto - ${image.alt}`,
+        url: window.location.href,
+      });
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+    }
+  };
+
+  const downloadImage = (image: ConcertImage, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const link = document.createElement('a');
+    link.href = `https://res.cloudinary.com/dq0ogehwz/image/upload/fl_attachment/${image.id}.jpg`;
+    link.download = `concierto-${image.id}.jpg`;
+    link.click();
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (selectedImage) {
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') closeLightbox();
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [selectedImage, currentIndex]);
 
   return (
     <div className="min-h-screen bg-pure-white">
@@ -142,14 +194,56 @@ export default function ConcertsGallery() {
         </div>
       </section>
 
+      {/* Controls Bar */}
+      <section className="py-8 bg-soft-grey/50 border-b border-soft-grey">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center space-x-4">
+              <h3 className="font-montserrat font-semibold text-dark-grey">
+                {concertGalleryImages.length} Fotografías
+              </h3>
+              <div className="flex items-center space-x-2">
+                <Button
+                  variant={layoutMode === 'masonry' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setLayoutMode('masonry')}
+                  className="text-xs"
+                >
+                  <Columns size={16} className="mr-1" />
+                  Masonry
+                </Button>
+                <Button
+                  variant={layoutMode === 'grid' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setLayoutMode('grid')}
+                  className="text-xs"
+                >
+                  <Grid size={16} className="mr-1" />
+                  Grid
+                </Button>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-2 text-sm text-dark-grey/70">
+              <Heart size={16} />
+              <span>{likedImages.size} favoritas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Grid */}
       <section className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+            key={layoutMode}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className={layoutMode === 'masonry' 
+              ? "columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            }
           >
             {concertGalleryImages.map((image, index) => {
               // Crear variaciones de altura para efecto masonry más dinámico
@@ -171,8 +265,14 @@ export default function ConcertsGallery() {
                     type: "spring",
                     stiffness: 100 
                   }}
-                  className={`relative group cursor-pointer ${isFeatureImage ? 'h-96 ring-2 ring-vibrant-yellow/30' : randomHeight} mb-6 break-inside-avoid overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-rotate-1 hover:scale-105 ${isFeatureImage ? 'hover:ring-vibrant-yellow/60' : ''}`}
+                  className={`relative group cursor-pointer ${
+                    layoutMode === 'masonry' 
+                      ? (isFeatureImage ? 'h-96 ring-2 ring-vibrant-yellow/30' : randomHeight) + ' mb-6 break-inside-avoid'
+                      : 'aspect-square'
+                  } overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-rotate-1 hover:scale-105 ${isFeatureImage ? 'hover:ring-vibrant-yellow/60' : ''}`}
                   onClick={() => openLightbox(image, index)}
+                  onMouseEnter={() => setHoveredImage(image.id)}
+                  onMouseLeave={() => setHoveredImage(null)}
                   style={{
                     backgroundImage: `url(https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_500,h_600,g_center,q_auto,f_auto/${image.id}.jpg)`,
                     backgroundSize: 'cover',
@@ -188,10 +288,48 @@ export default function ConcertsGallery() {
                   {/* Indicador visual */}
                   <div className="absolute top-4 right-4 w-4 h-4 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-pulse" />
                   
+                  {/* Interactive Controls */}
+                  <AnimatePresence>
+                    {hoveredImage === image.id && (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        className="absolute top-4 left-4 flex space-x-2"
+                      >
+                        <button
+                          onClick={(e) => toggleLike(image.id, e)}
+                          className={`p-2 rounded-full backdrop-blur-sm transition-all duration-200 ${
+                            likedImages.has(image.id) 
+                              ? 'bg-red-500 text-white' 
+                              : 'bg-white/20 text-white hover:bg-white/30'
+                          }`}
+                        >
+                          <Heart size={16} fill={likedImages.has(image.id) ? 'currentColor' : 'none'} />
+                        </button>
+                        <button
+                          onClick={(e) => shareImage(image, e)}
+                          className="p-2 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-200"
+                        >
+                          <Share2 size={16} />
+                        </button>
+                        <button
+                          onClick={(e) => downloadImage(image, e)}
+                          className="p-2 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-200"
+                        >
+                          <Download size={16} />
+                        </button>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
                   {/* Texto overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="font-montserrat text-sm opacity-90">
-                      Fotografía {index + 1} de {concertGalleryImages.length}
+                    <div className="font-montserrat text-sm opacity-90 flex items-center justify-between">
+                      <span>Fotografía {index + 1} de {concertGalleryImages.length}</span>
+                      {likedImages.has(image.id) && (
+                        <Heart size={14} className="text-red-400 fill-current" />
+                      )}
                     </div>
                   </div>
                   
@@ -204,44 +342,95 @@ export default function ConcertsGallery() {
         </div>
       </section>
 
-      {/* Lightbox */}
-      {selectedImage && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center">
-          <button
+      {/* Enhanced Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white hover:text-vibrant-yellow transition-colors"
           >
-            <X size={32} />
-          </button>
-          
-          <button
-            onClick={prevImage}
-            className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-vibrant-yellow transition-colors"
-          >
-            <ArrowLeft size={32} />
-          </button>
-          
-          <button
-            onClick={nextImage}
-            className="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-vibrant-yellow transition-colors rotate-180"
-          >
-            <ArrowLeft size={32} />
-          </button>
-
-          <div className="max-w-4xl max-h-[80vh] mx-auto px-6">
-            <img
-              src={`https://res.cloudinary.com/dq0ogehwz/image/upload/c_fit,w_1200,h_800,q_auto,f_auto/${selectedImage.id}.jpg`}
-              alt={selectedImage.alt}
-              className="max-w-full max-h-full object-contain"
-            />
-            <div className="text-center mt-4">
-              <p className="text-white/80 font-montserrat">
-                {currentIndex + 1} de {concertGalleryImages.length}
-              </p>
+            {/* Top Controls */}
+            <div className="absolute top-6 left-6 right-6 flex items-center justify-between z-10">
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={(e) => { e.stopPropagation(); toggleLike(selectedImage.id, e); }}
+                  className={`p-3 rounded-full backdrop-blur-sm transition-all duration-200 ${
+                    likedImages.has(selectedImage.id) 
+                      ? 'bg-red-500 text-white' 
+                      : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
+                  <Heart size={20} fill={likedImages.has(selectedImage.id) ? 'currentColor' : 'none'} />
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); shareImage(selectedImage, e); }}
+                  className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm transition-all duration-200"
+                >
+                  <Share2 size={20} />
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); downloadImage(selectedImage, e); }}
+                  className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm transition-all duration-200"
+                >
+                  <Download size={20} />
+                </button>
+              </div>
+              
+              <button
+                onClick={closeLightbox}
+                className="p-3 rounded-full bg-white/10 text-white hover:text-vibrant-yellow hover:bg-white/20 transition-all duration-200"
+              >
+                <X size={24} />
+              </button>
             </div>
-          </div>
-        </div>
-      )}
+            
+            {/* Navigation Arrows */}
+            <button
+              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              className="absolute left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:text-vibrant-yellow hover:bg-white/20 transition-all duration-200"
+            >
+              <ArrowLeft size={24} />
+            </button>
+            
+            <button
+              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              className="absolute right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:text-vibrant-yellow hover:bg-white/20 transition-all duration-200"
+            >
+              <ArrowLeft size={24} className="rotate-180" />
+            </button>
+
+            {/* Image Container */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="max-w-4xl max-h-[70vh] mx-auto px-6"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={`https://res.cloudinary.com/dq0ogehwz/image/upload/c_fit,w_1200,h_800,q_auto,f_auto/${selectedImage.id}.jpg`}
+                alt={selectedImage.alt}
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
+            </motion.div>
+
+            {/* Bottom Info */}
+            <div className="absolute bottom-6 left-6 right-6 text-center">
+              <div className="bg-black/50 backdrop-blur-sm rounded-lg px-6 py-3 mx-auto inline-block">
+                <p className="text-white font-montserrat mb-1">
+                  {selectedImage.alt}
+                </p>
+                <p className="text-white/60 text-sm font-montserrat">
+                  {currentIndex + 1} de {concertGalleryImages.length} • Usa ← → para navegar
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Contact CTA */}
       <section className="py-20 bg-dark-grey">
