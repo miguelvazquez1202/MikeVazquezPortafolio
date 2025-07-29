@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Play, X } from "lucide-react";
+import { useState } from "react";
 
 interface Videoclip {
   id: string;
@@ -9,58 +10,56 @@ interface Videoclip {
   artist: string;
   category: string;
   thumbnailSrc: string;
-  videoUrl?: string;
+  videoUrl: string;
 }
 
 export default function VideoclipsSection() {
+  const [selectedVideo, setSelectedVideo] = useState<Videoclip | null>(null);
+
   const videoclips: Videoclip[] = [
     {
       id: 'clip-1',
-      title: 'Midnight Dreams',
-      artist: 'Luna Vega',
-      category: 'Artista Independiente',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+      title: 'Hoy Me Alejo',
+      artist: 'Mike Vázquez Production',
+      category: 'Video Musical',
+      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753769477/09._Hoy_Me_Alejo_pvn1fj.jpg',
+      videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769477/09._Hoy_Me_Alejo_pvn1fj.mp4'
     },
     {
       id: 'clip-2',
-      title: 'Electric Nights',
-      artist: 'The Neon Collective',
-      category: 'Banda Emergente',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+      title: 'Contigo Quiero',
+      artist: 'Mike Vázquez Production',  
+      category: 'Video Musical',
+      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753768228/01._Contigo_Quiero_ovikin.jpg',
+      videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753768228/01._Contigo_Quiero_ovikin.mp4'
     },
     {
       id: 'clip-3',
-      title: 'Rise Up',
-      artist: 'Global Star',
-      category: 'Artista Internacional',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+      title: 'Me Salió Cara La Peda',
+      artist: 'Mike Vázquez Production',
+      category: 'Video Musical',
+      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770682/Me_Salio_Cara_La_Peda_Sanjuan_Finalcut_1080P_rcgp8c.jpg',
+      videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770682/Me_Salio_Cara_La_Peda_Sanjuan_Finalcut_1080P_rcgp8c.mp4'
     },
     {
       id: 'clip-4',
-      title: 'Summer Vibes',
-      artist: 'Tropical Beats',
-      category: 'Producción Regional',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
-    },
-    {
-      id: 'clip-5',
-      title: 'Urban Symphony',
-      artist: 'City Lights Orchestra',
-      category: 'Artista Establecido',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
-    },
-    {
-      id: 'clip-6',
-      title: 'Acoustic Soul',
-      artist: 'Maria Rodriguez',
-      category: 'Artista Independiente',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+      title: 'Volvería A Nacer En Pueblo',
+      artist: 'Mike Vázquez Production',
+      category: 'Video Musical',
+      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770679/01._Volveria_A_Nacer_En_Pueblo_Finalcut_xuvrsb.jpg',
+      videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770679/01._Volveria_A_Nacer_En_Pueblo_Finalcut_xuvrsb.mp4'
     }
   ];
 
   const handlePlayVideo = (videoId: string) => {
-    console.log(`Playing videoclip: ${videoId}`);
-    // In a real implementation, this would open a video player modal
+    const video = videoclips.find(v => v.id === videoId);
+    if (video) {
+      setSelectedVideo(video);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedVideo(null);
   };
 
   return (
@@ -136,6 +135,40 @@ export default function VideoclipsSection() {
           </Button>
         </motion.div>
       </div>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+          <div className="relative w-full max-w-4xl">
+            <button
+              onClick={closeModal}
+              className="absolute -top-12 right-0 text-white hover:text-vibrant-yellow transition-colors"
+            >
+              <X size={32} />
+            </button>
+            <div className="bg-black rounded-lg overflow-hidden">
+              <video
+                controls
+                autoPlay
+                controlsList="nodownload"
+                disablePictureInPicture
+                className="w-full h-auto"
+                src={selectedVideo.videoUrl}
+              >
+                Tu navegador no soporta la reproducción de video.
+              </video>
+              <div className="p-6 text-white">
+                <h3 className="font-playfair text-2xl font-semibold mb-2">
+                  {selectedVideo.title}
+                </h3>
+                <p className="font-montserrat text-lg opacity-90">
+                  {selectedVideo.artist}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
