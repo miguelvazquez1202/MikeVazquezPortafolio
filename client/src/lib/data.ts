@@ -73,8 +73,8 @@ export const portraitImages: GalleryImage[] = [
   },
   {
     id: 'portrait-3',
-    src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Retrato natural de estilo de vida',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753764610/WEB-09_si3utl.jpg',
+    alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   }
 ];
