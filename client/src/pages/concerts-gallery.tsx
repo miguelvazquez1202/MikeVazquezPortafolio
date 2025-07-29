@@ -46,7 +46,16 @@ const concertGalleryImages: ConcertImage[] = [
   { id: 'DSC06896_i1zjbb', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762139/DSC06896_i1zjbb.jpg', alt: 'Momento único de conexión artística' },
   { id: 'DSC06928_2_nkwpsj', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762137/DSC06928_2_nkwpsj.jpg', alt: 'Presentación musical documentada profesionalmente' },
   { id: 'DSC07048_ucs39k', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762140/DSC07048_ucs39k.jpg', alt: 'Fotografía de concierto con excelente iluminación' },
-  { id: 'DSC08427_znnrkg', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762134/DSC08427_znnrkg.jpg', alt: 'Artista capturado en momento performático' }
+  { id: 'DSC08427_znnrkg', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762134/DSC08427_znnrkg.jpg', alt: 'Artista capturado en momento performático' },
+  { id: 'WEB-03_a3iisf', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753763272/WEB-03_a3iisf.jpg', alt: 'Fotografía profesional de concierto con iluminación espectacular' },
+  { id: 'WEB-04_ehov0y', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/WEB-04_ehov0y.jpg', alt: 'Momento único capturado en presentación musical' },
+  { id: 'DSC03844_rwfsa7', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/DSC03844_rwfsa7.jpg', alt: 'Retrato artístico durante presentación' },
+  { id: 'DSC00379_hero', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/DSC00379_p6qglu.jpg', alt: 'Concierto con atmósfera cinematográfica' },
+  { id: 'DSC06930_adicional', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762137/DSC06928_2_nkwpsj.jpg', alt: 'Presentación musical con gran energía' },
+  { id: 'DSC03570_extra', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762131/DSC03570_wypjuu.jpg', alt: 'Artista en conexión emocional con el público' },
+  { id: 'DSC01887_adicional', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762144/DSC01887_www5pk.jpg', alt: 'Documentación profesional de evento musical' },
+  { id: 'DSC06517_extra', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762141/DSC06517_aodxjk.jpg', alt: 'Composición artística de presentación en vivo' },
+  { id: 'DSC00944_mejorada', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/v1753762141/DSC00944-Enhanced-NR_jscfcx.jpg', alt: 'Concierto con postproducción avanzada y efectos únicos' }
 ];
 
 export default function ConcertsGallery() {
