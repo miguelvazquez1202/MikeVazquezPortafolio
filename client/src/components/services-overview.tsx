@@ -18,19 +18,19 @@ export default function ServicesOverview() {
     {
       title: "Fotografía",
       description: "Retratos profesionales y hasta paisajes hermosos",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/DSC03844_rwfsa7.jpg",
       target: "portraits"
     },
     {
       title: "Videoclips",
       description: "Producciones musicales para artistas emergentes y establecidos",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/Captura_de_pantalla_2025-07-28_225306_ceq5ce.png",
       target: "videoclips"
     },
     {
       title: "Para Empresas",
       description: "Contenido corporativo y campañas comerciales",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/WEB-07_uwcx8q.jpg",
       target: "corporate"
     }
   ];
