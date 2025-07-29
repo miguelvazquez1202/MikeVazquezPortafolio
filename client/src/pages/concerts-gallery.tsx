@@ -91,21 +91,53 @@ export default function ConcertsGallery() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-soft-grey">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-soft-grey via-pure-white to-soft-grey relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-32 h-32 bg-vibrant-yellow/10 rounded-full blur-xl" />
+        <div className="absolute bottom-0 right-0 w-40 h-40 bg-vibrant-yellow/5 rounded-full blur-2xl" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="font-playfair text-4xl md:text-6xl font-bold text-dark-grey mb-6">
-              Fotografía de <span className="text-vibrant-yellow">Conciertos</span>
-            </h1>
-            <p className="font-montserrat text-xl text-dark-grey/80 max-w-3xl mx-auto leading-relaxed">
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="mb-6"
+            >
+              <h1 className="font-playfair text-4xl md:text-6xl font-bold text-dark-grey mb-2">
+                Fotografía de 
+              </h1>
+              <h1 className="font-playfair text-5xl md:text-7xl font-bold text-vibrant-yellow relative">
+                Conciertos
+                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-vibrant-yellow rounded-full" />
+              </h1>
+            </motion.div>
+            
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="font-montserrat text-xl text-dark-grey/80 max-w-3xl mx-auto leading-relaxed mb-8"
+            >
               Capturando la energía, emoción y arte de las presentaciones musicales en vivo. 
-              Una colección de momentos únicos que definen la experiencia musical.
-            </p>
+              Una colección de <span className="text-vibrant-yellow font-semibold">{concertGalleryImages.length} momentos únicos</span> que definen la experiencia musical.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex items-center justify-center space-x-2 text-dark-grey/60 font-montserrat"
+            >
+              <div className="w-12 h-px bg-vibrant-yellow" />
+              <span>Scroll para explorar</span>
+              <div className="w-12 h-px bg-vibrant-yellow" />
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -117,26 +149,57 @@ export default function ConcertsGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
           >
-            {concertGalleryImages.map((image, index) => (
-              <motion.div
-                key={image.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="relative group cursor-pointer aspect-[4/3] overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                onClick={() => openLightbox(image, index)}
-              >
-                <img
-                  src={`https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/${image.id}.jpg`}
-                  alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-dark-grey/0 group-hover:bg-dark-grey/20 transition-colors duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.div>
-            ))}
+            {concertGalleryImages.map((image, index) => {
+              // Crear variaciones de altura para efecto masonry más dinámico
+              const heightVariations = ['h-64', 'h-80', 'h-96', 'h-72', 'h-60', 'h-88'];
+              const randomHeight = heightVariations[index % heightVariations.length];
+              
+              // Crear elementos destacados especiales cada 8 fotos
+              const isFeatureImage = index % 8 === 0 && index > 0;
+              const featureClass = isFeatureImage ? 'lg:col-span-2 h-96' : randomHeight;
+              
+              return (
+                <motion.div
+                  key={image.id}
+                  initial={{ opacity: 0, y: 30, scale: 0.8 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: index * 0.08,
+                    type: "spring",
+                    stiffness: 100 
+                  }}
+                  className={`relative group cursor-pointer ${isFeatureImage ? 'h-96 ring-2 ring-vibrant-yellow/30' : randomHeight} mb-6 break-inside-avoid overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-rotate-1 hover:scale-105 ${isFeatureImage ? 'hover:ring-vibrant-yellow/60' : ''}`}
+                  onClick={() => openLightbox(image, index)}
+                  style={{
+                    backgroundImage: `url(https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_500,h_600,g_center,q_auto,f_auto/${image.id}.jpg)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                  
+                  {/* Efecto de brillo */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  
+                  {/* Indicador visual */}
+                  <div className="absolute top-4 right-4 w-4 h-4 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 animate-pulse" />
+                  
+                  {/* Texto overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="font-montserrat text-sm opacity-90">
+                      Fotografía {index + 1} de {concertGalleryImages.length}
+                    </div>
+                  </div>
+                  
+                  {/* Border accent */}
+                  <div className="absolute inset-0 border-2 border-vibrant-yellow/0 group-hover:border-vibrant-yellow/50 rounded-2xl transition-all duration-500" />
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
