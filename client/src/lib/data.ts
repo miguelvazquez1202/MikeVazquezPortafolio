@@ -101,8 +101,8 @@ export const demoReelVideos: VideoItem[] = [
   },
   {
     id: 'video-4',
-    title: 'Salvatierra',
-    description: 'Producción cinematográfica original',
+    title: 'Aftermovie - Salvatierra',
+    description: 'Resumen de un concierto de Reyli Barba',
     thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770686/Salvatierra_V1_mncehb.jpg',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770686/Salvatierra_V1_mncehb.mp4'
   }
