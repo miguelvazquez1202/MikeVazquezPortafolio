@@ -54,12 +54,6 @@ export const socialImages: GalleryImage[] = [
     src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
     alt: 'Celebración de cumpleaños con pastel',
     category: 'social'
-  },
-  {
-    id: 'social-4',
-    src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Celebración de ceremonia de graduación',
-    category: 'social'
   }
 ];
 
@@ -81,12 +75,6 @@ export const portraitImages: GalleryImage[] = [
     id: 'portrait-3',
     src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
     alt: 'Retrato natural de estilo de vida',
-    category: 'portrait'
-  },
-  {
-    id: 'portrait-4',
-    src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Retrato corporativo profesional',
     category: 'portrait'
   }
 ];
