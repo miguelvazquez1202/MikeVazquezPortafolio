@@ -10,18 +10,6 @@ export default function ServicesOverview() {
       target: "concerts"
     },
     {
-      title: "Eventos Sociales",
-      description: "Bodas, fiestas y celebraciones",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      target: "socials"
-    },
-    {
-      title: "Fotografía",
-      description: "Retratos profesionales y hasta paisajes hermosos",
-      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753771198/WEB-23_gvup8o.jpg",
-      target: "portraits"
-    },
-    {
       title: "Videoclips",
       description: "Producciones musicales para artistas emergentes y establecidos",
       image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/Captura_de_pantalla_2025-07-28_225306_ceq5ce.png",
@@ -32,6 +20,18 @@ export default function ServicesOverview() {
       description: "Contenido corporativo y campañas comerciales",
       image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/WEB-07_uwcx8q.jpg",
       target: "corporate"
+    },
+    {
+      title: "Fotografía",
+      description: "Retratos profesionales y hasta paisajes hermosos",
+      image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753771198/WEB-23_gvup8o.jpg",
+      target: "portraits"
+    },
+    {
+      title: "Eventos Sociales",
+      description: "Bodas, fiestas y celebraciones",
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      target: "socials"
     }
   ];
 
