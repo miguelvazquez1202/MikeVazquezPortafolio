@@ -57,8 +57,11 @@ export default function PhotographyCategories() {
   ];
 
   const handleViewCategory = (categoryId: string) => {
-    console.log(`Viewing category: ${categoryId}`);
-    // In a real implementation, this would navigate to a detailed category page
+    if (categoryId === 'retratos') {
+      window.location.href = '/retratos';
+    } else {
+      console.log(`Viewing category: ${categoryId}`);
+    }
   };
 
   return (
