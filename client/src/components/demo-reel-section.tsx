@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Play, X } from "lucide-react";
+import { Play, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { demoReelVideos, VideoItem } from "@/lib/data";
@@ -19,6 +19,18 @@ export default function DemoReelSection() {
 
   const closeModal = () => {
     setSelectedVideo(null);
+  };
+
+  const handleDownload = (video: VideoItem) => {
+    if (video.videoUrl) {
+      const link = document.createElement('a');
+      link.href = video.videoUrl;
+      link.download = `${video.title.replace(/\s+/g, '_')}.mp4`;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   return (
@@ -113,12 +125,23 @@ export default function DemoReelSection() {
                 Tu navegador no soporta la reproducción de video.
               </video>
               <div className="p-6 text-white">
-                <h3 className="font-playfair text-2xl font-semibold mb-2">
-                  {selectedVideo.title}
-                </h3>
-                <p className="font-montserrat text-lg opacity-90">
-                  {selectedVideo.description}
-                </p>
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h3 className="font-playfair text-2xl font-semibold mb-2">
+                      {selectedVideo.title}
+                    </h3>
+                    <p className="font-montserrat text-lg opacity-90">
+                      {selectedVideo.description}
+                    </p>
+                  </div>
+                  <Button
+                    onClick={() => handleDownload(selectedVideo)}
+                    className="ml-4 bg-vibrant-yellow text-dark-grey hover:bg-yellow-400 transition-colors duration-200 flex items-center gap-2"
+                  >
+                    <Download size={16} />
+                    Descargar
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
