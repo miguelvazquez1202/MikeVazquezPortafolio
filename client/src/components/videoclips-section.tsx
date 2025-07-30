@@ -30,7 +30,7 @@ export default function VideoclipsSection() {
       title: 'Contigo Quiero',
       artist: 'Mike Vázquez Production',  
       category: 'Video Musical',
-      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753768228/01._Contigo_Quiero_ovikin.jpg',
+      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_41,w_800,h_450,c_fill,q_auto,f_jpg/v1753768228/01._Contigo_Quiero_ovikin.jpg',
       videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753768228/01._Contigo_Quiero_ovikin.mp4'
     },
     {
