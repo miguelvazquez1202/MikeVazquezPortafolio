@@ -61,8 +61,8 @@ export const socialImages: GalleryImage[] = [
 export const portraitImages: GalleryImage[] = [
   {
     id: 'portrait-1',
-    src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    alt: 'Retrato profesional de negocios',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_face,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   },
   {
