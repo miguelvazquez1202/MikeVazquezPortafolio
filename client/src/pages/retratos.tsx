@@ -14,60 +14,60 @@ interface RetratosImage {
 export default function RetratosPage() {
   const [selectedImage, setSelectedImage] = useState<RetratosImage | null>(null);
 
-  // Imágenes de la colección de Cloudinary con variedad de tamaños para diseño dinámico
+  // Imágenes de la colección de Cloudinary con tamaños consistentes
   const retratosImages: RetratosImage[] = [
     {
       id: 'retrato-1',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_600,g_face,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg',
       alt: 'Retrato profesional con iluminación dramática'
     },
     {
       id: 'retrato-2', 
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_500,h_400,g_face,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
       alt: 'Retrato artístico con iluminación profesional'
     },
     {
       id: 'retrato-3',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_350,h_500,g_face,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
       alt: 'Sesión de retratos en estudio profesional'
     },
     {
       id: 'retrato-4',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_450,h_350,g_face,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg',
       alt: 'Retrato contemporáneo con composición artística'
     },
     {
       id: 'retrato-5',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_300,h_450,g_face,q_auto,f_auto/v1753764591/DSC04710_bdsrsr.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753764591/DSC04710_bdsrsr.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764591/DSC04710_bdsrsr.jpg',
       alt: 'Fotografía de retrato con enfoque creativo'
     },
     {
       id: 'retrato-6',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_face,q_auto,f_auto/v1753764722/DSC04868-Enhanced-NR_mp4u69.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753764722/DSC04868-Enhanced-NR_mp4u69.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764722/DSC04868-Enhanced-NR_mp4u69.jpg',
       alt: 'Retrato natural con luz ambiente'
     },
     {
       id: 'retrato-7',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_320,h_480,g_face,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
       alt: 'Retrato expresivo con técnica profesional'
     },
     {
       id: 'retrato-8',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_480,h_320,g_face,q_auto,f_auto/v1753770786/WEB-20_catoge.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753770786/WEB-20_catoge.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753770786/WEB-20_catoge.jpg',
       alt: 'Sesión de retrato con composición única'
     },
     {
       id: 'retrato-9',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_380,h_520,g_face,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1200,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
       alt: 'Retrato artístico con iluminación creativa'
     }
   ];
@@ -172,14 +172,7 @@ export default function RetratosPage() {
             />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-            className="absolute bottom-6 left-6 text-pure-white"
-          >
-            <p className="font-montserrat text-lg">{selectedImage.alt}</p>
-          </motion.div>
+
         </motion.div>
       )}
     </div>

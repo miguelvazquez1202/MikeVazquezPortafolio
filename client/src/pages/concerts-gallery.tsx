@@ -391,14 +391,10 @@ export default function ConcertsGallery() {
             </motion.div>
 
             {/* Bottom Info */}
-            <div className="absolute bottom-6 left-6 right-6 text-center">
-              <div className="bg-black/50 backdrop-blur-sm rounded-lg px-6 py-3 mx-auto inline-block">
-                <p className="text-white font-montserrat mb-1">
-                  {selectedImage.alt}
-                </p>
-                <p className="text-white/60 text-sm font-montserrat">
-                  {currentIndex + 1} de {concertGalleryImages.length} • Usa ← → para navegar
-                </p>
+            <div className="absolute bottom-6 right-6 text-white z-10">
+              <div className="flex items-center space-x-2 text-sm font-montserrat opacity-80">
+                <div className="w-2 h-2 bg-vibrant-yellow rounded-full" />
+                <span>Fotografía {currentIndex + 1} de {concertGalleryImages.length}</span>
               </div>
             </div>
           </motion.div>
