@@ -25,13 +25,23 @@ export default function Home() {
         bgColor="bg-soft-grey"
       />
       
-      <GallerySection
-        id="socials"
-        title="Eventos Sociales"
-        description="Documentando las celebraciones más preciosas de la vida con elegancia y autenticidad"
-        images={socialImages}
-        bgColor="bg-pure-white"
-      />
+      <VideoclipsSection />
+      
+      <div id="corporate" className="py-20 bg-pure-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
+            Para Empresas
+          </h2>
+          <p className="font-montserrat text-xl text-charcoal max-w-4xl mx-auto mb-12">
+            Contenido corporativo y campañas comerciales que elevan la presencia visual de tu marca con narrativa profesional y técnica cinematográfica
+          </p>
+          <div className="bg-gradient-to-r from-vibrant-yellow/10 to-transparent p-8 rounded-lg">
+            <p className="font-montserrat text-lg text-charcoal italic">
+              "Próximamente - Galería corporativa en desarrollo"
+            </p>
+          </div>
+        </div>
+      </div>
       
       <GallerySection
         id="portraits"
@@ -41,8 +51,15 @@ export default function Home() {
         bgColor="bg-soft-grey"
       />
       
+      <GallerySection
+        id="socials"
+        title="Eventos Sociales"
+        description="Documentando las celebraciones más preciosas de la vida con elegancia y autenticidad"
+        images={socialImages}
+        bgColor="bg-pure-white"
+      />
+      
       <PhotographyCategories />
-      <VideoclipsSection />
       <DemoReelSection />
       <AboutSection />
       <ContactSection />
