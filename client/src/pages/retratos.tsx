@@ -200,7 +200,7 @@ export default function RetratosPage() {
             variant="ghost"
             size="icon"
             onClick={(e) => { e.stopPropagation(); navigateImage(-1); }}
-            className="absolute left-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-dark-grey/80 text-pure-white hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-200 z-10 h-12 w-12 backdrop-blur-sm"
           >
             <ChevronLeft size={24} />
           </Button>
@@ -209,7 +209,7 @@ export default function RetratosPage() {
             variant="ghost"
             size="icon"
             onClick={(e) => { e.stopPropagation(); navigateImage(1); }}
-            className="absolute right-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+            className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-dark-grey/80 text-pure-white hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-200 z-10 h-12 w-12 backdrop-blur-sm"
           >
             <ChevronRight size={24} />
           </Button>
