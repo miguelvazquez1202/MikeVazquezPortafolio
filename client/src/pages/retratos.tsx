@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { ArrowLeft, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
@@ -13,67 +13,69 @@ interface RetratosImage {
 
 export default function RetratosPage() {
   const [selectedImage, setSelectedImage] = useState<RetratosImage | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Imágenes de la colección de Cloudinary con tamaños consistentes
+  // Imágenes de la colección de Cloudinary con tamaños optimizados
   const retratosImages: RetratosImage[] = [
     {
       id: 'retrato-1',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_600,g_face,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg',
       alt: 'Retrato profesional con iluminación dramática'
     },
     {
       id: 'retrato-2', 
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_500,h_400,g_face,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
       alt: 'Retrato artístico con iluminación profesional'
     },
     {
       id: 'retrato-3',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_350,h_500,g_face,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
       alt: 'Sesión de retratos en estudio profesional'
     },
     {
       id: 'retrato-4',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_450,h_350,g_face,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg',
       alt: 'Retrato contemporáneo con composición artística'
     },
     {
       id: 'retrato-5',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_300,h_450,g_face,q_auto,f_auto/v1753764591/DSC04710_bdsrsr.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764591/DSC04710_bdsrsr.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753764591/DSC04710_bdsrsr.jpg',
       alt: 'Fotografía de retrato con enfoque creativo'
     },
     {
       id: 'retrato-6',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_face,q_auto,f_auto/v1753764722/DSC04868-Enhanced-NR_mp4u69.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764722/DSC04868-Enhanced-NR_mp4u69.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753764722/DSC04868-Enhanced-NR_mp4u69.jpg',
       alt: 'Retrato natural con luz ambiente'
     },
     {
       id: 'retrato-7',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_320,h_480,g_face,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
       alt: 'Retrato expresivo con técnica profesional'
     },
     {
       id: 'retrato-8',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_480,h_320,g_face,q_auto,f_auto/v1753770786/WEB-20_catoge.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753770786/WEB-20_catoge.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753770786/WEB-20_catoge.jpg',
       alt: 'Sesión de retrato con composición única'
     },
     {
       id: 'retrato-9',
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_380,h_520,g_face,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
       alt: 'Retrato artístico con iluminación creativa'
     }
   ];
 
-  const openLightbox = (image: RetratosImage) => {
+  const openLightbox = (image: RetratosImage, index: number) => {
     setSelectedImage(image);
+    setCurrentIndex(index);
     document.body.style.overflow = 'hidden';
   };
 
@@ -81,6 +83,41 @@ export default function RetratosPage() {
     setSelectedImage(null);
     document.body.style.overflow = '';
   };
+
+  const navigateImage = (direction: number) => {
+    const newIndex = currentIndex + direction;
+    if (newIndex < 0) {
+      setCurrentIndex(retratosImages.length - 1);
+      setSelectedImage(retratosImages[retratosImages.length - 1]);
+    } else if (newIndex >= retratosImages.length) {
+      setCurrentIndex(0);
+      setSelectedImage(retratosImages[0]);
+    } else {
+      setCurrentIndex(newIndex);
+      setSelectedImage(retratosImages[newIndex]);
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+
+      switch (e.key) {
+        case 'Escape':
+          closeLightbox();
+          break;
+        case 'ArrowLeft':
+          navigateImage(-1);
+          break;
+        case 'ArrowRight':
+          navigateImage(1);
+          break;
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage, currentIndex]);
 
   return (
     <div className="min-h-screen bg-pure-white relative">
@@ -123,7 +160,7 @@ export default function RetratosPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="break-inside-avoid cursor-pointer group relative"
-                onClick={() => openLightbox(image)}
+                onClick={() => openLightbox(image, index)}
               >
                 <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500">
                   <img
@@ -157,12 +194,32 @@ export default function RetratosPage() {
           >
             <X size={24} />
           </Button>
+
+          {/* Navigation Buttons */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={(e) => { e.stopPropagation(); navigateImage(-1); }}
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+          >
+            <ChevronLeft size={24} />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={(e) => { e.stopPropagation(); navigateImage(1); }}
+            className="absolute right-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+          >
+            <ChevronRight size={24} />
+          </Button>
           
           <motion.div
+            key={currentIndex}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="max-w-[70vw] max-h-[70vh] flex items-center justify-center"
+            className="max-w-[60vw] max-h-[60vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img
@@ -172,7 +229,12 @@ export default function RetratosPage() {
             />
           </motion.div>
 
-
+          {/* Image Counter */}
+          <div className="absolute bottom-6 right-6 text-pure-white z-10">
+            <p className="font-source text-sm opacity-70">
+              <span className="text-vibrant-yellow">{currentIndex + 1}</span> de {retratosImages.length}
+            </p>
+          </div>
         </motion.div>
       )}
     </div>
