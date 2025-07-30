@@ -61,7 +61,7 @@ export const socialImages: GalleryImage[] = [
 export const portraitImages: GalleryImage[] = [
   {
     id: 'portrait-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_800,h_1000,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
     alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   },

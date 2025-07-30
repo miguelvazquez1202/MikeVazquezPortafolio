@@ -51,8 +51,8 @@ export default function GallerySection({ id, title, description, images, bgColor
             >
               <img
                 src={image.src.includes('DSC04770-Enhanced-NR') 
-                  ? image.src.replace('c_limit,w_800,h_1000', 'c_fill,w_800,h_600,g_face')
-                  : image.src.replace('c_limit,w_800,h_1000', 'c_fill,w_800,h_600,g_center').replace('c_limit,w_1200,h_1600', 'c_fill,w_800,h_600,g_center')
+                  ? image.src.replace('c_limit,w_600,h_800', 'c_fill,w_800,h_600,g_face')
+                  : image.src.replace('c_limit,w_600,h_800', 'c_fill,w_800,h_600,g_center').replace('c_limit,w_1200,h_1600', 'c_fill,w_800,h_600,g_center')
                 }
                 alt={image.alt}
                 className="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
