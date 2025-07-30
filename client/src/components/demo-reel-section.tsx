@@ -72,7 +72,6 @@ export default function DemoReelSection() {
                     <h3 className="font-montserrat font-semibold text-lg">{video.title}</h3>
                     <p className="font-source text-sm opacity-90">{video.description}</p>
                   </div>
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </Card>
             </motion.div>

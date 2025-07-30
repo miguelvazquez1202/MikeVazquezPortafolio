@@ -95,9 +95,10 @@ export const demoReelVideos: VideoItem[] = [
   },
   {
     id: 'video-3',
-    title: 'Video Corporativo',
-    description: 'Narrativa profesional de marca',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+    title: 'Video Médico Corporativo',
+    description: 'Video memoria lanzamiento médico con producción profesional',
+    thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.jpg',
+    videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.mp4'
   },
   {
     id: 'video-4',
