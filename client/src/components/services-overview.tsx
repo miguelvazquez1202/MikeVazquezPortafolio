@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 export default function ServicesOverview() {
   const services = [
     {
-      title: "Fotografía de Conciertos",
-      description: "Eventos de música en vivo y presentaciones",
+      title: "Conciertos",
+      description: "Foto, video y circuito cerrado para música en vivo",
       image: "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753763272/WEB-03_a3iisf.jpg",
       target: "concerts"
     },
