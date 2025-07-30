@@ -17,19 +17,19 @@ export interface VideoItem {
 export const concertImages: GalleryImage[] = [
   {
     id: 'concert-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/WEB-04_ehov0y.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/WEB-04_ehov0y.jpg',
     alt: 'Fotografía profesional de concierto capturando la energía del escenario',
     category: 'concert'
   },
   {
     id: 'concert-2',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/DSC00165_varofk.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/DSC00165_varofk.jpg',
     alt: 'Artista en presentación en vivo con iluminación dramática',
     category: 'concert'
   },
   {
     id: 'concert-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753762141/DSC00944-Enhanced-NR_jscfcx.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753762141/DSC00944-Enhanced-NR_jscfcx.jpg',
     alt: 'Momento único de presentación musical con efectos de iluminación',
     category: 'concert'
   }
@@ -51,7 +51,7 @@ export const socialImages: GalleryImage[] = [
   },
   {
     id: 'social-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753769823/WEB-14_fia6sz.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753769823/WEB-14_fia6sz.jpg',
     alt: 'Evento social profesional capturado por Mike Vázquez',
     category: 'social'
   }
@@ -61,19 +61,19 @@ export const socialImages: GalleryImage[] = [
 export const portraitImages: GalleryImage[] = [
   {
     id: 'portrait-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_face,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
     alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   },
   {
     id: 'portrait-2',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   },
   {
     id: 'portrait-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_600,g_center,q_auto,f_auto/v1753764610/WEB-09_si3utl.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753764610/WEB-09_si3utl.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   }
