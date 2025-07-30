@@ -117,7 +117,7 @@ export default function Lightbox() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="max-w-[90vw] max-h-[90vh] flex items-center justify-center"
+              className="max-w-[70vw] max-h-[70vh] flex items-center justify-center"
             >
               <img
                 src={currentImage.src}
