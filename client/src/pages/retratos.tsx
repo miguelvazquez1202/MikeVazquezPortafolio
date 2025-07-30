@@ -219,7 +219,7 @@ export default function RetratosPage() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="max-w-[60vw] max-h-[60vh] flex items-center justify-center"
+            className="max-w-[65vw] max-h-[65vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img
