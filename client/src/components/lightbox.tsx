@@ -127,20 +127,17 @@ export default function Lightbox() {
             </motion.div>
           )}
 
-          {/* Caption */}
-          {currentImage && (
+          {/* Image Counter */}
+          {currentImage && images.length > 1 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="absolute bottom-6 left-6 text-pure-white"
+              className="absolute bottom-6 right-6 text-pure-white"
             >
-              <p className="font-montserrat text-lg">{currentImage.alt}</p>
-              {images.length > 1 && (
-                <p className="font-source text-sm opacity-70 mt-1">
-                  <span className="text-vibrant-yellow">{currentIndex + 1}</span> of {images.length}
-                </p>
-              )}
+              <p className="font-source text-sm opacity-70">
+                <span className="text-vibrant-yellow">{currentIndex + 1}</span> of {images.length}
+              </p>
             </motion.div>
           )}
         </motion.div>

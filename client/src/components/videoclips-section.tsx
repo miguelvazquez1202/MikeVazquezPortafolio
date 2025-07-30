@@ -8,6 +8,7 @@ interface Videoclip {
   id: string;
   title: string;
   artist: string;
+  description: string;
   category: string;
   thumbnailSrc: string;
   videoUrl: string;
@@ -20,7 +21,8 @@ export default function VideoclipsSection() {
     {
       id: 'clip-1',
       title: 'Hoy Me Alejo',
-      artist: 'Reyli Barba',
+      artist: 'Videoclip',
+      description: 'Dirección, edición y post producción',
       category: 'Reyli Barba',
       thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_20,w_800,h_450,c_fill,q_auto,f_jpg/v1753769477/09._Hoy_Me_Alejo_pvn1fj.jpg',
       videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769477/09._Hoy_Me_Alejo_pvn1fj.mp4'
@@ -28,7 +30,8 @@ export default function VideoclipsSection() {
     {
       id: 'clip-2',
       title: 'Contigo Quiero',
-      artist: 'Reyli Barba',  
+      artist: 'Videoclip',
+      description: 'Dirección, fotografía, edición y post producción',
       category: 'Reyli Barba',
       thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_41,w_800,h_450,c_fill,q_auto,f_jpg/v1753768228/01._Contigo_Quiero_ovikin.jpg',
       videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753768228/01._Contigo_Quiero_ovikin.mp4'
@@ -36,7 +39,8 @@ export default function VideoclipsSection() {
     {
       id: 'clip-3',
       title: 'Me Salió Cara La Peda',
-      artist: 'SanJuan',
+      artist: 'Videoclip',
+      description: 'Dirección, fotografía, edición y post producción',
       category: 'SanJuan',
       thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770682/Me_Salio_Cara_La_Peda_Sanjuan_Finalcut_1080P_rcgp8c.jpg',
       videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770682/Me_Salio_Cara_La_Peda_Sanjuan_Finalcut_1080P_rcgp8c.mp4'
@@ -44,7 +48,8 @@ export default function VideoclipsSection() {
     {
       id: 'clip-4',
       title: 'Volvería A Nacer En Pueblo',
-      artist: 'Alexis Cristóbal',
+      artist: 'Disco en vivo',
+      description: 'Dirección, fotografía, edición y post producción',
       category: 'Alexis Cristóbal',
       thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770679/01._Volveria_A_Nacer_En_Pueblo_Finalcut_xuvrsb.jpg',
       videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770679/01._Volveria_A_Nacer_En_Pueblo_Finalcut_xuvrsb.mp4'
@@ -114,8 +119,11 @@ export default function VideoclipsSection() {
                   <h3 className="font-playfair text-xl font-semibold text-dark-grey mb-2">
                     {clip.title}
                   </h3>
-                  <p className="font-montserrat text-charcoal">
+                  <p className="font-montserrat text-charcoal mb-1">
                     {clip.artist}
+                  </p>
+                  <p className="font-montserrat text-charcoal italic text-sm">
+                    {clip.description}
                   </p>
                 </div>
               </Card>
