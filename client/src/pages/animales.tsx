@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import SEOHead from "@/components/seo-head";
 
 interface AnimalImage {
   id: string;
@@ -103,6 +104,24 @@ export default function AnimalesPage() {
 
   return (
     <div className="min-h-screen bg-light-grey">
+      <SEOHead
+        title="Fotografía de Animales - Mike Vázquez | Fotografía de Vida Salvaje"
+        description="Fotografías de animales y vida salvaje capturadas con técnica especializada. Documentando la naturaleza con respeto y visión artística profesional."
+        keywords="fotografía de animales, vida salvaje, fotografía de naturaleza, fauna, Mike Vázquez"
+        image="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753764520/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_51d8059a_slggsf.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Fotografía de Animales - Mike Vázquez",
+          "description": "Fotografías de animales y vida salvaje capturadas con técnica especializada",
+          "author": {
+            "@type": "Person",
+            "name": "Mike Vázquez"
+          },
+          "genre": "Fotografía de Vida Salvaje",
+          "url": window.location.href
+        }}
+      />
       {/* Header */}
       <div className="relative py-16 bg-dark-grey overflow-hidden">
         {/* Decorative elements */}

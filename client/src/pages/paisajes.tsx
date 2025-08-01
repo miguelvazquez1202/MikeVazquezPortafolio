@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import SEOHead from "@/components/seo-head";
 
 interface PaisajeImage {
   id: string;
@@ -121,6 +122,24 @@ export default function PaisajesPage() {
 
   return (
     <div className="min-h-screen bg-light-grey">
+      <SEOHead
+        title="Fotografía de Paisajes - Mike Vázquez | Paisajes Naturales y Urbanos"
+        description="Colección de fotografías de paisajes naturales y urbanos capturados con visión artística. Explorando la belleza de los espacios naturales y arquitectónicos."
+        keywords="fotografía de paisajes, paisajes naturales, fotografía urbana, naturaleza, Mike Vázquez"
+        image="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753771198/WEB-23_gvup8o.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Fotografía de Paisajes - Mike Vázquez",
+          "description": "Colección de fotografías de paisajes naturales y urbanos capturados con visión artística",
+          "author": {
+            "@type": "Person",
+            "name": "Mike Vázquez"
+          },
+          "genre": "Fotografía de Paisajes",
+          "url": window.location.href
+        }}
+      />
       {/* Header */}
       <div className="relative py-16 bg-dark-grey overflow-hidden">
         {/* Decorative elements */}

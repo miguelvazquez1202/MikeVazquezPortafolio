@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mikevazquez.replit.app/sitemap.xml
+
+# Allow search engines to index all photography galleries
+Allow: /conciertos
+Allow: /retratos
+Allow: /paisajes
+Allow: /animales
+Allow: /videoclips
+
+# Discourage crawling of API endpoints
+Disallow: /api/

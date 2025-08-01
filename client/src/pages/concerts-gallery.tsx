@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, X, Heart, Share2 } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
+import SEOHead from '@/components/seo-head';
 
 interface ConcertImage {
   id: string;
@@ -127,6 +128,24 @@ export default function ConcertsGallery() {
 
   return (
     <div className="min-h-screen bg-pure-white">
+      <SEOHead
+        title="Fotografía de Conciertos - Mike Vázquez | Fotógrafo Musical Profesional"
+        description="Galería profesional de fotografía de conciertos y eventos musicales. Capturando la energía y emoción de las presentaciones en vivo con técnica experta y visión artística."
+        keywords="fotografía de conciertos, fotógrafo musical, eventos en vivo, fotografía de escenario, presentaciones musicales, Mike Vázquez"
+        image="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753762144/DSC00089_wayg1s.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Fotografía de Conciertos - Mike Vázquez",
+          "description": "Galería profesional de fotografía de conciertos y eventos musicales",
+          "author": {
+            "@type": "Person",
+            "name": "Mike Vázquez"
+          },
+          "genre": "Fotografía Musical",
+          "url": window.location.href
+        }}
+      />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-pure-white/95 backdrop-blur-sm border-b border-soft-grey">
         <div className="max-w-7xl mx-auto px-6 py-4">

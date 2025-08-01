@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import SEOHead from "@/components/seo-head";
 
 interface RetratosImage {
   id: string;
@@ -121,6 +122,24 @@ export default function RetratosPage() {
 
   return (
     <div className="min-h-screen bg-pure-white relative">
+      <SEOHead
+        title="Retratos Profesionales - Mike Vázquez | Fotografía de Retrato Artístico"
+        description="Sesiones profesionales de retratos con técnica avanzada e iluminación artística. Capturando la personalidad única de cada persona con estilo cinematográfico."
+        keywords="retratos profesionales, fotografía de retrato, sesiones fotográficas, retratos artísticos, Mike Vázquez"
+        image="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_face,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Retratos Profesionales - Mike Vázquez",
+          "description": "Sesiones profesionales de retratos con técnica avanzada e iluminación artística",
+          "author": {
+            "@type": "Person",
+            "name": "Mike Vázquez"
+          },
+          "genre": "Fotografía de Retrato",
+          "url": window.location.href
+        }}
+      />
       {/* Background blur overlay when lightbox is open */}
       {selectedImage && (
         <div className="fixed inset-0 z-40 backdrop-blur-sm bg-dark-grey/20" />

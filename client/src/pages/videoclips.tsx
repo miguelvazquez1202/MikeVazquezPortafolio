@@ -4,6 +4,7 @@ import { ArrowLeft, X, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
+import SEOHead from "@/components/seo-head";
 
 interface VideoClip {
   id: string;
@@ -59,6 +60,24 @@ export default function VideoclipsPage() {
 
   return (
     <div className="min-h-screen bg-light-grey">
+      <SEOHead
+        title="Videoclips Musicales - Mike Vázquez | Producción Audiovisual Cinematográfica"
+        description="Videoclips musicales y producciones audiovisuales con narrativa cinematográfica. Dirección artística y técnica profesional para artistas musicales."
+        keywords="videoclips musicales, producción audiovisual, cineasta, dirección artística, Mike Vázquez"
+        image="https://res.cloudinary.com/dq0ogehwz/image/upload/so_5.0,w_1200,h_630,c_fill,g_center,q_auto,f_jpg/v1753770682/Fierro_Por_La_Costera_Alexis_Finalcut_1080P_zmwizb.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "VideoGallery",
+          "name": "Videoclips Musicales - Mike Vázquez",
+          "description": "Videoclips musicales y producciones audiovisuales con narrativa cinematográfica",
+          "author": {
+            "@type": "Person",
+            "name": "Mike Vázquez"
+          },
+          "genre": "Producción Audiovisual",
+          "url": window.location.href
+        }}
+      />
       {/* Header */}
       <div className="relative py-16 bg-dark-grey overflow-hidden">
         {/* Decorative elements */}
