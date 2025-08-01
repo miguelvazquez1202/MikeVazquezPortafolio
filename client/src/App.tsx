@@ -8,6 +8,7 @@ import ConcertsGallery from "@/pages/concerts-gallery";
 import RetratosPage from "@/pages/retratos";
 import PaisajesPage from "@/pages/paisajes";
 import AnimalesPage from "@/pages/animales";
+import VideoclipsPage from "@/pages/videoclips";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/retratos" component={RetratosPage} />
       <Route path="/paisajes" component={PaisajesPage} />
       <Route path="/animales" component={AnimalesPage} />
+      <Route path="/videoclips" component={VideoclipsPage} />
       <Route component={NotFound} />
     </Switch>
   );
