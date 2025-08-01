@@ -124,9 +124,9 @@ export default function PaisajesPage() {
       {/* Header */}
       <div className="relative py-32 bg-gradient-to-br from-dark-grey via-charcoal to-dark-grey overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow/50 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/20 rounded-lg rotate-45"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow/60 to-transparent"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/60 rounded-lg rotate-45"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow to-transparent"></div>
         
         <div className="relative max-w-7xl mx-auto px-6">
           <motion.div
@@ -135,7 +135,10 @@ export default function PaisajesPage() {
             transition={{ duration: 0.6 }}
           >
             <Link href="/" className="inline-block mb-12">
-              <Button variant="ghost" className="text-pure-white hover:text-vibrant-yellow transition-all duration-300 flex items-center gap-3 text-lg group">
+              <Button 
+                variant="ghost" 
+                className="text-pure-white hover:text-vibrant-yellow transition-all duration-300 flex items-center gap-3 text-lg group bg-dark-grey/30 hover:bg-dark-grey/50 border border-pure-white/20 hover:border-vibrant-yellow/50 px-6 py-3 rounded-lg backdrop-blur-sm"
+              >
                 <motion.div
                   whileHover={{ x: -5 }}
                   transition={{ duration: 0.2 }}
