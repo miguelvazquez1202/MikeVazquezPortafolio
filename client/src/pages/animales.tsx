@@ -262,7 +262,7 @@ export default function AnimalesPage() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative max-w-4xl max-h-[80vh] mx-auto"
+            className="relative max-w-2xl max-h-[60vh] mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <img
