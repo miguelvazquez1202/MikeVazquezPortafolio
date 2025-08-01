@@ -93,13 +93,18 @@ export default function DemoReelSection() {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="/videoclips"
-            className="inline-flex items-center justify-center bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg rounded-md cursor-pointer no-underline"
-            style={{ pointerEvents: 'auto', zIndex: 10 }}
+          <div
+            className="inline-flex items-center justify-center bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg rounded-md cursor-pointer select-none"
+            onMouseDown={(e) => {
+              e.preventDefault();
+              console.log('Mouse down - navigating...');
+              setTimeout(() => {
+                window.location.href = '/videoclips';
+              }, 100);
+            }}
           >
             Ver Más Videoclips
-          </a>
+          </div>
         </div>
       </div>
 
