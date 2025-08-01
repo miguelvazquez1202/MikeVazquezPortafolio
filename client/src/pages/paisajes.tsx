@@ -37,8 +37,8 @@ export default function PaisajesPage() {
     },
     {
       id: 'paisaje-4',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_300,h_400,g_center,q_auto,f_auto/v1753764613/WEB-08_i87yky.jpg',
-      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764613/WEB-08_i87yky.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_280,h_350,g_center,q_auto,f_auto/v1753764613/WEB-08_i87yky.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_750,q_auto,f_auto/v1753764613/WEB-08_i87yky.jpg',
       alt: 'Paisaje natural con enfoque cinematográfico'
     },
     {
@@ -122,57 +122,178 @@ export default function PaisajesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pure-white via-soft-grey to-light-grey">
       {/* Header */}
-      <div className="relative py-20 bg-gradient-to-r from-dark-grey to-charcoal">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark-grey/90 to-charcoal/90" />
+      <div className="relative py-32 bg-gradient-to-br from-dark-grey via-charcoal to-dark-grey overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow/30 rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/10 rounded-lg rotate-45"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow/40 to-transparent"></div>
+        
         <div className="relative max-w-7xl mx-auto px-6">
-          <Link href="/" className="inline-block mb-8">
-            <Button variant="ghost" className="text-pure-white hover:text-vibrant-yellow transition-colors duration-200 flex items-center gap-2">
-              <ArrowLeft size={20} />
-              Volver al inicio
-            </Button>
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link href="/" className="inline-block mb-12">
+              <Button variant="ghost" className="text-pure-white hover:text-vibrant-yellow transition-all duration-300 flex items-center gap-3 text-lg group">
+                <motion.div
+                  whileHover={{ x: -5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ArrowLeft size={20} />
+                </motion.div>
+                <span className="group-hover:translate-x-1 transition-transform duration-300">Volver al inicio</span>
+              </Button>
+            </Link>
+          </motion.div>
           
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center"
           >
-            <h1 className="font-playfair text-5xl md:text-6xl font-bold text-pure-white mb-6">
-              Paisajes
-            </h1>
-            <p className="font-montserrat text-xl text-pure-white/90 max-w-3xl mx-auto">
-              Capturando la belleza natural y urbana a través de composiciones paisajísticas únicas
-            </p>
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mb-8"
+            >
+              <h1 className="font-playfair text-6xl md:text-7xl font-bold text-pure-white mb-2 relative">
+                Paisajes
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                  className="h-1 bg-gradient-to-r from-transparent via-vibrant-yellow to-transparent absolute -bottom-2 left-0"
+                ></motion.div>
+              </h1>
+            </motion.div>
+            
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="font-montserrat text-xl md:text-2xl text-pure-white/90 max-w-4xl mx-auto leading-relaxed"
+            >
+              Explorando la <span className="text-vibrant-yellow font-semibold">majestuosidad natural</span> y 
+              <span className="text-vibrant-yellow font-semibold"> arquitectónica</span> a través de composiciones únicas
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              className="mt-8 flex justify-center items-center gap-6"
+            >
+              <div className="text-center">
+                <p className="text-vibrant-yellow font-bold text-2xl font-playfair">9</p>
+                <p className="text-pure-white/70 text-sm font-montserrat">Imágenes</p>
+              </div>
+              <div className="w-px h-8 bg-vibrant-yellow/40"></div>
+              <div className="text-center">
+                <p className="text-vibrant-yellow font-bold text-2xl font-playfair">3</p>
+                <p className="text-pure-white/70 text-sm font-montserrat">Estilos</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
 
       {/* Gallery */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+      <div className="py-20 bg-gradient-to-br from-pure-white via-soft-grey/30 to-pure-white relative">
+        {/* Decorative background elements */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-vibrant-yellow/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-48 h-48 bg-dark-grey/5 rounded-full blur-2xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
+              Colección Visual
+            </h2>
+            <p className="font-montserrat text-lg text-charcoal max-w-2xl mx-auto">
+              Cada imagen cuenta una historia única de belleza natural y urbana
+            </p>
+          </motion.div>
+
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
             {paisajesImages.map((image, index) => (
               <motion.div
                 key={image.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 80, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.15,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                viewport={{ once: true }}
                 className="break-inside-avoid cursor-pointer group relative"
                 onClick={() => openLightbox(image, index)}
               >
-                <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 group-hover:-translate-y-2">
+                  {/* Image container with dynamic effects */}
+                  <div className="relative">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    
+                    {/* Gradient overlays */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/80 via-dark-grey/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                    
+                    {/* Hover content */}
+                    <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <div className="text-pure-white">
+                        <motion.div
+                          initial={{ y: 20, opacity: 0 }}
+                          whileHover={{ y: 0, opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                          className="flex items-center gap-2"
+                        >
+                          <div className="w-2 h-2 bg-vibrant-yellow rounded-full"></div>
+                          <p className="font-montserrat text-sm font-medium">Ver imagen completa</p>
+                        </motion.div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Border accent */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-vibrant-yellow/30 transition-all duration-500"></div>
+                  
+                  {/* Corner accent */}
+                  <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-vibrant-yellow/0 group-hover:border-vibrant-yellow/70 transition-all duration-500 rounded-tr-lg"></div>
                 </div>
               </motion.div>
             ))}
           </div>
+          
+          {/* Bottom decorative section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-20 bg-gradient-to-r from-transparent to-vibrant-yellow"></div>
+              <div className="w-3 h-3 bg-vibrant-yellow rounded-full"></div>
+              <div className="h-px w-20 bg-gradient-to-l from-transparent to-vibrant-yellow"></div>
+            </div>
+            <p className="font-source text-charcoal/70 text-sm">
+              Galería completa de paisajes • {paisajesImages.length} imágenes
+            </p>
+          </motion.div>
         </div>
       </div>
 
