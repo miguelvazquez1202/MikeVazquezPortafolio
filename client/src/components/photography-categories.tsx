@@ -59,6 +59,8 @@ export default function PhotographyCategories() {
   const handleViewCategory = (categoryId: string) => {
     if (categoryId === 'retratos') {
       window.location.href = '/retratos';
+    } else if (categoryId === 'paisajes') {
+      window.location.href = '/paisajes';
     } else {
       console.log(`Viewing category: ${categoryId}`);
     }
