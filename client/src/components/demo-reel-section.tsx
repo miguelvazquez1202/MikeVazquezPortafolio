@@ -92,13 +92,12 @@ export default function DemoReelSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Link href="/videoclips">
-            <Button 
-              className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
-            >
-              Ver Más Videoclips
-            </Button>
-          </Link>
+          <Button 
+            onClick={() => window.location.href = '/videoclips'}
+            className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
+          >
+            Ver Más Videoclips
+          </Button>
         </motion.div>
       </div>
 
