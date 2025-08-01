@@ -89,9 +89,10 @@ export const demoReelVideos: VideoItem[] = [
   },
   {
     id: 'video-2',
-    title: 'Demo Reel de Bodas',
-    description: 'Muestra de narrativa romántica',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+    title: 'EduCanada - Video Promocional',
+    description: 'Producción audiovisual para campaña educativa',
+    thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753772574/EduCanada_V5_sip1ch.jpg',
+    videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772574/EduCanada_V5_sip1ch.mp4'
   },
   {
     id: 'video-3',
