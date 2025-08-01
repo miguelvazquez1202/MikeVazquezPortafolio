@@ -92,25 +92,15 @@ export default function DemoReelSection() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12">
           <a
             href="/videoclips"
             className="inline-flex items-center justify-center bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg rounded-md cursor-pointer no-underline"
-            onClick={(e) => {
-              e.preventDefault();
-              console.log('Link clicked - navigating to videoclips...');
-              window.location.href = '/videoclips';
-            }}
+            style={{ pointerEvents: 'auto', zIndex: 10 }}
           >
             Ver Más Videoclips
           </a>
-        </motion.div>
+        </div>
       </div>
 
       {/* Video Modal */}
