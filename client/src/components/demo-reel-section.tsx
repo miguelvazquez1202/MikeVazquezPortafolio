@@ -10,9 +10,16 @@ export default function DemoReelSection() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
   const [, setLocation] = useLocation();
 
-  const handleNavigateToVideoclips = () => {
-    console.log('Navigating to videoclips...');
-    setLocation('/videoclips');
+  const handleNavigateToVideoclips = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Button clicked - navigating to videoclips...');
+    try {
+      window.location.href = '/videoclips';
+    } catch (error) {
+      console.error('Navigation error:', error);
+      setLocation('/videoclips');
+    }
   };
 
   const handleVideoClick = (videoId: string) => {
@@ -92,12 +99,17 @@ export default function DemoReelSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button 
-            onClick={() => window.location.href = '/videoclips'}
-            className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
+          <a
+            href="/videoclips"
+            className="inline-flex items-center justify-center bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg rounded-md cursor-pointer no-underline"
+            onClick={(e) => {
+              e.preventDefault();
+              console.log('Link clicked - navigating to videoclips...');
+              window.location.href = '/videoclips';
+            }}
           >
             Ver Más Videoclips
-          </Button>
+          </a>
         </motion.div>
       </div>
 
