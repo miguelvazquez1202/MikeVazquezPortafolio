@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, X, Heart, Share2, Download } from 'lucide-react';
+import { ArrowLeft, X, Heart, Share2 } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 
@@ -48,8 +48,8 @@ const concertGalleryImages: ConcertImage[] = [
   { id: 'DSC07048_ucs39k', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762140/DSC07048_ucs39k.jpg', alt: 'Fotografía de concierto con excelente iluminación' },
   { id: 'DSC08427_znnrkg', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762134/DSC08427_znnrkg.jpg', alt: 'Artista capturado en momento performático' },
   { id: 'WEB-03_a3iisf', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753763272/WEB-03_a3iisf.jpg', alt: 'Fotografía profesional de concierto con iluminación espectacular' },
-  { id: 'WEB-04_ehov0y', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762144/WEB-04_ehov0y.jpg', alt: 'Momento único capturado en presentación musical' },
-  { id: 'DSC03844_rwfsa7', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762139/DSC03844_rwfsa7.jpg', alt: 'Retrato artístico durante presentación' },
+  { id: 'WEB-04_ehov0y', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753763272/WEB-04_ehov0y.jpg', alt: 'Momento único capturado en presentación musical' },
+  { id: 'DSC03844_rwfsa7', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753765323/DSC03844_rwfsa7.jpg', alt: 'Retrato artístico durante presentación' },
   { id: 'DSC00379_hero', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762135/DSC00379_p6qglu.jpg', alt: 'Concierto con atmósfera cinematográfica' },
   { id: 'DSC06930_adicional', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762137/DSC06928_2_nkwpsj.jpg', alt: 'Presentación musical con gran energía' },
   { id: 'DSC03570_extra', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_600,h_400,g_center,q_auto,f_auto/v1753762131/DSC03570_wypjuu.jpg', alt: 'Artista en conexión emocional con el público' },
@@ -110,13 +110,7 @@ export default function ConcertsGallery() {
     }
   };
 
-  const downloadImage = (image: ConcertImage, e: React.MouseEvent) => {
-    e.stopPropagation();
-    const link = document.createElement('a');
-    link.href = `https://res.cloudinary.com/dq0ogehwz/image/upload/fl_attachment/${image.id}.jpg`;
-    link.download = `concierto-${image.id}.jpg`;
-    link.click();
-  };
+
 
   // Keyboard navigation
   useEffect(() => {
@@ -286,12 +280,7 @@ export default function ConcertsGallery() {
                         >
                           <Share2 size={16} />
                         </button>
-                        <button
-                          onClick={(e) => downloadImage(image, e)}
-                          className="p-2 rounded-full bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm transition-all duration-200"
-                        >
-                          <Download size={16} />
-                        </button>
+
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -343,12 +332,6 @@ export default function ConcertsGallery() {
                   className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm transition-all duration-200"
                 >
                   <Share2 size={20} />
-                </button>
-                <button
-                  onClick={(e) => { e.stopPropagation(); downloadImage(selectedImage, e); }}
-                  className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm transition-all duration-200"
-                >
-                  <Download size={20} />
                 </button>
               </div>
               
