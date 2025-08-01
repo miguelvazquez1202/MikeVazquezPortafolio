@@ -122,7 +122,7 @@ export default function PaisajesPage() {
   return (
     <div className="min-h-screen bg-light-grey">
       {/* Header */}
-      <div className="relative py-32 bg-gradient-to-br from-dark-grey via-charcoal to-dark-grey overflow-hidden">
+      <div className="relative py-32 bg-dark-grey overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/60 rounded-lg rotate-45"></div>
@@ -137,7 +137,7 @@ export default function PaisajesPage() {
             <Link href="/" className="inline-block mb-12">
               <Button 
                 variant="ghost" 
-                className="text-pure-white hover:text-vibrant-yellow transition-all duration-300 flex items-center gap-3 text-lg group bg-dark-grey/70 hover:bg-vibrant-yellow hover:text-dark-grey border border-vibrant-yellow/30 hover:border-vibrant-yellow px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg"
+                className="text-pure-white hover:text-dark-grey transition-all duration-300 flex items-center gap-3 text-lg group bg-vibrant-yellow/20 hover:bg-vibrant-yellow border border-vibrant-yellow hover:border-vibrant-yellow px-6 py-3 rounded-lg shadow-lg"
               >
                 <motion.div
                   whileHover={{ x: -5 }}
