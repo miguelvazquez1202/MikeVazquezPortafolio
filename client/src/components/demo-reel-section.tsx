@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { demoReelVideos, VideoItem } from "@/lib/data";
 import { useState } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 
 export default function DemoReelSection() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
@@ -92,12 +92,13 @@ export default function DemoReelSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button 
-            onClick={handleNavigateToVideoclips}
-            className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
-          >
-            Ver Más Videoclips
-          </Button>
+          <Link href="/videoclips">
+            <Button 
+              className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
+            >
+              Ver Más Videoclips
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
