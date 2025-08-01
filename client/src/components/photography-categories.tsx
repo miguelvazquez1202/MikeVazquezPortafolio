@@ -61,6 +61,8 @@ export default function PhotographyCategories() {
       window.location.href = '/retratos';
     } else if (categoryId === 'paisajes') {
       window.location.href = '/paisajes';
+    } else if (categoryId === 'animales') {
+      window.location.href = '/animales';
     } else {
       console.log(`Viewing category: ${categoryId}`);
     }
