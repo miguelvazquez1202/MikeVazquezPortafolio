@@ -124,7 +124,6 @@ export default function PaisajesPage() {
       {/* Header */}
       <div className="relative py-32 bg-dark-grey overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/60 rounded-lg rotate-45"></div>
         <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow to-transparent"></div>
         
@@ -177,7 +176,7 @@ export default function PaisajesPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="font-montserrat text-xl md:text-2xl text-pure-white/90 max-w-4xl mx-auto leading-relaxed"
+              className="font-montserrat text-xl md:text-2xl text-pure-white max-w-4xl mx-auto leading-relaxed"
             >
               Explorando la <span className="text-vibrant-yellow font-semibold">majestuosidad natural</span> y 
               <span className="text-vibrant-yellow font-semibold"> arquitectónica</span> a través de composiciones únicas
