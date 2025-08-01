@@ -122,7 +122,7 @@ export default function PaisajesPage() {
   return (
     <div className="min-h-screen bg-light-grey">
       {/* Header */}
-      <div className="relative py-32 bg-dark-grey overflow-hidden">
+      <div className="relative py-16 bg-dark-grey overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/60 rounded-lg rotate-45"></div>
         <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow to-transparent"></div>
@@ -133,7 +133,7 @@ export default function PaisajesPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Link href="/" className="inline-block mb-12">
+            <Link href="/" className="inline-block mb-8">
               <Button 
                 variant="ghost" 
                 className="text-pure-white hover:text-dark-grey transition-all duration-300 flex items-center gap-3 text-lg group bg-vibrant-yellow/20 hover:bg-vibrant-yellow border border-vibrant-yellow hover:border-vibrant-yellow px-6 py-3 rounded-lg shadow-lg"
