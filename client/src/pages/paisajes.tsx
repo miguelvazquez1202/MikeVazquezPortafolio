@@ -120,7 +120,7 @@ export default function PaisajesPage() {
   }, [selectedImage, currentIndex]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pure-white via-soft-grey to-light-grey">
+    <div className="min-h-screen bg-gradient-to-br from-soft-grey via-light-grey to-soft-grey">
       {/* Header */}
       <div className="relative py-32 bg-gradient-to-br from-dark-grey via-charcoal to-dark-grey overflow-hidden">
         {/* Decorative elements */}
