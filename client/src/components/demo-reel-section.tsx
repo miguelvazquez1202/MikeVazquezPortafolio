@@ -10,6 +10,11 @@ export default function DemoReelSection() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
   const [, setLocation] = useLocation();
 
+  const handleNavigateToVideoclips = () => {
+    console.log('Navigating to videoclips...');
+    setLocation('/videoclips');
+  };
+
   const handleVideoClick = (videoId: string) => {
     const video = demoReelVideos.find(v => v.id === videoId);
     if (video && video.videoUrl) {
@@ -88,7 +93,7 @@ export default function DemoReelSection() {
           className="text-center mt-12"
         >
           <Button 
-            onClick={() => setLocation('/videoclips')}
+            onClick={handleNavigateToVideoclips}
             className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
           >
             Ver Más Videoclips
