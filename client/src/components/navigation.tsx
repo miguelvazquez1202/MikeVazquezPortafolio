@@ -27,9 +27,9 @@ export default function Navigation() {
   const navItems = [
     { label: "Inicio", id: "home" },
     { label: "Conciertos", id: "concerts" },
-    { label: "Eventos Sociales", id: "socials" },
-    { label: "Fotografía", id: "portraits" },
     { label: "Videoclips", id: "videoclips" },
+    { label: "Fotografía", id: "portraits" },
+    { label: "Eventos Sociales", id: "socials" },
     { label: "Demo Reel", id: "demo-reel" },
     { label: "Acerca de", id: "about" },
     { label: "Contacto", id: "contact" },
