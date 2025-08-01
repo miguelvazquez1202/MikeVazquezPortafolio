@@ -124,9 +124,9 @@ export default function PaisajesPage() {
       {/* Header */}
       <div className="relative py-32 bg-gradient-to-br from-dark-grey via-charcoal to-dark-grey overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow/30 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/10 rounded-lg rotate-45"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow/40 to-transparent"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 border-2 border-vibrant-yellow/50 rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-16 h-16 bg-vibrant-yellow/20 rounded-lg rotate-45"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-1 bg-gradient-to-r from-transparent via-vibrant-yellow/60 to-transparent"></div>
         
         <div className="relative max-w-7xl mx-auto px-6">
           <motion.div
@@ -180,22 +180,7 @@ export default function PaisajesPage() {
               <span className="text-vibrant-yellow font-semibold"> arquitectónica</span> a través de composiciones únicas
             </motion.p>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              className="mt-8 flex justify-center items-center gap-6"
-            >
-              <div className="text-center">
-                <p className="text-vibrant-yellow font-bold text-2xl font-playfair">9</p>
-                <p className="text-pure-white/70 text-sm font-montserrat">Imágenes</p>
-              </div>
-              <div className="w-px h-8 bg-vibrant-yellow/40"></div>
-              <div className="text-center">
-                <p className="text-vibrant-yellow font-bold text-2xl font-playfair">3</p>
-                <p className="text-pure-white/70 text-sm font-montserrat">Estilos</p>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </div>
@@ -285,14 +270,11 @@ export default function PaisajesPage() {
             viewport={{ once: true }}
             className="text-center mt-20"
           >
-            <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-4">
               <div className="h-px w-20 bg-gradient-to-r from-transparent to-vibrant-yellow"></div>
               <div className="w-3 h-3 bg-vibrant-yellow rounded-full"></div>
               <div className="h-px w-20 bg-gradient-to-l from-transparent to-vibrant-yellow"></div>
             </div>
-            <p className="font-source text-charcoal/70 text-sm">
-              Galería completa de paisajes • {paisajesImages.length} imágenes
-            </p>
           </motion.div>
         </div>
       </div>
