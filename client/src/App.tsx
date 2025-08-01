@@ -7,6 +7,7 @@ import Home from "@/pages/home";
 import ConcertsGallery from "@/pages/concerts-gallery";
 import RetratosPage from "@/pages/retratos";
 import PaisajesPage from "@/pages/paisajes";
+import AnimalesPage from "@/pages/animales";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/conciertos" component={ConcertsGallery} />
       <Route path="/retratos" component={RetratosPage} />
       <Route path="/paisajes" component={PaisajesPage} />
+      <Route path="/animales" component={AnimalesPage} />
       <Route component={NotFound} />
     </Switch>
   );
