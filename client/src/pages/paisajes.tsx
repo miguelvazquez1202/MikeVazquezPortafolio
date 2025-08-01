@@ -120,7 +120,7 @@ export default function PaisajesPage() {
   }, [selectedImage, currentIndex]);
 
   return (
-    <div className="min-h-screen bg-soft-grey">
+    <div className="min-h-screen bg-light-grey">
       {/* Header */}
       <div className="relative py-32 bg-gradient-to-br from-dark-grey via-charcoal to-dark-grey overflow-hidden">
         {/* Decorative elements */}
@@ -189,7 +189,7 @@ export default function PaisajesPage() {
       </div>
 
       {/* Gallery */}
-      <div className="py-20 bg-gradient-to-br from-soft-grey via-light-grey to-soft-grey relative">
+      <div className="py-20 bg-light-grey relative">
         {/* Decorative background elements */}
         <div className="absolute top-20 right-10 w-64 h-64 bg-vibrant-yellow/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-48 h-48 bg-dark-grey/5 rounded-full blur-2xl"></div>
