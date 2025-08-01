@@ -133,13 +133,15 @@ export default function PhotographyCategories() {
                   <p className="font-montserrat text-charcoal text-sm mb-4 leading-relaxed">
                     {category.description}
                   </p>
-                  <Button
-                    onClick={() => handleViewCategory(category.id)}
-                    variant="outline"
-                    className="w-full border-vibrant-yellow text-vibrant-yellow hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-300"
-                  >
-                    Ver {category.title}
-                  </Button>
+                  {category.id !== 'mas' && (
+                    <Button
+                      onClick={() => handleViewCategory(category.id)}
+                      variant="outline"
+                      className="w-full border-vibrant-yellow text-vibrant-yellow hover:bg-vibrant-yellow hover:text-dark-grey transition-all duration-300"
+                    >
+                      Ver {category.title}
+                    </Button>
+                  )}
                 </div>
               </Card>
             </motion.div>
