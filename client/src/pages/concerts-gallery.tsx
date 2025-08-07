@@ -270,7 +270,7 @@ export default function ConcertsGallery() {
                     <div className="w-full h-full relative">
                       <video
                         className="w-full h-full object-cover"
-                        poster={`https://res.cloudinary.com/dq0ogehwz/video/upload/so_${image.id === 'tajin_video' ? '35' : image.id === 'tapachula_video' ? '27' : '3'},w_800,h_450,c_fill,q_auto,f_jpg/${image.id.replace('_video', '')}.jpg`}
+                        poster={`https://res.cloudinary.com/dq0ogehwz/video/upload/so_${image.id === 'tajin_video' ? '35' : image.id === 'tapachula_video' ? '27' : '3'},w_800,h_450,c_fill,q_auto,f_jpg/${image.id === 'tajin_video' ? 'v1754545144/Tajin_V2alta_lo8tx5' : image.id === 'tapachula_video' ? 'v1753769573/Tapachula_Reyli_yms53z' : 'default'}.jpg`}
                         controlsList="nodownload"
                         disablePictureInPicture
                         muted
