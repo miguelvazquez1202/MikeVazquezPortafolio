@@ -23,7 +23,7 @@ const videoclips: VideoClip[] = [
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770686/06._Pido_Perdon_mrqgih.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_86,w_800,h_450,c_fill,q_auto,f_jpg/v1753770686/06._Pido_Perdon_mrqgih.jpg',
     duration: '3:45',
-    category: 'Videoclip'
+    category: 'Videolyric'
   },
   {
     id: 'fierro_costera',
