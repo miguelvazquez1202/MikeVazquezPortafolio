@@ -93,11 +93,13 @@ export default function DemoReelSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/videoclips">
-            <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg rounded-md">
-              Ver Más Videoclips
-            </Button>
-          </Link>
+          <Button 
+            className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg rounded-md cursor-not-allowed opacity-75"
+            disabled
+          >
+            Ver Más Proyectos
+          </Button>
+          <p className="text-sm text-dark-grey/60 mt-2 font-montserrat">Próximamente</p>
         </div>
       </div>
 

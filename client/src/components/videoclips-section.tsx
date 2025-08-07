@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 interface Videoclip {
   id: string;
@@ -138,9 +139,11 @@ export default function VideoclipsSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
-            Ver Más Videoclips
-          </Button>
+          <Link href="/videoclips">
+            <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
+              Ver Más Videoclips
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
