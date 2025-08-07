@@ -183,8 +183,47 @@ export default function VideoclipsGallery() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-soft-grey via-pure-white to-soft-grey relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-vibrant-yellow/10 rounded-full blur-xl" />
-        <div className="absolute bottom-0 right-0 w-40 h-40 bg-vibrant-yellow/5 rounded-full blur-2xl" />
+        {/* Animated Background Elements */}
+        <motion.div 
+          animate={{ 
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            repeatType: "reverse" 
+          }}
+          className="absolute top-0 left-0 w-32 h-32 bg-vibrant-yellow/10 rounded-full blur-xl" 
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, -25, 0],
+            y: [0, 15, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "reverse",
+            delay: 2 
+          }}
+          className="absolute bottom-0 right-0 w-40 h-40 bg-vibrant-yellow/5 rounded-full blur-2xl" 
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, 20, 0],
+            y: [0, -10, 0]
+          }}
+          transition={{ 
+            duration: 10,
+            repeat: Infinity,
+            repeatType: "reverse",
+            delay: 4 
+          }}
+          className="absolute top-1/2 left-1/4 w-20 h-20 bg-vibrant-yellow/5 rounded-full blur-xl" 
+        />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
@@ -194,37 +233,75 @@ export default function VideoclipsGallery() {
             className="text-center"
           >
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ 
+                duration: 1.2, 
+                ease: "easeOut",
+                type: "spring",
+                damping: 10 
+              }}
               className="mb-6"
             >
-              <h1 className="font-playfair text-5xl md:text-7xl font-bold text-vibrant-yellow relative">
+              <motion.h1 
+                initial={{ y: 50 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="font-playfair text-5xl md:text-7xl font-bold text-vibrant-yellow relative"
+              >
                 Videoclips
-                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-vibrant-yellow rounded-full" />
-              </h1>
+                <motion.span 
+                  initial={{ width: 0 }}
+                  animate={{ width: 96 }}
+                  transition={{ duration: 0.8, delay: 1 }}
+                  className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 bg-vibrant-yellow rounded-full" 
+                />
+              </motion.h1>
             </motion.div>
             
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="font-montserrat text-xl text-dark-grey/80 max-w-3xl mx-auto leading-relaxed mb-8"
             >
               Producción audiovisual profesional que combina narrativa cinematográfica con 
-              <span className="text-vibrant-yellow font-semibold"> estética contemporánea</span>. 
+              <motion.span 
+                initial={{ backgroundColor: "transparent" }}
+                animate={{ backgroundColor: "#ffc20f20" }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className="text-vibrant-yellow font-semibold px-1 rounded"
+              > 
+                estética contemporánea
+              </motion.span>. 
               Cada videoclip cuenta una historia única a través del lenguaje audiovisual.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               className="flex items-center justify-center space-x-2 text-dark-grey/60 font-montserrat"
             >
-              <div className="w-12 h-px bg-vibrant-yellow" />
-              <span>Scroll para explorar</span>
-              <div className="w-12 h-px bg-vibrant-yellow" />
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: 48 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="h-px bg-vibrant-yellow" 
+              />
+              <motion.span
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+              >
+                Scroll para explorar
+              </motion.span>
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: 48 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="h-px bg-vibrant-yellow" 
+              />
             </motion.div>
           </motion.div>
         </div>
@@ -251,10 +328,24 @@ export default function VideoclipsGallery() {
             {videoclips.map((video, index) => (
               <motion.div
                 key={video.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-soft-grey rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                initial={{ opacity: 0, y: 80, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.15,
+                  type: "spring",
+                  damping: 15
+                }}
+                whileHover={{ 
+                  y: -8,
+                  scale: 1.02,
+                  rotateY: 2,
+                  rotateX: 1
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative bg-soft-grey rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform perspective-1000"
+                style={{ transformStyle: "preserve-3d" }}
                 onClick={() => openFullscreen(video)}
               >
                 <div className="relative aspect-video bg-dark-grey/10">
@@ -286,66 +377,121 @@ export default function VideoclipsGallery() {
                   </video>
 
                   {/* Category Tag */}
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold">
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                    className="absolute top-4 left-4"
+                  >
+                    <motion.span 
+                      whileHover={{ scale: 1.05 }}
+                      className="bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold shadow-md"
+                    >
                       {video.category}
-                    </span>
-                  </div>
+                    </motion.span>
+                  </motion.div>
 
                   {/* Video Controls Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/60 via-transparent to-dark-grey/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 bg-gradient-to-t from-dark-grey/60 via-transparent to-dark-grey/30"
+                  >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Button
-                        onClick={(e) => togglePlay(video.id, e)}
-                        className="bg-vibrant-yellow hover:bg-vibrant-yellow/90 text-dark-grey rounded-full w-16 h-16 flex items-center justify-center transform scale-100 hover:scale-110 transition-transform duration-200"
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileHover={{ scale: 1, opacity: 1 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", damping: 15 }}
                       >
-                        {playingVideos.has(video.id) ? (
-                          <Pause size={24} />
-                        ) : (
-                          <Play size={24} className="ml-1" />
-                        )}
-                      </Button>
+                        <Button
+                          onClick={(e) => togglePlay(video.id, e)}
+                          className="bg-vibrant-yellow hover:bg-vibrant-yellow/90 text-dark-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl"
+                        >
+                          <motion.div
+                            animate={playingVideos.has(video.id) ? { rotate: 180 } : { rotate: 0 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            {playingVideos.has(video.id) ? (
+                              <Pause size={24} />
+                            ) : (
+                              <Play size={24} className="ml-1" />
+                            )}
+                          </motion.div>
+                        </Button>
+                      </motion.div>
                     </div>
 
                     {/* Video Controls */}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                    <motion.div 
+                      initial={{ y: 20, opacity: 0 }}
+                      whileHover={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                      className="absolute bottom-4 left-4 right-4 flex items-center justify-between"
+                    >
                       <div className="flex items-center space-x-2">
-                        <Button
-                          onClick={(e) => toggleMute(video.id, e)}
-                          className="bg-pure-white/20 hover:bg-pure-white/30 text-pure-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm"
-                        >
-                          {mutedVideos.has(video.id) ? (
-                            <VolumeX size={16} />
-                          ) : (
-                            <Volume2 size={16} />
-                          )}
-                        </Button>
+                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                          <Button
+                            onClick={(e) => toggleMute(video.id, e)}
+                            className="bg-pure-white/20 hover:bg-pure-white/30 text-pure-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm"
+                          >
+                            <motion.div
+                              animate={mutedVideos.has(video.id) ? { scale: [1, 0.8, 1] } : { scale: 1 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              {mutedVideos.has(video.id) ? (
+                                <VolumeX size={16} />
+                              ) : (
+                                <Volume2 size={16} />
+                              )}
+                            </motion.div>
+                          </Button>
+                        </motion.div>
                         {video.duration && (
-                          <span className="text-pure-white text-sm font-montserrat bg-pure-white/20 px-2 py-1 rounded backdrop-blur-sm">
+                          <motion.span 
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileHover={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.2 }}
+                            className="text-pure-white text-sm font-montserrat bg-pure-white/20 px-2 py-1 rounded backdrop-blur-sm"
+                          >
                             {video.duration}
-                          </span>
+                          </motion.span>
                         )}
                       </div>
                       
-                      <Button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          openFullscreen(video);
-                        }}
-                        className="bg-pure-white/20 hover:bg-pure-white/30 text-pure-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm"
-                      >
-                        <Maximize size={16} />
-                      </Button>
-                    </div>
-                  </div>
+                      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                        <Button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openFullscreen(video);
+                          }}
+                          className="bg-pure-white/20 hover:bg-pure-white/30 text-pure-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm"
+                        >
+                          <motion.div whileHover={{ rotate: 15 }}>
+                            <Maximize size={16} />
+                          </motion.div>
+                        </Button>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                 </div>
 
                 {/* Video Info */}
-                <div className="p-6 bg-pure-white">
-                  <h3 className="font-playfair text-xl font-semibold text-dark-grey mb-2 group-hover:text-vibrant-yellow transition-colors">
+                <motion.div 
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                  className="p-6 bg-pure-white"
+                >
+                  <motion.h3 
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", damping: 20 }}
+                    className="font-playfair text-xl font-semibold text-dark-grey mb-2 group-hover:text-vibrant-yellow transition-colors duration-300"
+                  >
                     {video.title}
-                  </h3>
-                </div>
+                  </motion.h3>
+                </motion.div>
               </motion.div>
             ))}
           </div>
