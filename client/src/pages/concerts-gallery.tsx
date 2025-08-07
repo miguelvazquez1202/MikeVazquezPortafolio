@@ -4,6 +4,8 @@ import { ArrowLeft, X, Heart, Share2 } from 'lucide-react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import SEOHead from '@/components/seo-head';
+import MobileCarousel from '@/components/mobile-carousel';
+import { useMobileDetect } from '@/hooks/use-mobile-detect';
 
 interface ConcertImage {
   id: string;
@@ -58,10 +60,17 @@ export default function ConcertsGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
+  const isMobile = useMobileDetect();
 
   const openLightbox = (image: ConcertImage, index: number) => {
-    setSelectedImage(image);
-    setCurrentIndex(index);
+    if (isMobile) {
+      setIsMobileCarouselOpen(true);
+      setCurrentIndex(index);
+    } else {
+      setSelectedImage(image);
+      setCurrentIndex(index);
+    }
   };
 
   const closeLightbox = () => {
@@ -461,6 +470,14 @@ export default function ConcertsGallery() {
           </motion.div>
         </div>
       </section>
+
+      {/* Mobile Carousel */}
+      <MobileCarousel
+        images={concertGalleryImages}
+        initialIndex={currentIndex}
+        isOpen={isMobileCarouselOpen}
+        onClose={() => setIsMobileCarouselOpen(false)}
+      />
     </div>
   );
 }

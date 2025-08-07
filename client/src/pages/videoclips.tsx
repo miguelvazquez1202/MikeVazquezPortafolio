@@ -4,6 +4,8 @@ import { ArrowLeft, Play, Pause, Volume2, VolumeX, Maximize, X } from 'lucide-re
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import SEOHead from '@/components/seo-head';
+import MobileCarousel from '@/components/mobile-carousel';
+import { useMobileDetect } from '@/hooks/use-mobile-detect';
 
 interface VideoClip {
   id: string;
@@ -58,10 +60,18 @@ export default function VideoclipsGallery() {
   const [selectedVideo, setSelectedVideo] = useState<VideoClip | null>(null);
   const [playingVideos, setPlayingVideos] = useState<Set<string>>(new Set());
   const [mutedVideos, setMutedVideos] = useState<Set<string>>(new Set(['all']));
+  const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const videoRefs = useRef<Record<string, HTMLVideoElement>>({});
+  const isMobile = useMobileDetect();
 
-  const openFullscreen = (video: VideoClip) => {
-    setSelectedVideo(video);
+  const openFullscreen = (video: VideoClip, index: number = 0) => {
+    if (isMobile) {
+      setIsMobileCarouselOpen(true);
+      setCurrentIndex(index);
+    } else {
+      setSelectedVideo(video);
+    }
   };
 
   const closeFullscreen = () => {
@@ -373,7 +383,7 @@ export default function VideoclipsGallery() {
                 whileTap={{ scale: 0.98 }}
                 className="group relative bg-soft-grey rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform perspective-1000"
                 style={{ transformStyle: "preserve-3d" }}
-                onClick={() => openFullscreen(video)}
+                onClick={() => openFullscreen(video, index)}
               >
                 <div className="relative aspect-video bg-dark-grey/10">
                   <video
@@ -569,6 +579,18 @@ export default function VideoclipsGallery() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Mobile Carousel */}
+      <MobileCarousel
+        images={videoclips.map(video => ({ 
+          id: video.id, 
+          src: video.thumbnailUrl, 
+          alt: video.title 
+        }))}
+        initialIndex={currentIndex}
+        isOpen={isMobileCarouselOpen}
+        onClose={() => setIsMobileCarouselOpen(false)}
+      />
     </div>
   );
 }

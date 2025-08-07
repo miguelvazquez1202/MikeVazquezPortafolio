@@ -4,6 +4,8 @@ import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import SEOHead from "@/components/seo-head";
+import MobileCarousel from "@/components/mobile-carousel";
+import { useMobileDetect } from "@/hooks/use-mobile-detect";
 
 interface RetratosImage {
   id: string;
@@ -15,6 +17,8 @@ interface RetratosImage {
 export default function RetratosPage() {
   const [selectedImage, setSelectedImage] = useState<RetratosImage | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
+  const isMobile = useMobileDetect();
 
   // Imágenes de la colección de Cloudinary con tamaños optimizados
   const retratosImages: RetratosImage[] = [
@@ -75,9 +79,14 @@ export default function RetratosPage() {
   ];
 
   const openLightbox = (image: RetratosImage, index: number) => {
-    setSelectedImage(image);
-    setCurrentIndex(index);
-    document.body.style.overflow = 'hidden';
+    if (isMobile) {
+      setIsMobileCarouselOpen(true);
+      setCurrentIndex(index);
+    } else {
+      setSelectedImage(image);
+      setCurrentIndex(index);
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   const closeLightbox = () => {
@@ -288,6 +297,14 @@ export default function RetratosPage() {
           </div>
         </motion.div>
       )}
+
+      {/* Mobile Carousel */}
+      <MobileCarousel
+        images={retratosImages.map(img => ({ id: img.id, src: img.lightboxSrc, alt: img.alt }))}
+        initialIndex={currentIndex}
+        isOpen={isMobileCarouselOpen}
+        onClose={() => setIsMobileCarouselOpen(false)}
+      />
     </div>
   );
 }
