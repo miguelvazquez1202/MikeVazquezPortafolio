@@ -190,10 +190,10 @@ export default function RetratosPage() {
       <div className="relative z-30 bg-pure-white/95 backdrop-blur-sm border-b border-light-grey/30">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <Link href="/">
+            <Link href="/#servicios">
               <Button variant="ghost" className="flex items-center gap-2 text-dark-grey hover:text-vibrant-yellow transition-colors">
                 <ArrowLeft size={20} />
-                Volver al Inicio
+                Volver
               </Button>
             </Link>
             <div className="text-center">

@@ -183,7 +183,7 @@ export default function PaisajesPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Link href="/" className="inline-block mb-8">
+            <Link href="/#servicios" className="inline-block mb-8">
               <Button 
                 variant="ghost" 
                 className="text-pure-white hover:text-dark-grey transition-all duration-300 flex items-center gap-3 text-lg group bg-vibrant-yellow/20 hover:bg-vibrant-yellow border border-vibrant-yellow hover:border-vibrant-yellow px-6 py-3 rounded-lg shadow-lg"
@@ -194,7 +194,7 @@ export default function PaisajesPage() {
                 >
                   <ArrowLeft size={20} />
                 </motion.div>
-                <span className="group-hover:translate-x-1 transition-transform duration-300">Volver al inicio</span>
+                <span className="group-hover:translate-x-1 transition-transform duration-300">Volver</span>
               </Button>
             </Link>
           </motion.div>

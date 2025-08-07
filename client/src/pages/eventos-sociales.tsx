@@ -124,9 +124,9 @@ export default function EventosSocialesGallery() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-pure-white/95 backdrop-blur-sm border-b border-soft-grey">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 text-dark-grey hover:text-vibrant-yellow transition-colors">
+            <Link href="/#servicios" className="flex items-center space-x-3 text-dark-grey hover:text-vibrant-yellow transition-colors">
               <ArrowLeft size={20} />
-              <span className="font-montserrat font-medium">Volver al Inicio</span>
+              <span className="font-montserrat font-medium">Volver</span>
             </Link>
             <div className="font-playfair text-2xl font-semibold text-dark-grey">
               Mike Vázquez
