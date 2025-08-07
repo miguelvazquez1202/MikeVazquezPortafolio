@@ -47,7 +47,7 @@ export default function Home() {
                   controls
                   controlsList="nodownload"
                   disablePictureInPicture
-                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_0/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.jpg"
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.jpg"
                 >
                   <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.mp4" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
@@ -71,7 +71,7 @@ export default function Home() {
                   controls
                   controlsList="nodownload"
                   disablePictureInPicture
-                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_0/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.jpg"
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_178/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.jpg"
                 >
                   <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.mp4" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
@@ -95,7 +95,7 @@ export default function Home() {
                   controls
                   controlsList="nodownload"
                   disablePictureInPicture
-                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_0/v1753772564/MyUsage_1080p_s8hgom.jpg"
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3/v1753772564/MyUsage_1080p_s8hgom.jpg"
                 >
                   <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772564/MyUsage_1080p_s8hgom.mov" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
