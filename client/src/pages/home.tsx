@@ -19,7 +19,7 @@ export default function Home() {
       
       <GallerySection
         id="concerts"
-        title="Fotografía de Conciertos"
+        title="Conciertos"
         description="Capturando la energía, emoción y arte de las presentaciones musicales en vivo"
         images={concertImages}
         bgColor="bg-soft-grey"

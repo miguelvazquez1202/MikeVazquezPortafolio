@@ -32,9 +32,20 @@ export default function GallerySection({ id, title, description, images, bgColor
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
             {title}
           </h2>
-          <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto">
+          <p className="font-montserrat text-xl text-charcoal max-w-3xl mx-auto mb-4">
             {description}
           </p>
+          {title === "Conciertos" && (
+            <p className="font-montserrat text-lg max-w-2xl mx-auto">
+              <span className="text-vibrant-yellow font-semibold">Fotografía</span>
+              <span className="text-dark-grey">/</span>
+              <span className="text-dark-grey font-semibold">Aftermovies</span>
+              <span className="text-vibrant-yellow">/</span>
+              <span className="text-vibrant-yellow font-semibold">MakingOf</span>
+              <span className="text-dark-grey">/</span>
+              <span className="text-dark-grey font-semibold">CircuitoCerrado</span>
+            </p>
+          )}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -71,7 +82,7 @@ export default function GallerySection({ id, title, description, images, bgColor
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            {title === "Fotografía de Conciertos" ? (
+            {title === "Conciertos" ? (
               <Link href="/conciertos">
                 <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
                   Ver Más Fotos de Conciertos
