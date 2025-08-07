@@ -51,12 +51,11 @@ const concertGalleryImages: ConcertImage[] = [
   { id: 'WEB-03_a3iisf', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/WEB-03_a3iisf.jpg', alt: 'Fotografía profesional de concierto con iluminación espectacular' },
   { id: 'WEB-04_ehov0y', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/WEB-04_ehov0y.jpg', alt: 'Momento único capturado en presentación musical' },
   { id: 'DSC03844_rwfsa7', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC03844_rwfsa7.jpg', alt: 'Retrato artístico durante presentación' },
-  { id: 'DSC00379_hero', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC00379_p6qglu.jpg', alt: 'Concierto con atmósfera cinematográfica' },
-  { id: 'DSC06930_adicional', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC06928_2_nkwpsj.jpg', alt: 'Presentación musical con gran energía' },
-  { id: 'DSC03570_extra', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC03570_wypjuu.jpg', alt: 'Artista en conexión emocional con el público' },
-  { id: 'DSC01887_adicional', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC01887_www5pk.jpg', alt: 'Documentación profesional de evento musical' },
-  { id: 'DSC06517_extra', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC06517_aodxjk.jpg', alt: 'Composición artística de presentación en vivo' },
-  { id: 'DSC00944_mejorada', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC00944-Enhanced-NR_jscfcx.jpg', alt: 'Concierto con postproducción avanzada y efectos únicos' }
+  { id: 'DSC00089_dup1', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC00089_wayg1s.jpg', alt: 'Presentación musical con gran energía capturada profesionalmente' },
+  { id: 'DSC00095_dup2', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC00095_lezf1e.jpg', alt: 'Artista en momento de conexión emocional con el público' },
+  { id: 'DSC00165_dup3', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC00165_varofk.jpg', alt: 'Concierto con iluminación dramática y composición excepcional' },
+  { id: 'DSC00212_dup4', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/DSC00212_p4jkbb.jpg', alt: 'Momento único de presentación musical documentado artísticamente' },
+  { id: 'WEB-03_dup5', src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_400,c_fill,g_auto,q_auto,f_auto/WEB-03_a3iisf.jpg', alt: 'Fotografía de concierto con técnica profesional y gran timing' }
 ];
 
 export default function ConcertsGallery() {
