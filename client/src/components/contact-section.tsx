@@ -92,7 +92,7 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/mikevazquez12?igsh=MXdzdHJramNiNm94bQ%3D%3D&utm_source=qr", label: "Instagram" },
     { icon: Youtube, href: "#", label: "YouTube" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
