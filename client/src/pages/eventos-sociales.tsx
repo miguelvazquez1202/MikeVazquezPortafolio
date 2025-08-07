@@ -23,13 +23,13 @@ export default function EventosSocialesGallery() {
   const eventosSocialesImages: EventoSocialImage[] = [
     {
       id: 'evento-1',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_500,g_center,q_auto,f_auto/v1753769933/WEB-17_nopwqq.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_500,g_face,q_auto,f_auto/v1753769933/WEB-17_nopwqq.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1500,q_auto,f_auto/v1753769933/WEB-17_nopwqq.jpg',
       alt: 'Fotografía de evento social por Mike Vázquez - Ambiente festivo y profesional'
     },
     {
       id: 'evento-2',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_350,h_450,g_center,q_auto,f_auto/v1753769932/WEB-16_abwn5o.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_350,h_450,g_face,q_auto,f_auto/v1753769932/WEB-16_abwn5o.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1050,h_1350,q_auto,f_auto/v1753769932/WEB-16_abwn5o.jpg',
       alt: 'Captura profesional de evento social - Momentos únicos documentados'
     },
