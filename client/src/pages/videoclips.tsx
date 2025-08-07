@@ -148,21 +148,48 @@ export default function VideoclipsGallery() {
   return (
     <div className="min-h-screen bg-pure-white">
       <SEOHead
-        title="Videoclips Musicales - Mike Vázquez | Producción Audiovisual Profesional"
-        description="Galería de videoclips musicales producidos profesionalmente. Narrativa cinematográfica, estética contemporánea y producción audiovisual de alta calidad."
-        keywords="videoclips musicales, producción audiovisual, video musical, cinematografía, Mike Vázquez, producción musical"
+        title="Videoclips Musicales - Mike Vázquez | Director y Productor Audiovisual México"
+        description="Producción profesional de videoclips musicales en México. Narrativa cinematográfica, dirección creativa y producción audiovisual de alta calidad. Especialista en videolyrics, videoclips y live sessions."
+        keywords="videoclips musicales México, producción audiovisual, director de videoclips, videolyrics, live session, cinematografía musical, Ciudad de México, Hello Hi Producciones, Mike Vázquez director"
         image="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_1200,h_630,c_fill,q_auto,f_jpg/v1753770686/06._Pido_Perdon_mrqgih.jpg"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "VideoGallery",
           "name": "Videoclips Musicales - Mike Vázquez",
-          "description": "Galería de videoclips musicales producidos profesionalmente",
+          "description": "Galería profesional de videoclips musicales con narrativa cinematográfica y producción audiovisual de alta calidad",
           "author": {
             "@type": "Person",
-            "name": "Mike Vázquez"
+            "name": "Mike Vázquez",
+            "jobTitle": "Director y Productor Audiovisual",
+            "telephone": "+52-55-3726-4582",
+            "email": "miguelvazquez1202@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ciudad de México",
+              "addressCountry": "México"
+            },
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Hello Hi Producciones"
+            }
           },
-          "genre": "Video Musical",
-          "url": window.location.href
+          "genre": "Videoclips Musicales",
+          "url": window.location.href,
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Producción de Videoclips Musicales",
+            "description": "Producción audiovisual profesional de videoclips, videolyrics y live sessions con narrativa cinematográfica",
+            "serviceType": "Producción Audiovisual",
+            "category": ["Videolyric", "Videoclip", "Live session"],
+            "areaServed": {
+              "@type": "Place",
+              "name": "México"
+            },
+            "provider": {
+              "@type": "Person",
+              "name": "Mike Vázquez"
+            }
+          }
         }}
       />
 

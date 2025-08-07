@@ -105,21 +105,43 @@ export default function AnimalesPage() {
   return (
     <div className="min-h-screen bg-light-grey">
       <SEOHead
-        title="Fotografía de Animales - Mike Vázquez | Fotografía de Vida Salvaje"
-        description="Fotografías de animales y vida salvaje capturadas con técnica especializada. Documentando la naturaleza con respeto y visión artística profesional."
-        keywords="fotografía de animales, vida salvaje, fotografía de naturaleza, fauna, Mike Vázquez"
+        title="Fotografía de Animales - Mike Vázquez | Fotógrafo de Vida Salvaje México"
+        description="Fotografía profesional de animales y vida salvaje en México. Capturando la fauna mexicana con técnica especializada, respeto por la naturaleza y visión artística única. Documentación de biodiversidad."
+        keywords="fotografía de animales, vida salvaje México, fotografía de fauna, animales mexicanos, naturaleza México, fotografía de biodiversidad, vida silvestre, documentación animal, Mike Vázquez fotógrafo"
         image="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753764520/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_51d8059a_slggsf.jpg"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "ImageGallery",
           "name": "Fotografía de Animales - Mike Vázquez",
-          "description": "Fotografías de animales y vida salvaje capturadas con técnica especializada",
+          "description": "Galería profesional de fotografía de vida salvaje y fauna mexicana con técnica especializada",
           "author": {
             "@type": "Person",
-            "name": "Mike Vázquez"
+            "name": "Mike Vázquez",
+            "jobTitle": "Fotógrafo de Vida Salvaje",
+            "telephone": "+52-55-3726-4582",
+            "email": "miguelvazquez1202@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ciudad de México",
+              "addressCountry": "México"
+            }
           },
           "genre": "Fotografía de Vida Salvaje",
-          "url": window.location.href
+          "url": window.location.href,
+          "locationCreated": {
+            "@type": "Place",
+            "name": "México"
+          },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Fotografía de Vida Salvaje Profesional",
+            "description": "Documentación fotográfica profesional de fauna y vida silvestre mexicana",
+            "serviceType": "Fotografía de Animales",
+            "areaServed": {
+              "@type": "Country",
+              "name": "México"
+            }
+          }
         }}
       />
       {/* Header */}

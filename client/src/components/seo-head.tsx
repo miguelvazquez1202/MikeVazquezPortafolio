@@ -64,10 +64,10 @@ export default function SEOHead({
       let script = document.querySelector('script[type="application/ld+json"]');
       if (!script) {
         script = document.createElement('script');
-        script.type = 'application/ld+json';
+        (script as HTMLScriptElement).type = 'application/ld+json';
         document.head.appendChild(script);
       }
-      script.textContent = JSON.stringify(structuredData);
+      (script as HTMLScriptElement).textContent = JSON.stringify(structuredData);
     }
 
     // Cleanup function to restore defaults when component unmounts

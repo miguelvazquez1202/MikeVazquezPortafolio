@@ -123,21 +123,43 @@ export default function PaisajesPage() {
   return (
     <div className="min-h-screen bg-light-grey">
       <SEOHead
-        title="Fotografía de Paisajes - Mike Vázquez | Paisajes Naturales y Urbanos"
-        description="Colección de fotografías de paisajes naturales y urbanos capturados con visión artística. Explorando la belleza de los espacios naturales y arquitectónicos."
-        keywords="fotografía de paisajes, paisajes naturales, fotografía urbana, naturaleza, Mike Vázquez"
+        title="Fotografía de Paisajes - Mike Vázquez | Paisajes Naturales y Urbanos México"
+        description="Fotografía profesional de paisajes naturales y urbanos en México. Capturando la belleza del entorno con técnica cinematográfica, composición artística y visión única. Especialista en paisajes mexicanos."
+        keywords="fotografía de paisajes, paisajes urbanos, paisajes naturales México, fotografía arquitectónica, paisajes mexicanos, Ciudad de México, composición paisajística, fotografía de naturaleza, Mike Vázquez fotógrafo"
         image="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753771198/WEB-23_gvup8o.jpg"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "ImageGallery",
           "name": "Fotografía de Paisajes - Mike Vázquez",
-          "description": "Colección de fotografías de paisajes naturales y urbanos capturados con visión artística",
+          "description": "Galería profesional de fotografía de paisajes naturales y urbanos de México con técnica cinematográfica",
           "author": {
             "@type": "Person",
-            "name": "Mike Vázquez"
+            "name": "Mike Vázquez",
+            "jobTitle": "Fotógrafo de Paisajes",
+            "telephone": "+52-55-3726-4582",
+            "email": "miguelvazquez1202@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ciudad de México",
+              "addressCountry": "México"
+            }
           },
           "genre": "Fotografía de Paisajes",
-          "url": window.location.href
+          "url": window.location.href,
+          "locationCreated": {
+            "@type": "Place",
+            "name": "México"
+          },
+          "mainEntity": {
+            "@type": "Service",
+            "name": "Fotografía de Paisajes Profesional",
+            "description": "Captura profesional de paisajes naturales y urbanos con técnica artística",
+            "serviceType": "Fotografía de Paisajes",
+            "areaServed": {
+              "@type": "Country",
+              "name": "México"
+            }
+          }
         }}
       />
       {/* Header */}
