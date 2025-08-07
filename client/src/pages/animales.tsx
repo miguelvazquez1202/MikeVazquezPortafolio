@@ -245,29 +245,20 @@ export default function AnimalesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group cursor-pointer relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                className="group cursor-pointer"
                 onClick={() => openLightbox(image, index)}
               >
-                <div className="aspect-[4/3] overflow-hidden bg-pure-white">
+                <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500">
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-12 h-12 bg-vibrant-yellow rounded-full flex items-center justify-center ml-auto">
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        className="w-6 h-6 border-2 border-dark-grey rounded-sm"
-                      ></motion.div>
-                    </div>
-                  </div>
-                </div>
+
               </motion.div>
             ))}
           </div>
