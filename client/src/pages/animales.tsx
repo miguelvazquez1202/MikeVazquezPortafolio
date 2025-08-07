@@ -57,6 +57,18 @@ export default function AnimalesPage() {
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
       alt: 'Fotografía artística de fauna por Mike Vázquez'
+    },
+    {
+      id: 'animal-7',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_20_pqsimv.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_20_pqsimv.jpg',
+      alt: 'Fotografía de vida salvaje en su entorno natural por Mike Vázquez'
+    },
+    {
+      id: 'animal-8',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_6_wclodr.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_6_wclodr.jpg',
+      alt: 'Captura profesional de animales en su hábitat por Mike Vázquez'
     }
   ];
 

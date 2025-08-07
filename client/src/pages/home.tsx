@@ -38,7 +38,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Video 1 - Medical Production */}
             <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-video bg-dark-grey relative overflow-hidden">
@@ -107,6 +107,25 @@ export default function Home() {
                 </h3>
                 <p className="font-source text-charcoal text-sm">
                   Producción publicitaria con narrativa cinematográfica y técnica profesional
+                </p>
+              </div>
+            </div>
+
+            {/* Photo 4 - Ranch Corporate Photography */}
+            <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+                <img
+                  src="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_450,g_center,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_34_samnjq.jpg"
+                  alt="Fotografía corporativa para empresas por Mike Vázquez"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">
+                  Fotografía Corporativa
+                </h3>
+                <p className="font-source text-charcoal text-sm">
+                  Sesión fotográfica corporativa con enfoque profesional y composición artística
                 </p>
               </div>
             </div>
