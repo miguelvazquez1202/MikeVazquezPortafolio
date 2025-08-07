@@ -28,17 +28,88 @@ export default function Home() {
       <VideoclipsSection />
       
       <div id="corporate" className="py-20 bg-pure-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
-            Para Empresas
-          </h2>
-          <p className="font-montserrat text-xl text-charcoal max-w-4xl mx-auto mb-12">
-            Contenido corporativo y campañas comerciales que elevan la presencia visual de tu marca con narrativa profesional y técnica cinematográfica
-          </p>
-          <div className="bg-gradient-to-r from-vibrant-yellow/10 to-transparent p-8 rounded-lg">
-            <p className="font-montserrat text-lg text-charcoal italic">
-              "Próximamente - Galería corporativa en desarrollo"
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-dark-grey mb-6">
+              Para Empresas
+            </h2>
+            <p className="font-montserrat text-xl text-charcoal max-w-4xl mx-auto">
+              Contenido corporativo y campañas comerciales que elevan la presencia visual de tu marca con narrativa profesional y técnica cinematográfica
             </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Video 1 - Medical Production */}
+            <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  controls
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_0/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.jpg"
+                >
+                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.mp4" type="video/mp4" />
+                  Tu navegador no soporta videos HTML5.
+                </video>
+              </div>
+              <div className="p-6">
+                <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">
+                  Producción Médica
+                </h3>
+                <p className="font-source text-charcoal text-sm">
+                  Video memoria corporativo con enfoque profesional para la industria de la salud
+                </p>
+              </div>
+            </div>
+
+            {/* Video 2 - Johnson & Johnson */}
+            <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  controls
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_0/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.jpg"
+                >
+                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.mp4" type="video/mp4" />
+                  Tu navegador no soporta videos HTML5.
+                </video>
+              </div>
+              <div className="p-6">
+                <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">
+                  Evento Corporativo J&J
+                </h3>
+                <p className="font-source text-charcoal text-sm">
+                  Producción para evento empresarial Credo Day 2019 con cobertura integral
+                </p>
+              </div>
+            </div>
+
+            {/* Video 3 - Commercial Production */}
+            <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  controls
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_0/v1753772564/MyUsage_1080p_s8hgom.jpg"
+                >
+                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772564/MyUsage_1080p_s8hgom.mov" type="video/mp4" />
+                  Tu navegador no soporta videos HTML5.
+                </video>
+              </div>
+              <div className="p-6">
+                <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">
+                  Campaña Comercial
+                </h3>
+                <p className="font-source text-charcoal text-sm">
+                  Producción publicitaria con narrativa cinematográfica y técnica profesional
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
