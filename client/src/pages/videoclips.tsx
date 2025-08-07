@@ -17,32 +17,32 @@ interface VideoClip {
 const videoclips: VideoClip[] = [
   {
     id: 'pido_perdon',
-    title: '06. Pido Perdón',
-    description: 'Video musical emotivo con narrativa cinematográfica',
+    title: 'Pido Perdón - Reyli Barba',
+    description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770686/06._Pido_Perdon_mrqgih.mp4',
-    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770686/06._Pido_Perdon_mrqgih.jpg',
+    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_86,w_800,h_450,c_fill,q_auto,f_jpg/v1753770686/06._Pido_Perdon_mrqgih.jpg',
     duration: '3:45'
   },
   {
     id: 'fierro_costera',
-    title: 'Fierro Por La Costera - Alexis',
-    description: 'Producción musical con estética urbana contemporánea',
+    title: 'Fierro Por La Costera - Alexis Cristóbal',
+    description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770682/Fierro_Por_La_Costera_Alexis_Finalcut_1080P_zmwizb.mp4',
-    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753770682/Fierro_Por_La_Costera_Alexis_Finalcut_1080P_zmwizb.jpg',
+    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_85,w_800,h_450,c_fill,q_auto,f_jpg/v1753770682/Fierro_Por_La_Costera_Alexis_Finalcut_1080P_zmwizb.jpg',
     duration: '4:12'
   },
   {
     id: 'mi_reina_maya',
-    title: 'Mi Reina Maya - Videolyric',
-    description: 'Video lírico con elementos visuales dinámicos y tipografía creativa',
+    title: 'Mi Reina Maya - Reyli Barba',
+    description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.jpg',
     duration: '3:28'
   },
   {
     id: '730_dias',
-    title: '730 Días',
-    description: 'Video musical con narrativa romántica y cinematografía profesional',
+    title: '730 Días - Reyli Barba',
+    description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769586/730_Dias_V4_1080P_flafqg.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753769586/730_Dias_V4_1080P_flafqg.jpg',
     duration: '4:03'
@@ -71,7 +71,17 @@ export default function VideoclipsGallery() {
   const togglePlay = (videoId: string, e?: React.MouseEvent) => {
     e?.stopPropagation();
     const video = videoRefs.current[videoId];
-    if (!video) return;
+    if (!video) {
+      console.error(`Video not found for ID: ${videoId}`);
+      return;
+    }
+
+    console.log(`Toggle play for video: ${videoId}`, { 
+      currentTime: video.currentTime, 
+      duration: video.duration,
+      readyState: video.readyState,
+      paused: video.paused 
+    });
 
     if (playingVideos.has(videoId)) {
       video.pause();
@@ -88,8 +98,19 @@ export default function VideoclipsGallery() {
         }
       });
       
-      video.play();
-      setPlayingVideos(new Set([videoId]));
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log(`Video ${videoId} started playing successfully`);
+            setPlayingVideos(new Set([videoId]));
+          })
+          .catch(error => {
+            console.error(`Error playing video ${videoId}:`, error);
+          });
+      } else {
+        setPlayingVideos(new Set([videoId]));
+      }
     }
   };
 
@@ -173,11 +194,8 @@ export default function VideoclipsGallery() {
               transition={{ duration: 1, ease: "easeOut" }}
               className="mb-6"
             >
-              <h1 className="font-playfair text-4xl md:text-6xl font-bold text-dark-grey mb-2">
-                Videoclips
-              </h1>
               <h1 className="font-playfair text-5xl md:text-7xl font-bold text-vibrant-yellow relative">
-                Musicales
+                Videoclips
                 <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-vibrant-yellow rounded-full" />
               </h1>
             </motion.div>
@@ -241,6 +259,16 @@ export default function VideoclipsGallery() {
                     poster={video.thumbnailUrl}
                     controlsList="nodownload"
                     disablePictureInPicture
+                    preload="metadata"
+                    onError={(e) => {
+                      console.error(`Video error for ${video.id}:`, e.currentTarget.error);
+                    }}
+                    onLoadStart={() => {
+                      console.log(`Loading video: ${video.id}`);
+                    }}
+                    onCanPlay={() => {
+                      console.log(`Video can play: ${video.id}`);
+                    }}
                     onEnded={() => {
                       setPlayingVideos(prev => {
                         const newSet = new Set(prev);
@@ -305,9 +333,6 @@ export default function VideoclipsGallery() {
                   <h3 className="font-playfair text-xl font-semibold text-dark-grey mb-2 group-hover:text-vibrant-yellow transition-colors">
                     {video.title}
                   </h3>
-                  <p className="font-montserrat text-dark-grey/70 text-sm leading-relaxed">
-                    {video.description}
-                  </p>
                 </div>
               </motion.div>
             ))}
@@ -354,9 +379,6 @@ export default function VideoclipsGallery() {
                 <h3 className="font-playfair text-xl font-semibold text-pure-white mb-1">
                   {selectedVideo.title}
                 </h3>
-                <p className="font-montserrat text-pure-white/80 text-sm">
-                  {selectedVideo.description}
-                </p>
               </div>
             </motion.div>
           </motion.div>
