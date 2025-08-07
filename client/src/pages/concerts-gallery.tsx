@@ -463,9 +463,9 @@ export default function ConcertsGallery() {
               Contáctame para documentar tu próximo evento musical
             </p>
             <Link href="/#contact">
-              <button className="bg-vibrant-yellow text-dark-grey font-montserrat font-semibold px-8 py-4 rounded-lg hover:bg-vibrant-yellow/90 transition-colors">
+              <Button className="bg-vibrant-yellow text-dark-grey font-montserrat font-semibold px-8 py-4 rounded-lg hover:bg-vibrant-yellow/90 transition-colors h-auto">
                 Solicitar Cotización
-              </button>
+              </Button>
             </Link>
           </motion.div>
         </div>
