@@ -36,7 +36,7 @@ const videoclips: VideoClip[] = [
     title: 'Mi Reina Maya - Reyli Barba',
     description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.mp4',
-    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.jpg',
+    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_56,w_800,h_450,c_fill,q_auto,f_jpg/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.jpg',
     duration: '3:28'
   },
   {
