@@ -41,7 +41,7 @@ export default function PhotographyCategories() {
       icon: Heart,
       color: 'bg-vibrant-yellow',
       images: [
-        'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753764518/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_a6a9ab5e_irfwl5.jpg'
+        'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753764516/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_b7df56ed_brhz7h.jpg'
       ]
     },
     {

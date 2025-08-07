@@ -20,15 +20,6 @@ export default function VideoclipsSection() {
 
   const videoclips: Videoclip[] = [
     {
-      id: 'clip-1',
-      title: 'Hoy Me Alejo',
-      artist: 'Videoclip',
-      description: 'Dirección, edición y post producción',
-      category: 'Reyli Barba',
-      thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_20,w_800,h_450,c_fill,q_auto,f_jpg/v1753769477/09._Hoy_Me_Alejo_pvn1fj.jpg',
-      videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769477/09._Hoy_Me_Alejo_pvn1fj.mp4'
-    },
-    {
       id: 'clip-2',
       title: 'Contigo Quiero',
       artist: 'Videoclip',

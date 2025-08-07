@@ -19,6 +19,15 @@ interface VideoClip {
 
 const videoclips: VideoClip[] = [
   {
+    id: 'hoy_me_alejo',
+    title: 'Hoy Me Alejo - Reyli Barba',
+    description: 'Dirección, edición y post producción',
+    videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769477/09._Hoy_Me_Alejo_pvn1fj.mp4',
+    thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_20,w_800,h_450,c_fill,q_auto,f_jpg/v1753769477/09._Hoy_Me_Alejo_pvn1fj.jpg',
+    duration: '4:15',
+    category: 'Videoclip'
+  },
+  {
     id: 'pido_perdon',
     title: 'Pido Perdón - Reyli Barba',
     description: '',
