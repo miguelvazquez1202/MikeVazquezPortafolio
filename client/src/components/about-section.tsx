@@ -105,7 +105,7 @@ export default function AboutSection() {
                 onClick={scrollToContact}
                 className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
               >
-                Contrátame
+                Solicitar Cotización
               </Button>
             </motion.div>
           </motion.div>

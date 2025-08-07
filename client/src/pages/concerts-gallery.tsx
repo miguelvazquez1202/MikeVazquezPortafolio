@@ -275,6 +275,7 @@ export default function ConcertsGallery() {
                         disablePictureInPicture
                         muted
                         loop
+                        preload="metadata"
                       >
                         <source src={image.src} type="video/mp4" />
                       </video>

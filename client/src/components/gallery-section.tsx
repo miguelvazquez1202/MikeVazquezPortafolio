@@ -85,7 +85,7 @@ export default function GallerySection({ id, title, description, images, bgColor
             {title === "Conciertos" ? (
               <Link href="/conciertos">
                 <Button className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto">
-                  Ver Más Fotos de Conciertos
+                  Ver Más de Conciertos
                 </Button>
               </Link>
             ) : (
