@@ -51,7 +51,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
-            onClick={() => scrollToSection("concerts")}
+            onClick={() => scrollToSection("demo-reel")}
             className="bg-vibrant-yellow text-dark-grey px-8 py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-lg h-auto"
           >
             Ver Portafolio
