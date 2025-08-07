@@ -227,7 +227,7 @@ export default function ConcertsGallery() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           >
             {concertGalleryImages.map((image, index) => {
               // Crear variaciones de altura para efecto masonry más dinámico
@@ -236,7 +236,7 @@ export default function ConcertsGallery() {
               
               // Crear elementos destacados especiales cada 8 fotos
               const isFeatureImage = index % 8 === 0 && index > 0;
-              const featureClass = isFeatureImage ? 'lg:col-span-2 h-96' : randomHeight;
+              const isVideo = image.type === 'video';
               
               return (
                 <motion.div
@@ -249,7 +249,13 @@ export default function ConcertsGallery() {
                     type: "spring",
                     stiffness: 100 
                   }}
-                  className={`relative group cursor-pointer ${isFeatureImage ? 'h-96 ring-2 ring-vibrant-yellow/30' : randomHeight} mb-6 break-inside-avoid overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-rotate-1 hover:scale-105 ${isFeatureImage ? 'hover:ring-vibrant-yellow/60' : ''}`}
+                  className={`relative group cursor-pointer mb-6 overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 ${
+                    isVideo 
+                      ? 'col-span-full h-80 md:h-96 ring-4 ring-vibrant-yellow/40 hover:ring-vibrant-yellow/70 bg-gradient-to-r from-vibrant-yellow/10 to-vibrant-yellow/5' 
+                      : isFeatureImage 
+                        ? 'h-96 ring-2 ring-vibrant-yellow/30 hover:ring-vibrant-yellow/60 hover:-rotate-1' 
+                        : `${randomHeight} break-inside-avoid hover:-rotate-1`
+                  }`}
                   onClick={() => openLightbox(image, index)}
                   onMouseEnter={() => setHoveredImage(image.id)}
                   onMouseLeave={() => setHoveredImage(null)}
@@ -261,16 +267,28 @@ export default function ConcertsGallery() {
                 >
                   {/* Video or Image Content */}
                   {image.type === 'video' ? (
-                    <video
-                      className="w-full h-full object-cover"
-                      poster={`https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_500,h_600,c_fill,q_auto,f_jpg/${image.id.replace('_video', '')}.jpg`}
-                      controlsList="nodownload"
-                      disablePictureInPicture
-                      muted
-                      loop
-                    >
-                      <source src={image.src} type="video/mp4" />
-                    </video>
+                    <div className="w-full h-full relative">
+                      <video
+                        className="w-full h-full object-cover"
+                        poster={`https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/${image.id.replace('_video', '')}.jpg`}
+                        controlsList="nodownload"
+                        disablePictureInPicture
+                        muted
+                        loop
+                      >
+                        <source src={image.src} type="video/mp4" />
+                      </video>
+                      {/* Video indicator badge */}
+                      <div className="absolute top-4 left-4 bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold">
+                        VIDEO
+                      </div>
+                      {/* Play button overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="w-16 h-16 bg-vibrant-yellow/90 rounded-full flex items-center justify-center">
+                          <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                        </div>
+                      </div>
+                    </div>
                   ) : null}
                   
                   {/* Overlay gradient */}
