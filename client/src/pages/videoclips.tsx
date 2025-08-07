@@ -12,6 +12,7 @@ interface VideoClip {
   videoUrl: string;
   thumbnailUrl: string;
   duration?: string;
+  category: string;
 }
 
 const videoclips: VideoClip[] = [
@@ -21,7 +22,8 @@ const videoclips: VideoClip[] = [
     description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770686/06._Pido_Perdon_mrqgih.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_86,w_800,h_450,c_fill,q_auto,f_jpg/v1753770686/06._Pido_Perdon_mrqgih.jpg',
-    duration: '3:45'
+    duration: '3:45',
+    category: 'Videoclip'
   },
   {
     id: 'fierro_costera',
@@ -29,7 +31,8 @@ const videoclips: VideoClip[] = [
     description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753770682/Fierro_Por_La_Costera_Alexis_Finalcut_1080P_zmwizb.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_85,w_800,h_450,c_fill,q_auto,f_jpg/v1753770682/Fierro_Por_La_Costera_Alexis_Finalcut_1080P_zmwizb.jpg',
-    duration: '4:12'
+    duration: '4:12',
+    category: 'Videoclip'
   },
   {
     id: 'mi_reina_maya',
@@ -37,7 +40,8 @@ const videoclips: VideoClip[] = [
     description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_56,w_800,h_450,c_fill,q_auto,f_jpg/v1753769575/Mi_Reina_Maya_Videolyric_1080P_Finalcut_hlre8m.jpg',
-    duration: '3:28'
+    duration: '3:28',
+    category: 'Videolyric'
   },
   {
     id: '730_dias',
@@ -45,7 +49,8 @@ const videoclips: VideoClip[] = [
     description: '',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1753769586/730_Dias_V4_1080P_flafqg.mp4',
     thumbnailUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto,f_jpg/v1753769586/730_Dias_V4_1080P_flafqg.jpg',
-    duration: '4:03'
+    duration: '4:03',
+    category: 'Live session'
   }
 ];
 
@@ -279,6 +284,13 @@ export default function VideoclipsGallery() {
                   >
                     <source src={video.videoUrl} type="video/mp4" />
                   </video>
+
+                  {/* Category Tag */}
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold">
+                      {video.category}
+                    </span>
+                  </div>
 
                   {/* Video Controls Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-grey/60 via-transparent to-dark-grey/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
