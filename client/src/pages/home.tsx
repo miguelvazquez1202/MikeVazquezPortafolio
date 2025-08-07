@@ -115,7 +115,7 @@ export default function Home() {
             <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-video bg-dark-grey relative overflow-hidden">
                 <img
-                  src="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_450,g_center,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_34_samnjq.jpg"
+                  src="https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_800,h_450,g_face,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_34_samnjq.jpg"
                   alt="Fotografía corporativa para empresas por Mike Vázquez"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

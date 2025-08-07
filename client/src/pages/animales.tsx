@@ -24,49 +24,49 @@ export default function AnimalesPage() {
   const animalesImages: AnimalImage[] = [
     {
       id: 'animal-1',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753764520/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_51d8059a_slggsf.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753764520/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_51d8059a_slggsf.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753764520/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_51d8059a_slggsf.jpg',
       alt: 'Fotografía de vida salvaje capturada por Mike Vázquez'
     },
     {
       id: 'animal-2',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753764518/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_a6a9ab5e_irfwl5.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753764518/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_a6a9ab5e_irfwl5.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753764518/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_a6a9ab5e_irfwl5.jpg',
       alt: 'Fotografía de fauna silvestre por Mike Vázquez'
     },
     {
       id: 'animal-3',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753764516/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_b7df56ed_brhz7h.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753764516/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_b7df56ed_brhz7h.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753764516/Imagen_de_WhatsApp_2025-02-08_a_las_16.48.20_b7df56ed_brhz7h.jpg',
       alt: 'Retrato animal en su hábitat natural por Mike Vázquez'
     },
     {
       id: 'animal-4',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753766549/WEB-11_im0av4.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753766549/WEB-11_im0av4.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753766549/WEB-11_im0av4.jpg',
       alt: 'Fotografía profesional de animales por Mike Vázquez'
     },
     {
       id: 'animal-5',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753770784/WEB-18_e1euhy.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753770784/WEB-18_e1euhy.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753770784/WEB-18_e1euhy.jpg',
       alt: 'Captura de vida animal en movimiento por Mike Vázquez'
     },
     {
       id: 'animal-6',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1753770789/WEB-19_c1268v.jpg',
       alt: 'Fotografía artística de fauna por Mike Vázquez'
     },
     {
       id: 'animal-7',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_20_pqsimv.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_20_pqsimv.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_20_pqsimv.jpg',
       alt: 'Fotografía de vida salvaje en su entorno natural por Mike Vázquez'
     },
     {
       id: 'animal-8',
-      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_400,h_300,g_center,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_6_wclodr.jpg',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_6_wclodr.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_900,q_auto,f_auto/v1754604582/FOTOS_RANCHOSANJUAN_DIA01_6_wclodr.jpg',
       alt: 'Captura profesional de animales en su hábitat por Mike Vázquez'
     }
