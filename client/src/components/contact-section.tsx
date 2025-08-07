@@ -153,7 +153,12 @@ export default function ContactSection() {
                           {info.value}
                         </a>
                       ) : (
-                        <p className="font-source text-charcoal">{info.value}</p>
+                        <div>
+                          <p className="font-source text-charcoal">{info.value}</p>
+                          {info.label === "Ubicación" && (
+                            <p className="font-source text-charcoal/70 text-sm italic mt-1">(Disponibilidad para viajar)</p>
+                          )}
+                        </div>
                       )}
                     </div>
                   </motion.div>
