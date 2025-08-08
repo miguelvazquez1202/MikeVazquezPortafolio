@@ -437,37 +437,60 @@ export default function VideoclipsGallery() {
                     </motion.span>
                   </motion.div>
 
-                  {/* Video Controls Overlay */}
+                  {/* Video Controls Overlay - Hover Effect */}
                   <motion.div 
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
                     className="absolute inset-0 bg-gradient-to-t from-dark-grey/60 via-transparent to-dark-grey/30"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
+                  />
+
+                  {/* Play Button - Always Visible */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      initial={{ scale: 1, opacity: 1 }}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", damping: 15 }}
+                      className="relative"
+                    >
                       <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        whileHover={{ scale: 1, opacity: 1 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ type: "spring", damping: 15 }}
+                        whileHover={{ 
+                          boxShadow: "0 0 30px rgba(255, 194, 15, 0.4)",
+                          scale: 1.05
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-vibrant-yellow hover:bg-vibrant-yellow/90 text-dark-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl cursor-pointer border-2 border-vibrant-yellow/20"
+                        onClick={(e) => togglePlay(video.id, e)}
                       >
-                        <Button
-                          onClick={(e) => togglePlay(video.id, e)}
-                          className="bg-vibrant-yellow hover:bg-vibrant-yellow/90 text-dark-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl"
+                        <motion.div
+                          animate={playingVideos.has(video.id) ? { rotate: 180 } : { rotate: 0 }}
+                          transition={{ duration: 0.3 }}
                         >
-                          <motion.div
-                            animate={playingVideos.has(video.id) ? { rotate: 180 } : { rotate: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            {playingVideos.has(video.id) ? (
-                              <Pause size={24} />
-                            ) : (
-                              <Play size={24} className="ml-1" />
-                            )}
-                          </motion.div>
-                        </Button>
+                          {playingVideos.has(video.id) ? (
+                            <Pause size={24} />
+                          ) : (
+                            <Play size={24} className="ml-1" />
+                          )}
+                        </motion.div>
                       </motion.div>
-                    </div>
+                      
+                      {/* Pulsing Ring Animation */}
+                      <motion.div
+                        initial={{ scale: 1, opacity: 0.8 }}
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          opacity: [0.8, 0.3, 0.8]
+                        }}
+                        transition={{ 
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                        className="absolute inset-0 rounded-full border-2 border-vibrant-yellow"
+                      />
+                    </motion.div>
+                  </div>
 
                     {/* Video Controls */}
                     <motion.div 
@@ -520,7 +543,6 @@ export default function VideoclipsGallery() {
                         </Button>
                       </motion.div>
                     </motion.div>
-                  </motion.div>
                 </div>
 
                 {/* Video Info */}
