@@ -36,15 +36,17 @@ export default function GallerySection({ id, title, description, images, bgColor
             {description}
           </p>
           {title === "Conciertos" && (
-            <p className="font-montserrat text-lg max-w-2xl mx-auto">
-              <span className="text-vibrant-yellow font-semibold">Fotografía</span>
-              <span className="text-dark-grey">/</span>
-              <span className="text-dark-grey font-semibold">Aftermovies</span>
-              <span className="text-vibrant-yellow">/</span>
-              <span className="text-vibrant-yellow font-semibold">MakingOf</span>
-              <span className="text-dark-grey">/</span>
-              <span className="text-dark-grey font-semibold">CircuitoCerrado</span>
-            </p>
+            <div className="font-montserrat text-lg max-w-2xl mx-auto">
+              <div className="flex flex-wrap justify-center items-center gap-2 text-center">
+                <span className="text-vibrant-yellow font-semibold">Fotografía</span>
+                <span className="text-dark-grey">/</span>
+                <span className="text-dark-grey font-semibold">Aftermovies</span>
+                <span className="text-vibrant-yellow">/</span>
+                <span className="text-vibrant-yellow font-semibold whitespace-nowrap">Making Of</span>
+                <span className="text-dark-grey">/</span>
+                <span className="text-dark-grey font-semibold whitespace-nowrap">Circuito Cerrado</span>
+              </div>
+            </div>
           )}
         </motion.div>
 
