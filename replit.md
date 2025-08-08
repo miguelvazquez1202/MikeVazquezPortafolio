@@ -125,7 +125,16 @@ The application is designed to be easily deployable on various platforms while m
 
 ## Recent Changes
 
-### February 8, 2025
+### February 8, 2025 - Evening Updates
+- **Gallery Content Updates**: Added new photography content to enhance portfolio showcases
+  - **Photography Section**: Replaced ocean landscape photo with new portrait image (DSC03612) for better section consistency
+  - **Portrait Gallery Expansion**: Added 4 new professional portraits from Cloudinary collection (DSC03409, DSC03589, DSC03634, FOTOS_RANCHOSANJUAN_DIA01_30)
+  - **Corporate Photography Addition**: Integrated new corporate photography image and updated section to use 4-column grid layout
+  - **Animals Gallery Enhancement**: Added 2 new animal photography images from ranch collection maintaining complete photo display
+  - **Image Optimization**: All new photos configured with width-only resizing (w_400) to preserve natural aspect ratios without cropping
+  - **Navigation Enhancement**: Updated all gallery "Volver" buttons to link directly to "Servicios Creativos" section (#servicios) instead of homepage
+
+### February 8, 2025 - Morning
 - **Comprehensive Advanced SEO Optimization Implementation**: Complete SEO enhancement across all category pages and website infrastructure
   - **Enhanced Category Page SEO**: Updated all gallery pages (retratos, paisajes, animales, videoclips) with detailed titles, descriptions, and targeted keywords
   - **Expanded Structured Data**: Comprehensive JSON-LD schema.org markup including detailed contact information, geographic targeting, and professional service catalogs
