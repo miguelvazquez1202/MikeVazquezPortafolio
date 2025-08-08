@@ -19,7 +19,7 @@ export async function sendContactNotification(contactData: InsertContactMessage)
   // Email to Mike Vázquez (notification)
   const notificationEmail = {
     to: 'miguelvazquez1202@gmail.com',
-    from: 'miguelvazquez1202@gmail.com', // This should be a verified sender domain
+    from: 'no-reply@mikevazquez.com', // Using a domain-based sender
     subject: `Nuevo mensaje de contacto - ${serviceType}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -64,7 +64,7 @@ export async function sendContactNotification(contactData: InsertContactMessage)
   // Confirmation email to the client
   const confirmationEmail = {
     to: email,
-    from: 'miguelvazquez1202@gmail.com',
+    from: 'no-reply@mikevazquez.com',
     subject: 'Mensaje recibido - Mike Vázquez Fotografía',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
