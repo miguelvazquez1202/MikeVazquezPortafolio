@@ -75,6 +75,30 @@ export default function RetratosPage() {
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1753771094/WEB-21_bkb7dn.jpg',
       alt: 'Retrato artístico con iluminación creativa'
+    },
+    {
+      id: 'retrato-10',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754611188/DSC03409_kcovpc.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1754611188/DSC03409_kcovpc.jpg',
+      alt: 'Retrato profesional con técnica contemporánea'
+    },
+    {
+      id: 'retrato-11',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754611188/DSC03589_wiclzr.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1754611188/DSC03589_wiclzr.jpg',
+      alt: 'Sesión de retrato con composición artística'
+    },
+    {
+      id: 'retrato-12',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754611190/DSC03634_sner79.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1754611190/DSC03634_sner79.jpg',
+      alt: 'Retrato expresivo con iluminación natural'
+    },
+    {
+      id: 'retrato-13',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_30_i5cwmr.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_30_i5cwmr.jpg',
+      alt: 'Retrato profesional en entorno natural'
     }
   ];
 

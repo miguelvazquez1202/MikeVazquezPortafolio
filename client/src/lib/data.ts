@@ -73,7 +73,7 @@ export const portraitImages: GalleryImage[] = [
   },
   {
     id: 'portrait-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753764610/WEB-09_si3utl.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754611195/DSC03612_pymyon.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   }
