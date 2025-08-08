@@ -20,6 +20,14 @@ export default function PaisajesPage() {
   const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
   const isMobile = useMobileDetect();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   // Imágenes de paisajes con tamaños optimizados
   const paisajesImages: PaisajeImage[] = [
     {

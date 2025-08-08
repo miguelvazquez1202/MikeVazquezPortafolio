@@ -20,6 +20,14 @@ export default function RetratosPage() {
   const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
   const isMobile = useMobileDetect();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   // Imágenes de la colección de Cloudinary con tamaños optimizados
   const retratosImages: RetratosImage[] = [
     {

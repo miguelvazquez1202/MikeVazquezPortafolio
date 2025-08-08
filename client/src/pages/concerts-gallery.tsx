@@ -63,6 +63,14 @@ export default function ConcertsGallery() {
   const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
   const isMobile = useMobileDetect();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   const openLightbox = (image: ConcertImage, index: number) => {
     if (isMobile) {
       setIsMobileCarouselOpen(true);

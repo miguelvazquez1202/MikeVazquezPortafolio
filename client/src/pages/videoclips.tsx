@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Play, Pause, Volume2, VolumeX, Maximize, X } from 'lucide-react';
 import { Link } from 'wouter';
@@ -73,6 +73,14 @@ export default function VideoclipsGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const videoRefs = useRef<Record<string, HTMLVideoElement>>({});
   const isMobile = useMobileDetect();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
 
   const openFullscreen = (video: VideoClip, index: number = 0) => {
     if (isMobile) {

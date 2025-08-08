@@ -20,6 +20,14 @@ export default function AnimalesPage() {
   const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
   const isMobile = useMobileDetect();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   // Imágenes de animales con tamaños optimizados de la colección de Cloudinary
   const animalesImages: AnimalImage[] = [
     {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'wouter';
@@ -19,6 +19,14 @@ export default function EventosSocialesGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobileCarouselOpen, setIsMobileCarouselOpen] = useState(false);
   const isMobile = useMobileDetect();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
 
   const eventosSocialesImages: EventoSocialImage[] = [
     {
