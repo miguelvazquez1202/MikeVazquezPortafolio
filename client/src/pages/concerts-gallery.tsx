@@ -292,10 +292,20 @@ export default function ConcertsGallery() {
                       <div className="absolute top-4 left-4 bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold">
                         VIDEO
                       </div>
-                      {/* Play button overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="w-16 h-16 bg-vibrant-yellow/90 rounded-full flex items-center justify-center">
-                          <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                      {/* Play Button - Always Visible */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative">
+                          <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300 border-2 border-vibrant-yellow/20">
+                            <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                          </div>
+                          
+                          {/* Pulsing Ring Animation */}
+                          <div
+                            className="absolute inset-0 rounded-full border-2 border-vibrant-yellow animate-ping opacity-75"
+                            style={{
+                              animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
+                            }}
+                          />
                         </div>
                       </div>
                     </div>

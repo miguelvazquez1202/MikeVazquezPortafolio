@@ -93,13 +93,27 @@ export default function VideoclipsSection() {
                     alt={`Videoclip ${clip.title} de ${clip.artist}`}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-dark-grey/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button
-                      onClick={() => handlePlayVideo(clip.id)}
-                      className="bg-vibrant-yellow text-dark-grey p-4 rounded-full hover:bg-yellow-400 transition-all duration-300 transform hover:scale-110"
-                    >
-                      <Play size={24} fill="currentColor" />
-                    </Button>
+                  {/* Video Controls Overlay - Hover Effect */}
+                  <div className="absolute inset-0 bg-dark-grey/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Play Button - Always Visible */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="relative">
+                      <div
+                        onClick={() => handlePlayVideo(clip.id)}
+                        className="bg-vibrant-yellow hover:bg-vibrant-yellow/90 text-dark-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl cursor-pointer border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300"
+                      >
+                        <Play size={24} className="ml-1" />
+                      </div>
+                      
+                      {/* Pulsing Ring Animation */}
+                      <div
+                        className="absolute inset-0 rounded-full border-2 border-vibrant-yellow animate-ping opacity-75"
+                        style={{
+                          animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
+                        }}
+                      />
+                    </div>
                   </div>
                   <div className="absolute top-4 left-4">
                     <span className="bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold">

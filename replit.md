@@ -125,7 +125,13 @@ The application is designed to be easily deployable on various platforms while m
 
 ## Recent Changes
 
-### February 8, 2025 - Evening Updates
+### February 8, 2025 - Evening Updates  
+- **Performance Optimization**: Implemented comprehensive performance improvements for faster loading
+  - **Image Optimization**: Reduced image sizes with Cloudinary w_400 and c_scale parameters
+  - **Video Optimization**: Added preload="none" and optimized poster thumbnails with q_auto:low compression
+  - **Lazy Loading Component**: Created LazyImage component for intersection observer-based loading
+  - **Consistent Play Buttons**: Added animated yellow play buttons to all video thumbnails across site
+  - **Mobile Responsive**: Fixed "Circuito Cerrado" text wrapping on mobile devices
 - **Email Notification System**: Implemented automatic email notifications for contact form submissions
   - **SendGrid Integration**: Added SendGrid email service for reliable email delivery
   - **Dual Email System**: Sends notification to photographer (miguelvazquez1202@gmail.com) and confirmation to client

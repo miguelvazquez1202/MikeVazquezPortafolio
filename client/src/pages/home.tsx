@@ -47,11 +47,29 @@ export default function Home() {
                   controls
                   controlsList="nodownload"
                   disablePictureInPicture
-                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.jpg"
+                  preload="none"
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_400,h_225,q_auto,f_jpg/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.jpg"
                 >
-                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/q_auto:low/v1753772026/Prod_Medical_Lanzamientomano_Videomemoria_Primercorte_03_v5nno5.mp4" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
                 </video>
+                
+                {/* Play Button - Always Visible */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300">
+                      <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                    </div>
+                    
+                    {/* Pulsing Ring Animation */}
+                    <div
+                      className="absolute inset-0 rounded-full border-2 border-vibrant-yellow animate-ping opacity-75"
+                      style={{
+                        animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">
@@ -71,11 +89,29 @@ export default function Home() {
                   controls
                   controlsList="nodownload"
                   disablePictureInPicture
-                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_178/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.jpg"
+                  preload="none"
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_178,w_400,h_225,q_auto,f_jpg/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.jpg"
                 >
-                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/q_auto:low/v1753772037/Prod_Jnj_Crosssector_Credoday2019_Primercorte04_svkyuv.mp4" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
                 </video>
+                
+                {/* Play Button - Always Visible */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300">
+                      <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                    </div>
+                    
+                    {/* Pulsing Ring Animation */}
+                    <div
+                      className="absolute inset-0 rounded-full border-2 border-vibrant-yellow animate-ping opacity-75"
+                      style={{
+                        animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">
@@ -95,11 +131,29 @@ export default function Home() {
                   controls
                   controlsList="nodownload"
                   disablePictureInPicture
-                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3/v1753772564/MyUsage_1080p_s8hgom.jpg"
+                  preload="none"
+                  poster="https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_400,h_225,q_auto,f_jpg/v1753772564/MyUsage_1080p_s8hgom.jpg"
                 >
-                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/v1753772564/MyUsage_1080p_s8hgom.mov" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dq0ogehwz/video/upload/q_auto:low/v1753772564/MyUsage_1080p_s8hgom.mov" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
                 </video>
+                
+                {/* Play Button - Always Visible */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300">
+                      <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                    </div>
+                    
+                    {/* Pulsing Ring Animation */}
+                    <div
+                      className="absolute inset-0 rounded-full border-2 border-vibrant-yellow animate-ping opacity-75"
+                      style={{
+                        animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-montserrat font-semibold text-dark-grey text-lg mb-2">

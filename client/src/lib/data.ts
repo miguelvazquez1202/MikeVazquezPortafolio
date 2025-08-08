@@ -13,67 +13,67 @@ export interface VideoItem {
   videoUrl?: string;
 }
 
-// Concert Photography Images
+// Concert Photography Images - Optimized for performance
 export const concertImages: GalleryImage[] = [
   {
     id: 'concert-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/WEB-04_ehov0y.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/WEB-04_ehov0y.jpg',
     alt: 'Fotografía profesional de concierto capturando la energía del escenario',
     category: 'concert'
   },
   {
     id: 'concert-2',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/DSC00165_varofk.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/DSC00165_varofk.jpg',
     alt: 'Artista en presentación en vivo con iluminación dramática',
     category: 'concert'
   },
   {
     id: 'concert-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753762141/DSC00944-Enhanced-NR_jscfcx.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1753762141/DSC00944-Enhanced-NR_jscfcx.jpg',
     alt: 'Momento único de presentación musical con efectos de iluminación',
     category: 'concert'
   }
 ];
 
-// Social Events Images
+// Social Events Images - Optimized for performance
 export const socialImages: GalleryImage[] = [
   {
     id: 'social-1',
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300&q=80',
     alt: 'Ceremonia de boda elegante',
     category: 'social'
   },
   {
     id: 'social-2',
-    src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300&q=80',
     alt: 'Evento profesional de networking',
     category: 'social'
   },
   {
     id: 'social-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753769823/WEB-14_fia6sz.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1753769823/WEB-14_fia6sz.jpg',
     alt: 'Evento social profesional capturado por Mike Vázquez',
     category: 'social'
   }
 ];
 
-// Portrait Images
+// Portrait Images - Optimized for performance
 export const portraitImages: GalleryImage[] = [
   {
     id: 'portrait-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_600,h_800,q_auto,f_auto/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
     alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   },
   {
     id: 'portrait-2',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_1200,h_1600,q_auto,f_auto/v1753765429/WEB-10_x9tqjp.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1753765429/WEB-10_x9tqjp.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   },
   {
     id: 'portrait-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754611195/DSC03612_pymyon.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1754611195/DSC03612_pymyon.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   }
