@@ -126,6 +126,15 @@ The application is designed to be easily deployable on various platforms while m
 ## Recent Changes
 
 ### February 8, 2025 - Evening Updates
+- **Email Notification System**: Implemented automatic email notifications for contact form submissions
+  - **SendGrid Integration**: Added SendGrid email service for reliable email delivery
+  - **Dual Email System**: Sends notification to photographer (miguelvazquez1202@gmail.com) and confirmation to client
+  - **Professional Email Templates**: Custom HTML templates with brand colors and professional styling
+  - **Robust Error Handling**: Form submission succeeds even if email fails, with proper logging
+- **Video Gallery Enhancement**: Added permanent yellow play buttons to all video thumbnails
+  - **Always Visible Play Buttons**: Yellow circular play buttons now visible on all video thumbnails
+  - **Hover Animations**: Scale effects, glowing shadows, and pulsing ring animations
+  - **Visual Feedback**: Clear indication that videos are clickable and interactive
 - **Gallery Content Updates**: Added new photography content to enhance portfolio showcases
   - **Photography Section**: Replaced ocean landscape photo with new portrait image (DSC03612) for better section consistency
   - **Portrait Gallery Expansion**: Added 4 new professional portraits from Cloudinary collection (DSC03409, DSC03589, DSC03634, FOTOS_RANCHOSANJUAN_DIA01_30)
