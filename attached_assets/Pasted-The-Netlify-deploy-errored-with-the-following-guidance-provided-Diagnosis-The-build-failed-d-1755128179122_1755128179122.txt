@@ -1,0 +1,46 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+The build failed due to a configuration error stating that the deploy directory 'client/dist/public' does not exist.
+
+**Solution:**
+1. Verify that the `client/dist/public` directory exists in the repository.
+2. If the directory is missing, create it or adjust the publish path to reflect the correct directory structure based on where the build artifacts are generated.
+3. Make sure the correct paths are configured in the build settings to target the actual build output directory.
+
+The relevant error logs are:
+
+Line 88:   dist/index.js  11.9kb
+Line 89: ⚡ Done in 3ms
+Line 90: ​
+Line 91: [90m(build.command completed in 11.2s)[39m
+Line 92: [96m[1m​[22m[39m
+Line 93: [96m[1mDeploy site                                                   [22m[39m
+Line 94: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 95: ​
+Line 96: Section completed: deploying
+Line 97: [91m[1m​[22m[39m
+Line 98: [91m[1mConfiguration error                                           [22m[39m
+Line 99: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 100: ​
+Line 101:   [31m[1mError message[22m[39m
+Line 102:   Deploy did not succeed: Deploy directory 'client/dist/public' does not exist
+Line 103: ​
+Line 104:   [31m[1mResolved config[22m[39m
+Line 105:   build:
+Line 106:     base: /opt/build/repo/client
+Line 107:     command: npm install && npm run build
+Line 108:     commandOrigin: config
+Line 109:     environment:
+Line 110:       - NODE_VERSION
+Line 111:     publish: /opt/build/repo/client/dist/public
+Line 112:     publishOrigin: config
+Line 113:   redirects:
+Line 114: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 115:     - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+Line 116: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 117: Failing build: Failed to build site
+Line 118: Finished processing build request in 30.717s
