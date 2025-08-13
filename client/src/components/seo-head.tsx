@@ -14,7 +14,7 @@ export default function SEOHead({
   title,
   description,
   keywords,
-  image = "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753762144/DSC00089_wayg1s.jpg",
+  image = "https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,w_1200,h_630,g_center,q_auto,f_auto/v1753771091/WEB-22_ln3kgw.jpg",
   url = window.location.href,
   type = "website",
   structuredData
