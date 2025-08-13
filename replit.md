@@ -132,6 +132,17 @@ The application is designed to be easily deployable on various platforms while m
   - **Lazy Loading Component**: Created LazyImage component for intersection observer-based loading
   - **Consistent Play Buttons**: Added animated yellow play buttons to all video thumbnails across site
   - **Mobile Responsive**: Fixed "Circuito Cerrado" text wrapping on mobile devices
+- **Navigation Enhancement**: Added automatic scroll-to-top functionality for all gallery pages
+  - **Smooth Scrolling**: Gallery pages (conciertos, eventos sociales, retratos, paisajes, animales, videoclips) now scroll to top when accessed
+  - **User Experience**: Ensures introductory text is visible when navigating from "Ver más" buttons
+- **Social Media Integration Updates**: Enhanced contact section with better social media integration
+  - **WhatsApp Integration**: Replaced YouTube button with official WhatsApp logo linking to +525537264582
+  - **Email Integration**: Replaced LinkedIn button with email icon linking to miguelvazquez1202@gmail.com
+  - **UI Cleanup**: Removed "Sigue mi trabajo" title for cleaner design
+- **Profile Photo Optimization**: Reduced About section profile photo size
+  - **Size Adjustment**: Changed from w-full to w-3/4 (75% width) with centered alignment
+  - **Image Optimization**: Reduced resolution from 800x1000 to 600x750 for faster loading
+  - **Responsive Design**: Maintained border decoration alignment with new photo dimensions
 - **Email Notification System**: Implemented automatic email notifications for contact form submissions
   - **SendGrid Integration**: Added SendGrid email service for reliable email delivery
   - **Dual Email System**: Sends notification to photographer (miguelvazquez1202@gmail.com) and confirmation to client
