@@ -61,7 +61,7 @@ export const socialImages: GalleryImage[] = [
 export const portraitImages: GalleryImage[] = [
   {
     id: 'portrait-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_fill,g_face/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
     alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   },
@@ -83,8 +83,8 @@ export const portraitImages: GalleryImage[] = [
 export const demoReelVideos: VideoItem[] = [
   {
     id: 'video-1',
-    title: 'Demo Reel Destacado',
-    description: 'Muestra cinematográfica de mi trabajo de filmación',
+    title: 'Demo Reel',
+    description: 'Muestra de mi trabajo de filmación',
     thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto:low,f_jpg/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.jpg',
     videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.mp4'
   },
