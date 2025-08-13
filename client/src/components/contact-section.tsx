@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -93,7 +94,7 @@ export default function ContactSection() {
 
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/mikevazquez12?igsh=MXdzdHJramNiNm94bQ%3D%3D&utm_source=qr", label: "Instagram" },
-    { icon: MessageCircle, href: "https://wa.me/525537264582", label: "WhatsApp" },
+    { icon: FaWhatsapp, href: "https://wa.me/525537264582", label: "WhatsApp" },
     { icon: Mail, href: "mailto:miguelvazquez1202@gmail.com", label: "Correo" },
   ];
 
@@ -172,9 +173,7 @@ export default function ContactSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
-                Sigue Mi Trabajo
-              </h3>
+
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a

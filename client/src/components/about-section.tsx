@@ -31,11 +31,11 @@ export default function AboutSection() {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=750"
               alt="Mike Vázquez professional photographer headshot"
-              className="w-full h-auto rounded-lg shadow-2xl"
+              className="w-3/4 h-auto rounded-lg shadow-2xl mx-auto"
             />
-            <div className="absolute -top-4 -left-4 w-full h-full border-4 border-vibrant-yellow rounded-lg -z-10" />
+            <div className="absolute -top-4 -left-4 w-3/4 h-full border-4 border-vibrant-yellow rounded-lg -z-10 mx-auto" />
           </motion.div>
 
           <motion.div
