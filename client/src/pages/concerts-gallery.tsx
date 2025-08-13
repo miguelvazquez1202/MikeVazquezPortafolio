@@ -455,13 +455,7 @@ export default function ConcertsGallery() {
               )}
             </motion.div>
 
-            {/* Bottom Info */}
-            <div className="absolute bottom-6 right-6 text-white z-10">
-              <div className="flex items-center space-x-2 text-sm font-montserrat opacity-80">
-                <div className="w-2 h-2 bg-vibrant-yellow rounded-full" />
-                <span>{selectedImage.type === 'video' ? 'Video' : 'Fotografía'} {currentIndex + 1} de {concertGalleryImages.length}</span>
-              </div>
-            </div>
+
           </motion.div>
         )}
       </AnimatePresence>

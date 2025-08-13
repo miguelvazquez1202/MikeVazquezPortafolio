@@ -171,17 +171,7 @@ export default function MobileCarousel({ images, initialIndex, onClose, isOpen }
         )}
       </div>
 
-      {/* Bottom Info */}
-      <div className="p-4 bg-black/80 backdrop-blur-sm">
-        <motion.p
-          key={currentIndex}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-white text-sm font-montserrat text-center"
-        >
-          {currentImage?.alt}
-        </motion.p>
-      </div>
+
 
       {/* Swipe Indicator */}
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2">

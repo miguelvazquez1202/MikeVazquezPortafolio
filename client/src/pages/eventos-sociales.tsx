@@ -345,12 +345,7 @@ export default function EventosSocialesGallery() {
             />
           </motion.div>
 
-          {/* Image Counter */}
-          <div className="absolute bottom-6 right-6 text-pure-white z-10">
-            <p className="font-source text-sm opacity-70">
-              <span className="text-vibrant-yellow">{currentIndex + 1}</span> de {eventosSocialesImages.length}
-            </p>
-          </div>
+
         </motion.div>
       )}
 

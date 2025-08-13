@@ -609,11 +609,7 @@ export default function VideoclipsGallery() {
                 <X size={20} />
               </Button>
 
-              <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="font-playfair text-xl font-semibold text-pure-white mb-1">
-                  {selectedVideo.title}
-                </h3>
-              </div>
+
             </motion.div>
           </motion.div>
         )}

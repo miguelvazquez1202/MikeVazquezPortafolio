@@ -311,12 +311,7 @@ export default function AnimalesPage() {
             <ChevronRight size={24} className="text-pure-white group-hover:text-dark-grey" />
           </button>
 
-          {/* Image counter */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-dark-grey/80 rounded-full z-10">
-            <span className="text-pure-white font-montserrat">
-              {currentIndex + 1} de {animalesImages.length}
-            </span>
-          </div>
+
 
           {/* Main image */}
           <motion.div
