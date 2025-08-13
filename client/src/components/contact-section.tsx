@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -93,8 +93,8 @@ export default function ContactSection() {
 
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/mikevazquez12?igsh=MXdzdHJramNiNm94bQ%3D%3D&utm_source=qr", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: MessageCircle, href: "https://wa.me/525537264582", label: "WhatsApp" },
+    { icon: Mail, href: "mailto:miguelvazquez1202@gmail.com", label: "Correo" },
   ];
 
   return (
