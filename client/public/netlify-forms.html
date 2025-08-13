@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netlify Forms Detection</title>
+</head>
+<body>
+  <!-- This file helps Netlify detect the form during build -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <select name="serviceType">
+      <option value="concert">Fotografía de Conciertos</option>
+      <option value="social">Eventos Sociales</option>
+      <option value="portrait">Fotografía de Retratos</option>
+      <option value="video">Producción de Videos</option>
+      <option value="other">Otro</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

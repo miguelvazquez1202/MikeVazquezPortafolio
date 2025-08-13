@@ -8,8 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactForm {
   firstName: string;
@@ -21,6 +19,7 @@ interface ContactForm {
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<ContactForm>({
     firstName: "",
     lastName: "",
@@ -29,34 +28,9 @@ export default function ContactSection() {
     message: "",
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactForm) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "¡Mensaje enviado exitosamente!",
-        description: "Gracias por tu consulta. Me pondré en contacto contigo pronto.",
-      });
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        serviceType: "",
-        message: "",
-      });
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Error al enviar mensaje",
-        description: error.message || "Por favor intenta de nuevo más tarde.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
       toast({
         title: "Por favor completa todos los campos requeridos",
@@ -64,7 +38,43 @@ export default function ContactSection() {
       });
       return;
     }
-    contactMutation.mutate(formData);
+
+    setIsSubmitting(true);
+    
+    try {
+      const form = e.target as HTMLFormElement;
+      const formDataObj = new FormData(form);
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataObj as any).toString(),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "¡Mensaje enviado exitosamente!",
+          description: "Gracias por tu consulta. Me pondré en contacto contigo pronto.",
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          serviceType: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Error al enviar el formulario');
+      }
+    } catch (error) {
+      toast({
+        title: "Error al enviar mensaje",
+        description: "Por favor intenta de nuevo más tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: keyof ContactForm, value: string) => {
@@ -202,7 +212,18 @@ export default function ContactSection() {
               <h3 className="font-playfair text-2xl font-semibold text-dark-grey mb-6">
                 Envía un Mensaje
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+              >
+                {/* Hidden fields for Netlify */}
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block font-montserrat font-medium text-charcoal mb-2">
@@ -210,6 +231,7 @@ export default function ContactSection() {
                     </label>
                     <Input
                       id="firstName"
+                      name="firstName"
                       value={formData.firstName}
                       onChange={(e) => handleInputChange("firstName", e.target.value)}
                       className="focus:border-vibrant-yellow transition-colors duration-200"
@@ -222,6 +244,7 @@ export default function ContactSection() {
                     </label>
                     <Input
                       id="lastName"
+                      name="lastName"
                       value={formData.lastName}
                       onChange={(e) => handleInputChange("lastName", e.target.value)}
                       className="focus:border-vibrant-yellow transition-colors duration-200"
@@ -236,6 +259,7 @@ export default function ContactSection() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
@@ -248,18 +272,19 @@ export default function ContactSection() {
                   <label htmlFor="serviceType" className="block font-montserrat font-medium text-charcoal mb-2">
                     Tipo de Servicio
                   </label>
-                  <Select value={formData.serviceType} onValueChange={(value) => handleInputChange("serviceType", value)}>
-                    <SelectTrigger className="focus:border-vibrant-yellow transition-colors duration-200">
-                      <SelectValue placeholder="Selecciona un servicio" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="concert">Fotografía de Conciertos</SelectItem>
-                      <SelectItem value="social">Eventos Sociales</SelectItem>
-                      <SelectItem value="portrait">Fotografía de Retratos</SelectItem>
-                      <SelectItem value="video">Producción de Videos</SelectItem>
-                      <SelectItem value="other">Otro</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <select
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={(e) => handleInputChange("serviceType", e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-vibrant-yellow transition-colors duration-200"
+                  >
+                    <option value="">Selecciona un servicio</option>
+                    <option value="concert">Fotografía de Conciertos</option>
+                    <option value="social">Eventos Sociales</option>
+                    <option value="portrait">Fotografía de Retratos</option>
+                    <option value="video">Producción de Videos</option>
+                    <option value="other">Otro</option>
+                  </select>
                 </div>
 
                 <div>
@@ -268,6 +293,7 @@ export default function ContactSection() {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     rows={6}
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
@@ -279,10 +305,10 @@ export default function ContactSection() {
 
                 <Button
                   type="submit"
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                   className="w-full bg-vibrant-yellow text-dark-grey py-4 font-montserrat font-semibold hover:bg-yellow-400 transition-all duration-300 text-lg h-auto"
                 >
-                  {contactMutation.isPending ? "Enviando..." : "Enviar Mensaje"}
+                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                 </Button>
               </form>
             </Card>
