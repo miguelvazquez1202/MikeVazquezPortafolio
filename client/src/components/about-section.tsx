@@ -31,7 +31,7 @@ export default function AboutSection() {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=750"
+              src="https://res.cloudinary.com/dq0ogehwz/image/upload/w_600,h_750,c_fill,g_face,q_auto,f_auto/v1755057636/240153231_6653007281379920_4210642738946288813_n_dsixce.jpg"
               alt="Mike Vázquez professional photographer headshot"
               className="w-3/4 h-auto rounded-lg shadow-2xl mx-auto"
             />

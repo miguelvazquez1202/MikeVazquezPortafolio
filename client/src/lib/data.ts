@@ -85,7 +85,8 @@ export const demoReelVideos: VideoItem[] = [
     id: 'video-1',
     title: 'Demo Reel Destacado',
     description: 'Muestra cinematográfica de mi trabajo de filmación',
-    thumbnailSrc: 'https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=450'
+    thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto:low,f_jpg/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.jpg',
+    videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.mp4'
   },
   {
     id: 'video-2',
