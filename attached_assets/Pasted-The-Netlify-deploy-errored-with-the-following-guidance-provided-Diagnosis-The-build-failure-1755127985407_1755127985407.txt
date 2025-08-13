@@ -1,0 +1,57 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+
+The build failure is due to the command `vite build` not being found during the build process.
+
+**Solution:**
+
+To fix this issue, you need to ensure that the Vite package is installed in the project and available in the build environment. 
+
+1. Verify that Vite is listed as a dependency in the `package.json` file in your repository.
+2. If Vite is missing, you should install it by running the following command in your project directory:
+   ```bash
+   npm install vite
+   ```
+3. After adding Vite as a dependency, commit the changes to your repository and trigger a new build on Netlify to see if the issue is resolved.
+
+The relevant error logs are:
+
+Line 51: [36m[1m​[22m[39m
+Line 52: [36m[1m❯ Context[22m[39m
+Line 53:   production
+Line 54: [96m[1m​[22m[39m
+Line 55: [96m[1mbuild.command from netlify.toml                               [22m[39m
+Line 56: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 57: ​
+Line 58: [36m$ vite build[39m
+Line 59: bash: line 1: vite: command not found
+Line 60: [91m[1m​[22m[39m
+Line 61: [91m[1m"build.command" failed                                        [22m[39m
+Line 62: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 63: ​
+Line 64:   [31m[1mError message[22m[39m
+Line 65:   Command failed with exit code 127: vite build
+Line 66: ​
+Line 67:   [31m[1mError location[22m[39m
+Line 68:   In build.command from netlify.toml:
+Line 69:   vite build
+Line 70: ​
+Line 71:   [31m[1mResolved config[22m[39m
+Line 72:   build:
+Line 73:     base: /opt/build/repo/client
+Line 74:     command: vite build
+Line 75:     commandOrigin: config
+Line 76:     environment:
+Line 77:       - NODE_VERSION
+Line 78:     publish: /opt/build/repo/client/dist/public
+Line 79:     publishOrigin: config
+Line 80:   redirects:
+Line 81: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 82:     - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+Line 83: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 84: Failing build: Failed to build site
+Line 85: Finished processing build request in 18.169s
