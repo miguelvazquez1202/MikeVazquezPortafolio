@@ -32,11 +32,12 @@ Language preference: Spanish (Latin America) for all website content.
 
 ### Core Features
 - **Photography Gallery System**: Structured image data with categories, custom lightbox for viewing, and responsive masonry-style layouts. Includes concert, social event, and portrait photography.
-- **Contact Management**: React Hook Form with Zod validation, messages stored in PostgreSQL, RESTful API endpoints, and toast notifications. Email notifications via SendGrid.
+- **Contact Management**: Netlify Forms integration for static site deployment, React Hook Form with validation, toast notifications, and automatic email notifications to client.
 - **Content Sections**: Hero section, services overview, demo reel, about section with downloadable portfolio, and smooth-scrolling navigation.
 - **UI/UX Features**: Smooth scrolling, skeleton loaders, full responsiveness, and accessibility (ARIA labels, keyboard navigation).
-- **SEO Optimization**: Dynamic SEOHead component, category-specific meta tags, Open Graph, Twitter Cards, JSON-LD schema.org (ImageGallery, VideoGallery, professional photographer info), sitemap.xml, robots.txt, canonical URLs, and professional business schema with geographic targeting for Latin America.
+- **SEO Optimization**: Dynamic SEOHead component, category-specific meta tags, Open Graph with custom preview images, Twitter Cards, JSON-LD schema.org (ImageGallery, VideoGallery, professional photographer info), and professional business schema with geographic targeting for Latin America.
 - **Image/Video Optimization**: Image sizes reduced using Cloudinary, video optimization with `preload="none"`, optimized poster thumbnails, and lazy loading. Intelligent face centering for portraits.
+- **Deployment & Hosting**: Complete Netlify deployment configuration with automated builds, GitHub integration, and production-ready form handling.
 
 ## External Dependencies
 
