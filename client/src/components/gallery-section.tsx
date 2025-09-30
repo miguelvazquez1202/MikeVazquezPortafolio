@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { GalleryImage } from "@/lib/data";
 import { Link } from "wouter";
+import { getCloudinaryUrl, cloudinaryTransformations } from "@/lib/cloudinary";
 
 interface GallerySectionProps {
   id: string;
@@ -17,6 +18,14 @@ export default function GallerySection({ id, title, description, images, bgColor
       detail: { images, currentIndex: imageIndex }
     });
     window.dispatchEvent(event);
+  };
+
+  const getGridImageUrl = (image: GalleryImage) => {
+    const isPortrait = image.category === 'portrait' || image.src.includes('g_face');
+    const transformation = isPortrait 
+      ? cloudinaryTransformations.portraitGrid 
+      : cloudinaryTransformations.grid;
+    return getCloudinaryUrl(image.src, transformation);
   };
 
   return (
@@ -61,14 +70,14 @@ export default function GallerySection({ id, title, description, images, bgColor
               whileHover={{ y: -5 }}
               className="cursor-pointer group relative"
               onClick={() => openLightbox(index)}
+              data-testid={`gallery-item-${image.id}`}
             >
               <img
-                src={image.src.includes('DSC04770-Enhanced-NR') 
-                  ? image.src.replace('w_400,q_auto,f_auto,c_fill,g_face', 'w_800,h_600,c_fill,g_face,q_auto,f_auto')
-                  : image.src.replace('w_400,q_auto,f_auto,c_scale', 'w_800,h_600,c_fill,g_center,q_auto,f_auto')
-                }
+                src={getGridImageUrl(image)}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                data-testid={`img-gallery-${image.id}`}
               />
               <div className="absolute inset-0 bg-vibrant-yellow/0 group-hover:bg-vibrant-yellow/20 transition-all duration-300 rounded-lg" />
               <div className="absolute top-4 right-4 w-3 h-3 bg-vibrant-yellow rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

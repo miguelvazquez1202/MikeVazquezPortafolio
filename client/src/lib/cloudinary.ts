@@ -9,15 +9,27 @@ export function getCloudinaryUrl(originalUrl: string, transformation: string): s
   }
 
   const [baseUrl, afterUpload] = urlParts;
-  const publicIdParts = afterUpload.split('/');
-  const publicIdWithParams = publicIdParts[publicIdParts.length - 1];
-  const publicId = publicIdWithParams.split('.')[0];
-  const extension = publicIdWithParams.split('.')[1] || 'jpg';
+  const segments = afterUpload.split('/');
   
-  const versionMatch = afterUpload.match(/v\d+/);
-  const version = versionMatch ? `${versionMatch[0]}/` : '';
+  if (segments[0]?.match(/^s--[A-Za-z0-9_-]+--$/)) {
+    return originalUrl;
+  }
   
-  return `${baseUrl}/upload/${transformation}/${version}${publicId}.${extension}`;
+  let i = 0;
+  while (i < segments.length && segments[i].includes(',')) {
+    i++;
+  }
+  
+  let version = '';
+  if (i < segments.length && segments[i].match(/^v\d+$/)) {
+    version = segments[i] + '/';
+    i++;
+  }
+  
+  const remainingSegments = segments.slice(i);
+  const publicPathWithExt = remainingSegments.join('/');
+  
+  return `${baseUrl}/upload/${transformation}/${version}${publicPathWithExt}`;
 }
 
 export const cloudinaryTransformations = {
