@@ -61,7 +61,7 @@ export const socialImages: GalleryImage[] = [
 export const portraitImages: GalleryImage[] = [
   {
     id: 'portrait-1',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_fill,g_face/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_fill,g_face/v1759203506/DSC04536_vjsdco.jpg',
     alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   },
@@ -75,6 +75,18 @@ export const portraitImages: GalleryImage[] = [
     id: 'portrait-3',
     src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/v1754611195/DSC03612_pymyon.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
+    category: 'portrait'
+  },
+  {
+    id: 'portrait-4',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_fill,g_face/v1759203592/DSC04145_n1jtu7.jpg',
+    alt: 'Retrato profesional capturado por Mike Vázquez',
+    category: 'portrait'
+  },
+  {
+    id: 'portrait-5',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_fill,g_face/v1753764635/DSC04770-Enhanced-NR_c9miya.jpg',
+    alt: 'Retrato profesional capturado por Mike Vázquez',
     category: 'portrait'
   }
 ];
