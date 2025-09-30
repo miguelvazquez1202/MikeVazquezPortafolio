@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GalleryImage } from "@/lib/data";
+import { getCloudinaryUrl, cloudinaryTransformations } from "@/lib/cloudinary";
 
 export default function Lightbox() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +62,14 @@ export default function Lightbox() {
   };
 
   const currentImage = images[currentIndex];
+  
+  const getFullSizeImageUrl = (image: GalleryImage) => {
+    const isPortrait = image.category === 'portrait' || image.src.includes('g_face');
+    const transformation = isPortrait 
+      ? cloudinaryTransformations.portraitLightbox 
+      : cloudinaryTransformations.lightboxFull;
+    return getCloudinaryUrl(image.src, transformation);
+  };
 
   return (
     <AnimatePresence>
@@ -70,7 +79,7 @@ export default function Lightbox() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[999] bg-dark-grey/95 backdrop-blur-sm flex items-center justify-center"
+          className="fixed inset-0 z-[999] bg-dark-grey/95 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={(e) => {
             if (e.target === e.currentTarget) {
               closeLightbox();
@@ -82,7 +91,8 @@ export default function Lightbox() {
             variant="ghost"
             size="icon"
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+            className="absolute top-4 right-4 md:top-6 md:right-6 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+            data-testid="button-close-lightbox"
           >
             <X size={24} />
           </Button>
@@ -94,7 +104,8 @@ export default function Lightbox() {
                 variant="ghost"
                 size="icon"
                 onClick={() => navigateImage(-1)}
-                className="absolute left-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 h-12 w-12"
+                className="absolute left-2 md:left-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 h-12 w-12"
+                data-testid="button-prev-image"
               >
                 <ChevronLeft size={24} />
               </Button>
@@ -102,7 +113,8 @@ export default function Lightbox() {
                 variant="ghost"
                 size="icon"
                 onClick={() => navigateImage(1)}
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 h-12 w-12"
+                className="absolute right-2 md:right-6 top-1/2 transform -translate-y-1/2 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 h-12 w-12"
+                data-testid="button-next-image"
               >
                 <ChevronRight size={24} />
               </Button>
@@ -117,12 +129,14 @@ export default function Lightbox() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="max-w-[70vw] max-h-[70vh] flex items-center justify-center"
+              className="max-w-[90vw] max-h-[85vh] md:max-w-[85vw] md:max-h-[80vh] flex items-center justify-center"
             >
               <img
-                src={currentImage.src}
+                src={getFullSizeImageUrl(currentImage)}
                 alt={currentImage.alt}
-                className="max-w-full max-h-full object-contain border-2 border-vibrant-yellow/20"
+                className="max-w-full max-h-full w-auto h-auto object-contain border-2 border-vibrant-yellow/20 rounded"
+                loading="eager"
+                data-testid={`img-lightbox-${currentImage.id}`}
               />
             </motion.div>
           )}
