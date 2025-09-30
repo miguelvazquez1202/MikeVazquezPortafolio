@@ -107,6 +107,18 @@ export default function RetratosPage() {
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_30_i5cwmr.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1754604583/FOTOS_RANCHOSANJUAN_DIA01_30_i5cwmr.jpg',
       alt: 'Retrato profesional en entorno natural'
+    },
+    {
+      id: 'retrato-14',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1759203506/DSC04536_vjsdco.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1759203506/DSC04536_vjsdco.jpg',
+      alt: 'Retrato profesional capturado por Mike Vázquez'
+    },
+    {
+      id: 'retrato-15',
+      src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1759203592/DSC04145_n1jtu7.jpg',
+      lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1759203592/DSC04145_n1jtu7.jpg',
+      alt: 'Retrato profesional capturado por Mike Vázquez'
     }
   ];
 
