@@ -23,7 +23,7 @@ export const concertImages: GalleryImage[] = [
   },
   {
     id: 'concert-2',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_scale/DSC01706_yjmouz.jpg',
+    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto,c_fill,g_face/DSC01706_yjmouz.jpg',
     alt: 'Artista en presentación en vivo con iluminación dramática',
     category: 'concert'
   },
