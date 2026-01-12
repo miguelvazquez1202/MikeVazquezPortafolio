@@ -77,6 +77,7 @@ export default function GallerySection({ id, title, description, images, bgColor
                 alt={image.alt}
                 loading="lazy"
                 className="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                style={image.category === 'portrait' && !image.src.includes('cloudinary') ? { objectPosition: 'top' } : undefined}
                 data-testid={`img-gallery-${image.id}`}
               />
               <div className="absolute inset-0 bg-vibrant-yellow/0 group-hover:bg-vibrant-yellow/20 transition-all duration-300 rounded-lg" />
