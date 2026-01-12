@@ -119,6 +119,18 @@ export default function RetratosPage() {
       src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/w_400,q_auto,f_auto/v1759203592/DSC04145_n1jtu7.jpg',
       lightboxSrc: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_limit,w_450,h_600,q_auto,f_auto/v1759203592/DSC04145_n1jtu7.jpg',
       alt: 'Retrato profesional capturado por Mike Vázquez'
+    },
+    {
+      id: 'retrato-16',
+      src: '/retrato-16.jpg',
+      lightboxSrc: '/retrato-16.jpg',
+      alt: 'Retrato profesional capturado por Mike Vázquez'
+    },
+    {
+      id: 'retrato-17',
+      src: '/retrato-17.jpg',
+      lightboxSrc: '/retrato-17.jpg',
+      alt: 'Retrato profesional capturado por Mike Vázquez'
     }
   ];
 
