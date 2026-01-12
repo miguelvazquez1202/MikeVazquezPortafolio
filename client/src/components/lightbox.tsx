@@ -91,10 +91,10 @@ export default function Lightbox() {
             variant="ghost"
             size="icon"
             onClick={closeLightbox}
-            className="absolute top-4 right-4 md:top-6 md:right-6 text-pure-white hover:text-vibrant-yellow transition-colors duration-200 z-10 h-12 w-12"
+            className="absolute top-4 right-4 md:top-6 md:right-6 bg-dark-grey/80 text-pure-white hover:text-vibrant-yellow hover:bg-dark-grey transition-colors duration-200 z-10 h-12 w-12 rounded-full"
             data-testid="button-close-lightbox"
           >
-            <X size={24} />
+            <X size={28} />
           </Button>
 
           {/* Navigation Buttons */}
@@ -129,12 +129,17 @@ export default function Lightbox() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="w-full h-full flex items-center justify-center px-12 md:px-20 py-16"
+              className="w-full h-full flex items-center justify-center px-12 md:px-20 py-16 cursor-pointer"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) {
+                  closeLightbox();
+                }
+              }}
             >
               <img
                 src={getFullSizeImageUrl(currentImage)}
                 alt={currentImage.alt}
-                className="max-w-full max-h-[85vh] w-auto h-auto object-contain border-2 border-vibrant-yellow/20 rounded"
+                className="max-w-full max-h-[85vh] w-auto h-auto object-contain border-2 border-vibrant-yellow/20 rounded cursor-default"
                 loading="eager"
                 data-testid={`img-lightbox-${currentImage.id}`}
               />
