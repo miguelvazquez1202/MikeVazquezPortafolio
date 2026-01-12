@@ -41,7 +41,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Video 1 - Medical Production */}
             <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+              <div 
+                className="aspect-video bg-dark-grey relative overflow-hidden cursor-pointer"
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) {
+                    if (video.paused) {
+                      video.play();
+                      e.currentTarget.querySelector('.play-button-overlay')?.classList.add('opacity-0');
+                    } else {
+                      video.pause();
+                      e.currentTarget.querySelector('.play-button-overlay')?.classList.remove('opacity-0');
+                    }
+                  }
+                }}
+              >
                 <video
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   controls
@@ -54,8 +68,8 @@ export default function Home() {
                   Tu navegador no soporta videos HTML5.
                 </video>
                 
-                {/* Play Button - Always Visible */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                {/* Play Button - Always Visible until play */}
+                <div className="absolute inset-0 flex items-center justify-center play-button-overlay transition-opacity duration-300">
                   <div className="relative">
                     <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300">
                       <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
@@ -83,7 +97,21 @@ export default function Home() {
 
             {/* Video 2 - Johnson & Johnson */}
             <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+              <div 
+                className="aspect-video bg-dark-grey relative overflow-hidden cursor-pointer"
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) {
+                    if (video.paused) {
+                      video.play();
+                      e.currentTarget.querySelector('.play-button-overlay')?.classList.add('opacity-0');
+                    } else {
+                      video.pause();
+                      e.currentTarget.querySelector('.play-button-overlay')?.classList.remove('opacity-0');
+                    }
+                  }
+                }}
+              >
                 <video
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   controls
@@ -96,8 +124,8 @@ export default function Home() {
                   Tu navegador no soporta videos HTML5.
                 </video>
                 
-                {/* Play Button - Always Visible */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                {/* Play Button - Always Visible until play */}
+                <div className="absolute inset-0 flex items-center justify-center play-button-overlay transition-opacity duration-300">
                   <div className="relative">
                     <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300">
                       <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
@@ -125,7 +153,21 @@ export default function Home() {
 
             {/* Video 3 - Commercial Production */}
             <div className="bg-soft-grey rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="aspect-video bg-dark-grey relative overflow-hidden">
+              <div 
+                className="aspect-video bg-dark-grey relative overflow-hidden cursor-pointer"
+                onClick={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) {
+                    if (video.paused) {
+                      video.play();
+                      e.currentTarget.querySelector('.play-button-overlay')?.classList.add('opacity-0');
+                    } else {
+                      video.pause();
+                      e.currentTarget.querySelector('.play-button-overlay')?.classList.remove('opacity-0');
+                    }
+                  }
+                }}
+              >
                 <video
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   controls
@@ -138,8 +180,8 @@ export default function Home() {
                   Tu navegador no soporta videos HTML5.
                 </video>
                 
-                {/* Play Button - Always Visible */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                {/* Play Button - Always Visible until play */}
+                <div className="absolute inset-0 flex items-center justify-center play-button-overlay transition-opacity duration-300">
                   <div className="relative">
                     <div className="w-16 h-16 bg-vibrant-yellow rounded-full flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300">
                       <div className="w-0 h-0 border-l-[12px] border-l-dark-grey border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
@@ -206,7 +248,6 @@ export default function Home() {
       <PhotographyCategories />
       <DemoReelSection />
       <AboutSection />
-      <ContactSection />
       
       <footer className="bg-dark-grey text-pure-white py-12">
         <div className="max-w-7xl mx-auto px-6">

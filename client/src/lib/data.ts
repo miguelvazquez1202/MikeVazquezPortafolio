@@ -83,10 +83,10 @@ export const portraitImages: GalleryImage[] = [
 export const demoReelVideos: VideoItem[] = [
   {
     id: 'video-1',
-    title: 'Demo Reel',
-    description: 'Muestra de mi trabajo de filmación',
-    thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_800,h_450,c_fill,q_auto:low,f_jpg/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.jpg',
-    videoUrl: 'https://res.cloudinary.com/dq0ogehwz/video/upload/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.mp4'
+    title: 'Demo Reel 2025',
+    description: 'Mi mejor trabajo hasta la fecha, capturando momentos únicos con visión cinematográfica.',
+    thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_1280,h_720,c_fill,q_auto:good,f_jpg/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.jpg',
+    videoUrl: '/demo_reel_2025.mp4'
   },
   {
     id: 'video-2',
