@@ -87,21 +87,40 @@ export default function VideoclipsSection() {
               viewport={{ once: true }}
             >
               <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-light-grey hover:border-vibrant-yellow/30">
-                <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={clip.thumbnailSrc}
-                    alt={`Videoclip ${clip.title} de ${clip.artist}`}
+                <div 
+                  className="relative aspect-video overflow-hidden cursor-pointer"
+                  onClick={(e) => {
+                    const video = e.currentTarget.querySelector('video');
+                    if (video) {
+                      if (video.paused) {
+                        video.play();
+                        e.currentTarget.querySelector('.play-button-overlay')?.classList.add('opacity-0');
+                      } else {
+                        video.pause();
+                        e.currentTarget.querySelector('.play-button-overlay')?.classList.remove('opacity-0');
+                      }
+                    }
+                  }}
+                >
+                  <video
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                    controls
+                    controlsList="nodownload"
+                    disablePictureInPicture
+                    preload="none"
+                    poster={clip.thumbnailSrc}
+                  >
+                    <source src={clip.videoUrl} type="video/mp4" />
+                    Tu navegador no soporta videos HTML5.
+                  </video>
                   {/* Video Controls Overlay - Hover Effect */}
-                  <div className="absolute inset-0 bg-dark-grey/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-dark-grey/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                  {/* Play Button - Always Visible */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Play Button - Always Visible until play */}
+                  <div className="absolute inset-0 flex items-center justify-center play-button-overlay transition-opacity duration-300 pointer-events-none">
                     <div className="relative">
                       <div
-                        onClick={() => handlePlayVideo(clip.id)}
-                        className="bg-vibrant-yellow hover:bg-vibrant-yellow/90 text-dark-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl cursor-pointer border-2 border-vibrant-yellow/20 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,194,15,0.4)] transition-all duration-300"
+                        className="bg-vibrant-yellow text-dark-grey rounded-full w-16 h-16 flex items-center justify-center shadow-xl border-2 border-vibrant-yellow/20 transition-all duration-300"
                       >
                         <Play size={24} className="ml-1" />
                       </div>
@@ -115,7 +134,7 @@ export default function VideoclipsSection() {
                       />
                     </div>
                   </div>
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute top-4 left-4 pointer-events-none">
                     <span className="bg-vibrant-yellow text-dark-grey px-3 py-1 rounded-full text-sm font-montserrat font-semibold">
                       {clip.category}
                     </span>

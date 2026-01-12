@@ -84,7 +84,7 @@ export const demoReelVideos: VideoItem[] = [
   {
     id: 'video-1',
     title: 'Demo Reel 2025',
-    description: 'Mi mejor trabajo hasta la fecha, capturando momentos únicos con visión cinematográfica.',
+    description: '',
     thumbnailSrc: 'https://res.cloudinary.com/dq0ogehwz/video/upload/so_3,w_1280,h_720,c_fill,q_auto:good,f_jpg/v1755057608/Demo_2025_Mikevazquez_Redes_tqwanp.jpg',
     videoUrl: '/demo_reel_2025.mp4'
   },
