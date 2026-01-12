@@ -248,6 +248,7 @@ export default function Home() {
       <PhotographyCategories />
       <DemoReelSection />
       <AboutSection />
+      <ContactSection />
       
       <footer className="bg-dark-grey text-pure-white py-12">
         <div className="max-w-7xl mx-auto px-6">
