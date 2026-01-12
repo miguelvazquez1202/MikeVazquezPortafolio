@@ -73,7 +73,7 @@ export const portraitImages: GalleryImage[] = [
   },
   {
     id: 'portrait-3',
-    src: 'https://res.cloudinary.com/dq0ogehwz/image/upload/c_fill,g_face,w_800,h_1000,q_auto,f_auto/v1768186316/DSC09510-Edit_1768186316599.jpg',
+    src: '/portrait-woman-box-new.jpg',
     alt: 'Fotografía profesional capturada por Mike Vázquez',
     category: 'portrait'
   }
