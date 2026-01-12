@@ -260,7 +260,7 @@ export default function Home() {
               Fotógrafo y cineasta capturando los momentos únicos de la vida con visión artística y experiencia técnica.
             </p>
             <div className="border-t border-vibrant-yellow/30 pt-6 text-sm text-light-grey">
-              <p>&copy; 2025 Hello Hi Producciones. Todos los derechos reservados.</p>
+              <p>&copy; 2026 Hello Hi Producciones. Todos los derechos reservados.</p>
             </div>
           </div>
         </div>
