@@ -129,12 +129,12 @@ export default function Lightbox() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="max-w-[90vw] max-h-[85vh] md:max-w-[85vw] md:max-h-[80vh] flex items-center justify-center"
+              className="w-full h-full flex items-center justify-center px-12 md:px-20 py-16"
             >
               <img
                 src={getFullSizeImageUrl(currentImage)}
                 alt={currentImage.alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain border-2 border-vibrant-yellow/20 rounded"
+                className="max-w-full max-h-[85vh] w-auto h-auto object-contain border-2 border-vibrant-yellow/20 rounded"
                 loading="eager"
                 data-testid={`img-lightbox-${currentImage.id}`}
               />
